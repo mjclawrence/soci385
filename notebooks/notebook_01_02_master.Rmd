@@ -124,6 +124,22 @@ Next we'll get the data.
 hurricanes <- read.csv("https://raw.githubusercontent.com/mjclawrence/soci385/master/data/hurricanes.csv")
 ```
 
+## Plot
+
+```{r plot example}
+plot_data <- hurricanes %>% group_by(male_female) %>%
+     summarise(deaths_mean = round(mean(deaths),2))
+plot <- ggplot(plot_data, aes(x = male_female, y = deaths_mean, fill = male_female))
+plot + geom_col() + geom_text(aes(label = deaths_mean), size = 5, vjust = 0) + 
+     labs(x = "", y = "Mean Number of Deaths",
+          title = "Mean Number of Deaths by Gender of Hurricane Name") +
+     scale_fill_discrete(name = "") +
+     theme(axis.title.y = element_text(size = 18),
+           axis.text = element_text(size = 16),
+           title = element_text(size = 13),
+           legend.text = element_text(size = 16))
+```
+
 If the code above executed correctly, you should now see the data frame loaded and saved with the object name you created in the `environment` panel in the top right quadrant of R Studio. There should be 92 observations of 7 variables in the data frame named hurricanes.
 
 Click the white arrow to the left of the object name to see all the variables (year, name, etc.). Click the spreadsheet icon on the far right side of the data name row to open the full data frame. Note that the *variables* are in the columns and the *values* are in the rows, with each row representating a separate *observation* or *case*.
@@ -222,18 +238,3 @@ summary(hurricanes$deaths[hurricanes$male_female=="female"])
 ```
 
 
-## Plot
-
-```{r plot example}
-plot_data <- hurricanes %>% group_by(male_female) %>%
-     summarise(deaths_mean = round(mean(deaths),2))
-plot <- ggplot(plot_data, aes(x = male_female, y = deaths_mean, fill = male_female))
-plot + geom_col() + geom_text(aes(label = deaths_mean), size = 5, vjust = 0) + 
-     labs(x = "", y = "Mean Number of Deaths",
-          title = "Mean Number of Deaths by Gender of Hurricane Name") +
-     scale_fill_discrete(name = "") +
-     theme(axis.title.y = element_text(size = 18),
-           axis.text = element_text(size = 16),
-           title = element_text(size = 13),
-           legend.text = element_text(size = 16))
-```
