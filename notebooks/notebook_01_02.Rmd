@@ -106,7 +106,7 @@ Now that the package is installed, you can put a hashtag in front of the `instal
 Next we'll get the data.
 
 ```{r load data, message = FALSE}
-hurricanes <- read.csv("https://raw.githubusercontent.com/mjclawrence/soci385/f19/data/hurricanes.csv")
+hurricanes <- read.csv("https://raw.githubusercontent.com/mjclawrence/soci385/master/data/hurricanes.csv")
 ```
 
 If the code above executed correctly, you should now see the data frame loaded and saved with the object name you created in the `environment` panel in the top right quadrant of R Studio. There should be 92 observations of 7 variables in the data frame named hurricanes.
