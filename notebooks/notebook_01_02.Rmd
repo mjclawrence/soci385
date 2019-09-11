@@ -64,7 +64,7 @@ coursename
 
 We can now reference these saved objects in our code as well as our text. To use *inline code*, wrap the code in single backticks with a preceding r:
 
-> This class is called `r coursename` and it is SOAN `r coursenumber`.
+> This class is called `r coursename` and it is SOCI `r coursenumber`.
 
 The printed document will replace `coursename` and `coursenumber` with their saved values.
 
