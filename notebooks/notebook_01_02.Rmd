@@ -133,9 +133,6 @@ By default, R will sort factor variables alphabetically. An easier way to see wh
 sort(table(hurricanes$name))
 ```
 
-```{r sort table with decreasing}
-sort(table(hurricanes$name), decreasing=TRUE)
-```
 
 Now let's look at another categorical factor variable - `male_female` - which identifies whether a hurricane has a male or female name. Try making a table of this variable to see how many hurricanes have male and female names.
 
