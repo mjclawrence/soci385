@@ -41,14 +41,15 @@ To run this line of code, click the green arrow on the far right side of the fir
 
 For subtraction, use a -; for multiplication, use a *; for division, use a /. 
 
+
+
 What is 770 divided by 2?
 
 ### REPLACE THIS LINE WITH YOUR CODE ###
 
-```{r division}
+```{r calculator 2}
 770 / 2
 ```
-
 
 Our course number could be helpful to save so we do not have to calculate it each time we want to reference it. We save a value by creating an object. The syntax for doing so is to name our object first, then use the symbol "<-" to say what value our object takes. Let's call our new object `coursenumber`:
 
@@ -101,6 +102,8 @@ And three (or more) dashes on a single line will create a horizontal rule:
 
 ---
 
+\pagebreak
+
 ## Getting Started With R
 
 Today we will learn one way to import data into R and how to get simple summaries of different types of variables.
@@ -127,7 +130,7 @@ hurricanes <- read.csv("https://raw.githubusercontent.com/mjclawrence/soci385/ma
 ## Plot
 
 ```{r plot example}
-#library(ggthemes)
+library(ggthemes)
 plot_data <- hurricanes %>% group_by(male_female) %>%
      summarise(deaths_mean = round(mean(deaths),2))
 plot <- ggplot(plot_data, aes(x = male_female, y = deaths_mean, fill = male_female))
@@ -238,7 +241,7 @@ summary(hurricanes$deaths[hurricanes$male_female=="female"])
 ```
 
 
-```{r plot example}
+```{r plot example 2}
 #library(ggthemes)
 plot_data <- hurricanes %>% group_by(male_female) %>%
      summarise(deaths_mean = round(mean(deaths),2))
