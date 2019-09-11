@@ -97,7 +97,7 @@ First, we need to install a package. Packages are additional functions that supp
 Here's the code to install the package. You only have to install the package once on any computer you use. Once your computer has the package installed, you can load the package with the `library()` function.
 
 ```{r load packages, warning=FALSE, error=FALSE, include=FALSE}
-#install.packages("tidyverse")
+install.packages("tidyverse")
 library(tidyverse)
 ```
 
