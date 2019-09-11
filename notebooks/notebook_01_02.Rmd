@@ -188,7 +188,3 @@ summary(hurricanes$deaths[hurricanes$male_female=="male"])
 Repeat the summary of the `deaths` variable for hurricanes with female names:
 
 ### REPLACE THIS LINE WITH YOUR CODE ###
-
-```{r}
-summary(hurricanes$deaths[hurricanes$male_female=="female"])
-```
