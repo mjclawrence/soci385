@@ -115,7 +115,7 @@ Click the white arrow to the left of the object name to see all the variables (y
 
 ## Types of Variables
 
-We have different types of variables in our data frame. Some have the `int` tag identifying them as interval variables, some have the `Factor` tag identifying them as categorical variables, and some have the `numeric` tag. We can map these tags onto the different types of variables described in the Field chapter.
+We have different types of variables in our data frame. Some have the `int` tag identifying them as interval variables, some have the `Factor` tag identifying them as categorical variables, and some have the `numeric` tag.
 
 Let's look at the `name` variable to start. We can see in the `Environment` panel that this variable is a factor variable with 83 levels - or 83 different possible values. In this case, each value is a different name, making this an example of a *nominal variable*.
 
