@@ -1,0 +1,213 @@
+## Getting Started
+
+To begin, copy all the text on this screen. Then open RStudio, and in the "File" menu select "New File" then "R Markdown". Add a title like "SOCI 385, Week Two, Class One", include your name in the "Author" box, select "PDF" as the Default Output Format, and click Ok. A default markdown file will open. Delete all the text in the default file below the header (everything after line 7) and paste in the text you copied to your clipboard. Make sure that "R Markdown" is selected in the file type drop down menu in the bottom right corner of this pane. Save this file in your working directory.
+
+Load the dataset as a data frame called `colleges` using the `read.csv()` function:
+
+```{r load data}
+colleges <- read.csv("https://raw.githubusercontent.com/mjclawrence/soci385/master/data/college_mobility.csv")
+```
+
+How many observations and variables are there in this data frame?
+
+## Reviewing Tables and Summaries
+
+Let's do a quick review of the functions we looked at last week. If you want to know how many colleges in this data frame are in each region, how would you do so? What is the *modal value* of the `region` variable?
+
+### Replace this line with your code.
+
+The table lists categories in alphabetical order by default. With only four possible values, it is pretty easy to pick out the modal value even when they are alphabetical. If there are many categories - like all the possible names of hurricanes - it would be easier to sort the categories by the number of observations. You can do so by wrapping the full `table()` code within the `sort()` function:
+
+```{r sort by region}
+sort(table(colleges$region),
+     decreasing=TRUE)
+```
+
+We had a very quick look at how to index last week. Indexing allows you to run a function or display values for one variable by specific values of that same variable or a different variable. We index with [brackets]. 
+
+Suppose we want to find the `region` that Middlebury College is in. More formally, we want to pull the value of the `region` variable for the observation whose value for the `name` variable is `Middlebury College`. Since we are only referencing one value of the `name` variable, we identify it with two equal signs. Note that we also have to put "Middlebury College" in quotation marks since it is a character value rather than a numerical value:
+
+```{r indexing}
+colleges$region[colleges$name=="Middlebury College"]
+```
+
+Other indexing tools that are helpful:
+
+- For not equal to, use !=
+- To connect multiple arguments with and, use &
+- To connect multiple arguments with or, use |
+
+And for numeric variables:
+
+- For greater than, use >
+- For less than, use <
+- For greater than or equal to, use >=
+- For less than or equal to, use <=
+
+How would you find the number of colleges in each institutional control level (use the `iclevel` variable) in the Northeast region?
+
+### Replace this line with your code.
+
+
+The table reports frequencies, or counts of observations. We can find the *proportion* in each institutional control level by wrapping the whole line in the `prop.table()` command:
+
+```{r proportion table}
+prop.table(table(colleges$iclevel[colleges$region=="Northeast"]))
+```
+
+Try making a table showing the proportion of colleges in a specific state (use the two letter postal abbreviation) that is in each category of selectivity (using the `tier` variable). What is the modal selectivity category in that state?
+
+### Replace this line with your code.
+
+
+## Using Packages
+
+While "Base R" is pretty great on its own, getting the most out of this software often requires additional packages. Today we'll start using the `dplyr` package, which loads as part of the `tidyverse` package. To install it (or any other package), click the `Packages` tab in the bottom right quadrant of R Studio and then click Install. In the center text box, type `tidyverse` and press enter. (Note: we did this installation last week with the lab computers; we are redoing it today so the package is loaded on your own computer.)
+
+You will have to load packages every time you start a new notebook (or script or file) that will use them. Load a package with the `library()` function:
+
+```{r load package}
+library(tidyverse)
+```
+
+In the `Packages` tab, you should now see a check next to `tidyverse`.
+
+
+## Creating Variables
+Our goal this week is to recreate the NYT table showing that Middlebury ranks 9th in the ratio of students from the top 1 percent of the income distribution to students from the bottom 60 percent. Our dataset already has a variable called `par_top1pc` with each college's proportion of students from the top 1 percent. 
+
+What is this value for Middlebury?
+
+### Replace this line with your code.
+
+
+Let's use the `summary()` function to find the minimum value, the maximum value, the interquartile range, the median, and the mean:
+
+```{r summary of numerical variable}
+summary(colleges$par_top1pc)
+```
+
+What does the median tell us? 
+
+Based on this spread, there are very few colleges with higher proportions of students in the top 1 percent than Middlebury. The default summary gives us the 25th, 50th, and 75th percentiles of the distribution. We can use the `quantile()` function to find any specific percentile we want. Let's get the 90th and 95th percentiles:
+
+```{r finding 90th and 95th percentiles}
+quantile(colleges$par_top1pc, c(.90, .95))
+```
+
+Middlebury's value is higher than even the 95th percentile! Try the 99th and 99.9th percentiles.
+
+### Replace this line with your code.
+
+
+So Middlebury ranks *within* the top 1% of all colleges for the proportion of students *from* the top 1% of the family income distribution. 
+
+Let's find some of the other colleges with similar proportions.
+
+This is a task that `tidyverse` can help us do easily. It might be helpful to only look at a subset of the observations. We can create a new data frame called `colleges_top1pc_hi` that only includes colleges with at least 20% of students from the top 1 percent. We'll use the `filter()` function for this. One difference between `tidyverse` and `base R` is that when using `tidyverse` we separate the data frame name and the variable name with a comma rather than a dollar sign:
+
+```{r new data frame with filtered variables}
+colleges_top1pc_hi <- filter(colleges, par_top1pc>=.2)
+```
+
+Now we have a new data frame with only 15 observations. But we sitll have all 80 variables. We can keep just the variables we want by using the `select()` function. In this code, we are only keeping the `name` and `par_top1pc` variables in the `colleges_top1pc_hi` data frame:
+
+```{r select variables for table}
+colleges_top1pc_hi <- select(colleges_top1pc_hi, name, par_top1pc)
+```
+
+Finally we will order the 15 observations from the highest to lowest value of the `par_top1pc` variable. When working with an object (like a table), we used `sort` for this. When working with a data frame, `tidyverse` uses `arrange` for this. The default is to arrange from lowest to highest, so we wrap the variable name in `desc()` to assert we want a descending order:
+
+```{r sort table}
+colleges_top1pc_hi <- arrange(colleges_top1pc_hi, desc(par_top1pc))
+```
+
+Now let's take a look at the data frame:
+
+```{r view table}
+colleges_top1pc_hi
+```
+
+The other main variable in the NYT story is the proportion of students from the bottom 60%. That variable does not exist in our original colleges data frame. But there are five separate variables with the proportions of students in each quintile (lowest 20% = `par_q1`, second to lowest 20% = `par_q2`, middle 20% = `par_q3`, second to highest 20% = `par_q4`, highest 20% = `par_q5`).
+
+Here are the distributions:
+
+- par_q1 = 0 - 19,800
+
+- par_q2 = 19,801 - 37,300
+
+- par_q3 = 37,301 - 65,300
+
+- par_q4 = 65,301 - 110,200
+
+- par_q5 = 110,201 +
+
+- par_top1pc = 630,500 +
+
+We create a variable for students from the bottom 60% by adding the proportions in the bottom three quintiles. The idea is to create a new dataframe (we'll call it `colleges2`) that will *mutate* our existing dataframe. Our mutation will be to add a new variable called `par_q123` that is the sum of `par_q1` and `par_q2` and `par_q3`. Here we go: 
+
+```{r creating new data frame}
+colleges2 <- mutate(colleges, par_q123 = par_q1 + par_q2 + par_q3)
+```
+
+This is a new data frame, so we change what goes before the dollar sign in our code whenever we want to reference it. Let's find the proportion of Middlebury students coming from the bottom 60% of the income distribution.
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+
+What can you say about the center and spread of this new variable?
+
+### Replace this line with your code.
+
+
+Now we have the two variables (`par_top1pc` and `par_q123`) we need to recreate the NYT table. To compare them, we need another variable that measures the ratio of the proportion of students from the top 1 percent to the proportion of students from the bottom 60 percent. How do you think we do this? Add your new variable to a new dataframe called `colleges3`.
+
+### Replace this line with your code.
+
+
+What is that ratio at Middlebury? How can you interpret that number in words?
+
+```{r Middlebury ratio}
+colleges3$ratio_top1_bottom60[colleges3$name=="Middlebury College"]
+```
+
+We have all we need to make something that actually looks like the NYT table, and we have the tools to make it happen. We will have to `select` only the column variables that we need. We will also `arrange` the observations from the highest to the lowest values of our new ratio variable. And we will want to only see the list of colleges with the top ten ratios using the `top_n()` function.
+
+The `tidyverse` simplifies things even more by letting us run all of these functions together if we connect them with a symbol that R calls a pipe: %>%. Whenever you see a pipe in a code chunk, read it as: "and don't stop before executing the function that is on the next line." 
+
+The other helpful `tidyverse` trick is that if we are combining several functions with pipes, we only have to tell R which dataframe we are using once (at the very beginning). So our full code chunk will look like this:
+
+```{r data frame for final table}
+colleges4 <- colleges3 %>%       #the data frames we are creating and using
+    select(name, par_top1pc, 
+           par_q123, ratio_top1_bottom60) %>%       #the variables we want to keep
+    arrange(desc(ratio_top1_bottom60)) %>%     #the order we want the observations
+    top_n(10)                   #the number of ordered observations we want to keep
+```
+
+Unveil the rankings:
+
+```{r view table with rankings}
+colleges4
+```
+
+One last step could be to add a variable giving the numerical rank of each college. This could be helpful for knowing something about colleges that do not rank in the top group. We'll use `mutate` again to create a new variable that saves the row number that is already stored in R's memory for each data frame:
+
+```{r generate rank variable}
+colleges4 <- mutate(colleges4, rank = row_number())
+colleges4
+```
+
+
+# Thinking Sociologically
+
+What other variables would you want as you try to understand these statistics?
+
+Are there other ratios you would want to know? For example, might any of these be relevant?:
+
+- Top 1 percent / Bottom 20 percent
+- Top 1 percent / Bottom 40 percent
+- Top 1 percent / Middle 60 percent
+- Top 20 percent / Bottom 20 percent
+
+Where do you think Middlebury would rank for each of these comparisons?
