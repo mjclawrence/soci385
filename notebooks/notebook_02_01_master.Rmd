@@ -205,7 +205,7 @@ What can you say about the center and spread of this new variable?
 summary(colleges2$par_q123)
 ```
 
-Now we have the two variables (`par_top1pc` and `par_q123`) we need to recreate the NYT table. To compare them, we need another variable that measures the ratio of the proportion of students from the top 1 percent to the proportion of students from the bottom 60 percent. How do you think we do this? Add your new variable to a new dataframe called `colleges3`.
+Now we have the two variables (`par_top1pc` and `par_q123`) we need to recreate the NYT table. To compare them, we need another variable that measures the ratio of the proportion of students from the top 1 percent to the proportion of students from the bottom 60 percent. How do you think we do this? Call your new variable `ratio_top1_bottom60` and add it to a new dataframe called `colleges3`.
 
 ### Replace this line with your code.
 ```{r}
@@ -242,14 +242,47 @@ One last step could be to add a variable giving the numerical rank of each colle
 
 ```{r generate rank variable}
 colleges4 <- mutate(colleges4, rank = row_number())
+colleges4 <- select(colleges4, rank, name, ratio_top1_bottom60)
 colleges4
 ```
 
 
 # Thinking Sociologically
-What other variables would you want as you try to understand these statistics?
 
-Are there other ratios you would want to know? For example, might any of these be relevant?:
+## What other variables would you want as you try to understand these statistics?
+
+To see a list of all the variable names in a data frame:
+
+```{r}
+names(colleges)
+```
+
+Pull Middlebury's value of another one of the variables in the dataset:
+
+```{r}
+colleges$kq5_cond_parq1[colleges$name=="Middlebury College"]
+```
+
+How does Middlebury's value compare to overall distribution: 
+
+```{r}
+summary(colleges$kq5_cond_parq1)
+```
+
+Which college has the maximum value for that variable?
+
+```{r}
+colleges$name[colleges$kq5_cond_parq1>=.952]
+```
+
+or...
+
+```{r}
+colleges$name[colleges$kq5_cond_parq1==max(colleges$kq5_cond_parq1)]
+```
+
+
+## Are there other ratios you would want to know? For example, might any of these be relevant?:
 
 - Top 1 percent / Bottom 20 percent
 - Top 1 percent / Bottom 40 percent
@@ -258,10 +291,32 @@ Are there other ratios you would want to know? For example, might any of these b
 
 Where do you think Middlebury would rank for each of these comparisons?
 
-Let's add a new variable for each of the ratios. We can create all these variables in one mutate function:
+
+Let's try the ratio of students from the top 1 percent to the middle 60 percent:
+
+```{r}
+colleges5 <- colleges %>%
+  mutate(par_q234 = par_q2 + par_q3 + par_q4) %>%
+  mutate(ratio_top1_middle60 = par_top1pc / par_q234) %>%
+  arrange(desc(ratio_top1_middle60)) %>%
+  mutate(rank = row_number()) %>%
+  select(rank, name, ratio_top1_middle60)
+```
+
+We could use filter as another way to only see Middlebury's values:
+
+```{r}
+middlebury <- filter(colleges5,
+                     name=="Middlebury College")
+
+middlebury
+```
+
+
+Here are all the other ratios:
 
 ```{r other ratios}
-colleges5 <- colleges %>%
+colleges6 <- colleges %>%
   mutate(ratio_top1_bottom20 = par_top1pc / par_q1,
          ratio_top1_bottom40 = par_top1pc / (par_q1 + par_q2),
          ratio_top1_middle60 = par_top1pc / (par_q2 + par_q3 + par_q4),
@@ -271,7 +326,7 @@ colleges5 <- colleges %>%
 ```
 
 ```{r}
-colleges5 <- arrange(colleges5, desc(ratio_top1_bottom20))
+colleges6 <- arrange(colleges5, desc(ratio_top1_bottom20))
 ```
 
 Now let's try some of the tables:
