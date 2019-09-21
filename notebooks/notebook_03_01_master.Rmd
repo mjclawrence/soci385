@@ -39,7 +39,7 @@ Let's look at some visualizations of the distribution of age at first birth. The
 
 The "grammar of graphics" that ggplot is built on creates graphics layer by layer, mapping aesthetics and options on top of other layers. Let's see how this works in a very basic density plot.
 
-The first step is to name our figure. In this example, we'll save it as an object called `agekdbrn_plot`. The right side of the following chunk says that we will be using the ggplot functions with the `gss_week3` data frame, and the `aes` parentheses is where we say what we want on the x and y axes. For this initial plot, we will only have a variable on the x axis.
+The first step is to name our figure. In this example, we'll save it as an object called `agekdbrn_plot`. The right side of the following chunk says that we will be using the ggplot functions with the `gss_week3` data frame, and the `aes` parentheses is where we define the *aesthetics* we want on the x and y axes. For this initial plot, we will only have a variable on the x axis.
 
 ```{r save plot as object}
 agekdbrn_plot <- ggplot(gss_week3, aes(x = agekdbrn))
@@ -171,7 +171,7 @@ agekdbrn_college_plot + geom_density(alpha = .1) +
           subtitle = "General Social Survey, 2000-2014") 
 ```
 
-# Stop Here On Tuesday #
+# Stop Here On Monday #
 
 Change legend?
 
