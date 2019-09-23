@@ -64,8 +64,8 @@ What is this distribution telling us? How would you define the shape and the ske
 There are many ways to improve this plot. We'll start simply by changing the axis labels and adding a title. If you are making all of these changes, the easiest thing to do is to use the `labs()` function:
 
 ```{r add labels}
-agekdbrn_plot + geom_histogram() + 
-  labs(x = "Age at First Birth", y = "Count",
+agekdbrn_plot + geom_density() + 
+  labs(x = "Age at First Birth", y = "Density",
         title = "Distribution of Age at First Birth",
         subtitle = "General Social Survey, 2000-2014")
 ```
@@ -85,7 +85,7 @@ agekdbrn_plot + geom_histogram() +
 The warning message about binwidth with the histogram is asking you to choose how many buckets you want the data grouped by. See what happens as you increase and decrease the number of bins:
 
 ```{r agekdbrn histogram bins}
-agekdbrn_plot + geom_histogram(bins = 20) + 
+agekdbrn_plot + geom_histogram(bins = 100) + 
   labs (x = "Age at First Birth", y = "Count",
         title = "Distribution of Age at First Birth",
         subtitle = "GSS, 2000-2014")
