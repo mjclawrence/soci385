@@ -3,7 +3,7 @@
 We are still using the `gss_week3` dataset, and we will be using `ggplot2` and `dplyr` from `tidyverse`. Load the data and `tidyverse`, and remember to include the options to suppress the output, warning, and message from this chunk.
 
 ```{r load data and packages, echo = FALSE, warning = FALSE, message = FALSE}
-gss_week3 <- read.csv("../data/gss_week3.csv")
+gss_week3 <- read.csv("gss_week3.csv")
 library(tidyverse)
 ```
 
