@@ -207,11 +207,4 @@ agekdbrn_racehisp
 This `summarize()` function works with a lot of the basic commands we have discussed (min, max, sd, var, etc.). Try finding the median age at first birth for each education category. You can still use the `agekdbrn_edcat` object:
 
 ### REPLACE THIS LINE WITH YOUR CODE
-```{r}
-agekdbrn_edcat <- gss_week3 %>% 
-                  group_by(edcat) %>% 
-                  summarize(median_agekdbrn = median(agekdbrn))
-
-agekdbrn_edcat
-```
 

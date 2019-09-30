@@ -81,7 +81,7 @@ agekdbrn_college_plot <- ggplot(gss_week3,
               fill = college_degree)) # Fills in the area under the curve
 
 agekdbrn_college_plot + 
-     geom_density(alpha = 0.2) + # Alpha adjusts transparency of 
+     geom_density(alpha = .5) + # Alpha adjusts transparency of 
                                    # overlapping fills
      labs(x = "Age at First Birth",
           y = "Density",
@@ -129,7 +129,8 @@ Let's get a sense of how the distribution of age at first birth varies by educat
 
 ```{r agekdbrn plot by edcat}
 agekdbrn_edcat_plot <- ggplot(gss_week3, 
-                              aes(x = agekdbrn, color = edcat))
+                              aes(x = agekdbrn, 
+                                  color = edcat))
 
 agekdbrn_edcat_plot + geom_density() + 
   labs(x = "Age at First Birth", y = "Density", 
@@ -143,10 +144,11 @@ One option to consider at this point is changing the title of the legend. The ea
 agekdbrn_edcat_plot <- ggplot(gss_week3, aes(x = agekdbrn, color = edcat))
 
 agekdbrn_edcat_plot + geom_density() + 
-  labs(x = "Age at First Birth", y = "Density", 
+  labs(x = "Age at \nFirst Birth", y = "Density", 
        title = "Distribution of Age at First Birth \n by Highest Degree",
        subtitle = "GSS, 2000-2014",
-       color = "Highest Degree") 
+       color = "Highest Degree",
+       caption = "Note: All densities sum to 1") 
 ```
 
 
@@ -168,8 +170,16 @@ facet_grid(edcat~.) + guides(color=FALSE)
 
 To change size of text in label "strips":
 
-theme(strip.text.y = element_text(size = 5))
+```{r}
+agekdbrn_edcat_plot <- ggplot(gss_week3, aes(x = agekdbrn, color = edcat))
 
+agekdbrn_edcat_plot + geom_density() + 
+  labs(x = "Age at First Birth", y = "Density", 
+       title = "Distribution of Age at First Birth by Highest Degree", 
+       subtitle = "GSS, 2000-2014") +
+facet_grid(edcat~.) + guides(color=FALSE) +
+theme(strip.text.y = element_text(size = 5))
+```
 
 
 You can facet into columns by replacing `edcat~.` with `.~edcat`. Which would make more sense in this case?
@@ -193,6 +203,11 @@ Good rule of thumb: faceting by rows is better when comparing the x axis and fac
 # Back to Basics
 
 Let's take a break from graphics for a moment and think about tables and basic summaries again. If you wanted to find the proportion of respondents in each education category for a specific race/ethnicity category (use the `racehisp` variable), what might you do?
+
+```{r}
+table(gss_week3$racehisp)
+```
+
 
 ### REPLACE THIS LINE WITH YOUR CODE
 ```{r proportion table with indexing}
@@ -248,4 +263,13 @@ agekdbrn_edcat <- gss_week3 %>%
 
 agekdbrn_edcat
 ```
+
+```{r}
+test_1 <- ggplot(agekdbrn_edcat, aes(x = edcat, 
+                                     y = median_agekdbrn,
+                                fill = edcat))
+
+test_1 + geom_col() + geom_text(aes(label = median_agekdbrn))
+```
+
 
