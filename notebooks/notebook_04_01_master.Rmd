@@ -111,7 +111,8 @@ There are 32 observations where the value for `mobility` is "NA". That is R's wa
 cor(cz$commute15min, cz$mobility, use="complete")
 ```
 
-For many other functions, use `na.rm = TRUE` to remove all values with an NA. For example:
+For many other functions, use `
+na.rm = TRUE` to remove all values with an NA. For example:
 
 ```{r other functions with na}
 mean(cz$mobility, na.rm = TRUE)
