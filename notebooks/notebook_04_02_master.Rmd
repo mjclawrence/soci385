@@ -90,6 +90,15 @@ cor(cz$frac_foreign_born, cz$mobility,
     use = "complete")
 ```
 
+## Correlations With Indexing
+
+```{r}
+florida <- cz %>%
+    filter(state == "FL")
+
+cor(florida$social_capital_index, florida$mobility,
+    use = "complete")
+```
 
 
 # Plots With Labeled Points
@@ -133,10 +142,15 @@ mobility_commute_scatter + geom_point(color = "Light Gray") +
                color = "Blue", hjust = 1.1)
 ```
 
+
+```{r}
+cz$cz_name[cz$state=="NY"]
+```
+
 A second (much easier) option uses the `gghighlight` package. Install and load the package.
 
 ```{r install and load gghighlight}
-install.packages("gghighlight")
+#install.packages("gghighlight")
 library(gghighlight)
 ```
 
@@ -160,7 +174,7 @@ You can highlight points that fall within ranges of values as well. For example,
 ### REPLACE THIS LINE WITH YOUR CODE
 ```{r gghighlight exercise with label, warning = FALSE}
 mobility_commute_scatter + geom_point(color = "Blue") +
-     gghighlight(commute15min > .80,
-                 label_key = state)
+     gghighlight(commute15min >= .80,
+                 label_key = paste(state,",", cz_name))
 ```
 
