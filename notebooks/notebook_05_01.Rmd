@@ -159,7 +159,7 @@ quintile_plot1 + geom_col(position = "dodge") + # For side by side columns
 One popular package to use for adjusting color is the R Color Brewer package. You can install it and load it here:
 
 ```{r}
-#install.packages("RColorBrewer")
+install.packages("RColorBrewer")
 library(RColorBrewer)
 ```
 
