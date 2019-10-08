@@ -49,7 +49,7 @@ Let's review the matrix!
 matrix
 ```
 
-To only see some of the matrix, use indexing. We have indexed by value in the past, but we can also index by row and cell location in the dataframe. In this example, we want to pull the first three rows (1:3) and the first three columns (1:4):
+To only see some of the matrix, use indexing. We have indexed by value in the past, but we can also index by row and cell location in the dataframe. In this example, we want to pull the first three rows (1:3) and the first four columns (1:4):
 
 ```{r matrix with indexing}
 matrix[1:3, 1:4]
@@ -70,6 +70,20 @@ cor(cz_subset$hh_income, cz_subset$racial_seg,
 ```
 
 Would this association be the same in urban and rural commuting zones?
+
+```{r}
+cz_urban <- cz_subset %>%
+  filter(urban==1)
+
+cor(cz_urban$hh_income, cz_urban$racial_seg, use = "complete")
+```
+
+```{r}
+cz_rural <- cz_subset %>%
+  filter(urban==0)
+
+cor(cz_rural$hh_income, cz_rural$racial_seg, use = "complete")
+```
 
 ### REPLACE THIS LINE WITH YOUR CODE
 
@@ -223,7 +237,7 @@ library(RColorBrewer)
 
 quintile_plot1 + geom_col(position = "dodge") + # For side by side columns
      geom_text(position = position_dodge(1), vjust = -.25) +
-  scale_fill_brewer(palette = "RdYlGn") # Palette Name
+  scale_fill_brewer(palette = "RdYlBu") # Palette Name
 ```
 
 
@@ -233,7 +247,7 @@ Want other colors? I like the [`viridis color palettes`](https://cran.r-project.
 quintile_plot2 + geom_col() + 
      geom_text(aes(label = mean_racial_seg, vjust = -.25)) +
      facet_grid(.~urban) + guides(fill = FALSE) +
-     scale_fill_viridis_d() # The d is for a discrete variable
+     scale_fill_viridis_d(option = "cividis") # The d is for a discrete variable
 
 ```
 

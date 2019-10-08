@@ -1,0 +1,275 @@
+---
+title: "Introducing Probability"
+date: "October 7, 2019"
+author: "Matt Lawrence"
+output:
+  pdf_document: default
+---
+
+# Wrapping Up From Tuesday
+
+We'll start by finishing up a few last things about multivariate descriptives. Load the commuting zones dataset as a data frame called `cz` and load the usual packages. You can use the linked file today.
+
+```{r setting up data and packagaes, warning = FALSE, error = FALSE, message = FALSE}
+
+cz <- read.csv("https://raw.githubusercontent.com/lawrence-midd/soan385/spring2019/commuting_zones.csv")
+
+library(tidyverse)
+library(pander)
+```
+
+We will use the `urban` variable as a factor variable again.
+
+```{r make urban a factor variable}
+cz <- cz %>%
+     mutate(urban = factor(urban, 
+                           levels=c("0", "1"), 
+                           labels=c("Rural", "Urban")))
+```
+
+We finished on Tuesday with a table that showed the mean racial segregation value in each quintile of median income for rural and urban commuting zones. Here's that table:
+
+```{r start by creating the quintiles}
+cz_quintiles <- cz %>%
+     mutate(quintile = ntile(hh_income, 5)) %>% 
+     # Nice trick to get quintiles!
+     group_by(quintile, urban) %>% 
+     # Grouping by multiple variables
+     summarize(mean_racial_seg = round(mean(racial_seg),3)) 
+     # Round here
+
+pander(cz_quintiles)
+```
+
+In the table above we have long data but might prefer wide data. This would be a good time to use `spread()` rather than `gather()`. In the `spread()` line, we are saying we want to create a column for each level of the `urban` variable (so a column called `Rural` and a column called `Urban`), and we want the values of those variables to be the values of `mean_racial_seg` for each quintile-urban combination.
+
+```{r spread example}
+
+cz_spread <- cz_quintiles %>%
+     spread(urban, mean_racial_seg)
+
+cz_spread
+```
+
+Pander will make this table prettier...
+
+```{r pander the spread table}
+pander(cz_spread)
+```
+
+How to get back to long data using gather()?
+
+```{r gather example}
+
+cz_gather <- cz_spread %>%
+     gather(type, racial_seg, Rural:Urban)
+
+cz_gather
+```
+
+
+How could we visualize these three way relationships?
+
+One option for a plot is to use side by side *columns*. Why do we need to use the long data for this visualization rather than the wide data?
+
+```{r columns with dodge}
+quintile_plot1 <- ggplot(cz_quintiles, 
+                         aes(x = quintile, y = mean_racial_seg,
+                                          fill = urban, 
+                                          label = mean_racial_seg))
+
+quintile_plot1 + geom_col(position = "dodge") + # For side by side columns
+     geom_text(position = position_dodge(1), vjust = -.25) +
+     guides(fill = FALSE)
+```
+
+How would you describe how the relationship between income and racial segregation varies between urban and rural commuting zones?
+
+Maybe side by side plots (rather than side by side columns) would be preferable...
+
+```{r columns with facets}
+quintile_plot2 <- ggplot(cz_quintiles, aes(x = quintile, y = mean_racial_seg,
+                                           fill = urban))
+
+quintile_plot2 + geom_col() + 
+     geom_text(aes(label = mean_racial_seg, vjust = -.25)) + 
+     facet_grid(.~urban) + guides(fill = FALSE)
+```
+
+
+Want better colors? I like the [`viridis color palettes`](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html).
+
+```{r facet plot with viridis palette}
+quintile_plot2 + geom_col() + 
+     geom_text(aes(label = mean_racial_seg, vjust = -.25)) +
+     facet_grid(.~urban) + guides(fill = FALSE) +
+     scale_fill_viridis_d() # _d is for discrete; _c is for continuous
+
+# use scale_fill_viridis_d(option = "") to change viridis color scale
+```
+
+
+# Transitioning to Probabilty
+
+Let's move from multivariate descriptions to probability. We'll also switch datasets to look at some distributions across counties rather than commuting zones. Load the counties dataset to get started.
+
+```{r load data and packages, echo = FALSE, warning = FALSE, message = FALSE}
+counties <- read.csv("https://raw.githubusercontent.com/lawrence-midd/soan385/spring2019/counties.csv")
+```
+
+
+### BACK TO SLIDES; WE'LL RETURN TO R SOON ###
+
+
+
+
+# Introducing Probability And Z-Scores
+
+A z-score or standardized value is a value's distance from the mean in standard deviations. It is calculated as: $\Large{z = \frac{x - \mu}{\sigma}}$. In words, the z-score is the difference between the observed value and the sample mean divided by the standard deviation.
+
+After confirming that `teen_birthrate` is approximately normally distributed, let's make a new variable with the standardized values of `teen_birthrate`:
+
+```{r standardize values}
+counties <- mutate(counties,
+     teen_birthrate_z = (teen_birthrate - mean(teen_birthrate)) /
+                         sd(teen_birthrate))
+```
+
+Z-scores should be normally distributed with a mean of 0 and a standard deviation of 1. Were we successful?                        
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r check distribution of standardized values}
+summary(counties$teen_birthrate_z)
+
+sd(counties$teen_birthrate_z)
+```
+
+What is the z-score for Addison County, Vermont's birth rate? (Note that in the counties dataset you have to use the state's full name, not its abbreviation.)
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r standardized birthrate for addison county}
+counties$teen_birthrate_z[counties$county=="Addison" &
+                               counties$state=="Vermont"]
+```
+
+
+When we plot standardized values that are approximately normal, we now know a lot about the proportion of observations falling along different points of the distribution. To see how, make a density plot showing the distribution of the standardized teen birthrates.
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r plot standardized values}
+birthrate_z_plot <- ggplot(counties, aes(x = teen_birthrate_z))
+
+birthrate_z_plot + geom_density()
+```
+
+To find the probability of getting any z-score, use `dnorm()`. Think about this value as the y axis intersection with the density curve for any specific value on the x axis. For example, the probability that a randomly pulled county would have the same birthrate as Addison County, Vermont is:
+
+```{r dnorm to find density probability of z score}
+dnorm(-1.75531)
+```
+
+Probabilities of specific values are more helpful for descriptives than for inference. Moving forward, what is more helpful is knowing the probability of randomly pulling a value that is greater than or less than an observed value.  In other words, we want to add up the probabilities of pulling any value less than Addison County's value.
+
+We get that summed probability by thinking not of the density but of the *cumulative density*. The cumulative density is also the percentile.
+
+If you have the z-value and want the percentile associated with it, use `pnorm()`. For Addison County:
+
+```{r pnorm for percentile of z score}     
+pnorm(-1.75531)
+```
+
+The pnorm() function will give you the proportion of the distribution to the left of the z score. So about 4% of counties have a teen birth rate less than the teen birth rate of Addison County. Alternative, Addison County is at the 4th percentile in the national distribution of teen birth rates.
+
+We can also plot the entire *empirical cumulative density function*:
+
+```{r ecdf}
+birthrate_z_plot + geom_step(stat = "ecdf") + 
+     labs(y = "cumulative density")
+```
+
+Since normal distributions are symmetrical, the probability of getting a value that is more extreme of a negative z-score is the same as the probability of getting a value that is more extreme of that positive z-score.
+
+What is the z-score of Hamilton County, Florida?
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r symmetric z scores}
+counties$teen_birthrate_z[counties$county=="Hamilton" & 
+                               counties$state=="Florida"]
+```
+
+What is the probability of another county having a birth rate that is higher than that of Hamilton County?
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r proportion greater than positive z score}
+1 - pnorm(1.751348)
+```
+
+What proportion of counties have birth rates between those of Addison and Hamilton?
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r proportion between extremes}
+pnorm(1.751348) - pnorm(-1.75531)
+```
+
+
+# Exercise
+
+1. Choose a county and find its z-score for the average commute time (variable = `commute`). 
+
+2. What is the probability that a randomly pulled county will have an average commute time greater than the county you chose?
+
+3. What is the probability that a randomly pulled county will have an average commute time less than the county you chose?
+
+
+# Exercise Follow Up
+
+Start by calculating z-scores for all values of the `commute` variable:
+
+```{r standardize commute variable}
+counties <- mutate(counties, commute_z = 
+     (commute - mean(commute)) / sd(commute))
+```
+
+Find the z-score for a specific county:
+
+```{r find z score}
+counties$commute_z[counties$county=="Baltimore" & counties$state=="Maryland"]
+```
+
+Find the probability of a more extreme value than that z-score. In this case, the z-score is negative so we just use pnorm():
+
+```{r pnorm}
+pnorm(1.961353)
+```
+
+For the probability of z-score greater than this one, use:
+
+```{r}
+1 - pnorm(1.961353)
+```
+
+Plot it...
+
+```{r plot}
+commute_z_density <- with(density(counties$commute_z), data.frame(x , y))
+
+commute_cumulative_density_plot <- ggplot(data = commute_z_density, 
+                                          mapping = aes(x = x, y = y)) +
+     geom_line() +
+     geom_area(mapping = aes(x = ifelse(x >= 1.961353, x, 1.961353)),
+               fill = "red") + 
+     ylim(c(0, .5)) +
+     theme(axis.title = element_text(size = 24), 
+           axis.text = element_text(size = 20)) +
+     labs(x = "commute_z", y = "density")
+```
+
+```{r, warning = FALSE}
+commute_cumulative_density_plot
+```
