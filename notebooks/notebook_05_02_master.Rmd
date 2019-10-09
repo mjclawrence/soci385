@@ -117,6 +117,7 @@ pnorm(1.751348) - pnorm(-1.75531)
 ```
 
 
+
 # Exercise
 
 1. Choose a county and find its z-score for the average commute time (variable = `commute`). 
