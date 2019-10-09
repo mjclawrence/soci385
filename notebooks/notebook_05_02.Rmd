@@ -1,12 +1,3 @@
----
-title: "Introducing Probability"
-date: "March 14, 2019"
-author: "Matt Lawrence"
-output:
-  pdf_document: default
----
-
-
 # Transitioning to Probabilty
 
 Let's move from multivariate descriptions to probability, and we'll switch datasets to look at some distributions across counties rather than commuting zones. Load the counties dataset and the usual packages to get started.
