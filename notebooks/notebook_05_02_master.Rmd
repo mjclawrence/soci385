@@ -1,6 +1,6 @@
 ---
 title: "Introducing Probability"
-date: "March 14, 2019"
+date: "October 9, 2019"
 author: "Matt Lawrence"
 output:
   pdf_document: default
@@ -9,10 +9,13 @@ output:
 
 # Transitioning to Probabilty
 
-Let's move from multivariate descriptions to probability, and we'll switch datasets to look at some distributions across counties rather than commuting zones. Load the counties dataset and the usual packages to get started.
+Today we'll move from multivariate descriptions to probability, and we'll switch datasets to look at some distributions across counties rather than commuting zones. Load the counties dataset and the usual packages to get started.
 
 ```{r load data and packages, echo = FALSE, warning = FALSE, message = FALSE}
-counties <- read.csv("https://raw.githubusercontent.com/lawrence-midd/soan385/spring2019/counties.csv")
+library(pander)
+library(tidyverse)
+
+counties <- read.csv("https://raw.githubusercontent.com/mjclawrence/soci385/master/data/counties.csv")
 ```
 
 
@@ -135,7 +138,7 @@ counties <- mutate(counties, commute_z =
 Find the z-score for a specific county:
 
 ```{r find z score}
-counties$commute_z[counties$county=="Baltimore" & counties$state=="Maryland"]
+counties$commute_z[counties$county=="Allegheny" & counties$state=="Pennsylvania"]
 ```
 
 Find the probability of a more extreme value than that z-score. In this case, the z-score is negative so we just use pnorm():
