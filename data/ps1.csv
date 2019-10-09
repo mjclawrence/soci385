@@ -1,0 +1,734 @@
+class,joindem,attrally,id,age,educ,degree,sex,polviews,racespeech,racehisp,num_action
+Working,No But I Might,No But I Might,3,60,13,HS Diploma,Male,5,Allowed,White,3
+Middle,Before Last Year,Before Last Year,6,57,17,College Degree,Female,5,Allowed,White,6
+Working,No And I Will Not,No And I Will Not,10,31,15,Some College,Female,3,Allowed,Hispanic,2
+Working,No And I Will Not,No And I Will Not,13,70,8,Less Than HS,Male,3,Allowed,White,0
+Lower,No And I Will Not,No And I Will Not,17,52,13,HS Diploma,Female,7,Not allowed,Other,0
+Working,No And I Will Not,No And I Will Not,18,47,13,HS Diploma,Male,4,Allowed,White,0
+Middle,No And I Will Not,No And I Will Not,20,40,8,Less Than HS,Female,4,Not allowed,Hispanic,0
+Working,No But I Might,No But I Might,25,39,15,HS Diploma,Female,2,Allowed,Hispanic,0
+Working,Before Last Year,Before Last Year,30,55,16,College Degree,Male,1,Allowed,White,7
+Working,Before Last Year,No And I Will Not,34,48,16,College Degree,Male,4,Allowed,White,4
+Lower,No And I Will Not,Before Last Year,37,39,11,Less Than HS,Female,3,Not allowed,Hispanic,1
+Middle,No But I Might,Before Last Year,41,62,17,College Degree,Female,4,Allowed,White,6
+Middle,No And I Will Not,No And I Will Not,47,31,15,Some College,Male,6,Not allowed,White,1
+Middle,No And I Will Not,No And I Will Not,48,60,11,HS Diploma,Male,4,Allowed,White,0
+Working,No But I Might,No But I Might,53,30,14,Some College,Male,2,Not allowed,Hispanic,4
+Middle,Before Last Year,No And I Will Not,55,52,18,Grad/Prof Degree,Male,5,Allowed,Other,3
+Lower,Before Last Year,Before Last Year,57,64,15,HS Diploma,Female,5,Allowed,White,6
+Working,No But I Might,No But I Might,61,52,16,Grad/Prof Degree,Male,5,Allowed,White,2
+Middle,No And I Will Not,No But I Might,64,48,16,Grad/Prof Degree,Female,4,Allowed,Other,2
+Middle,No But I Might,No But I Might,65,35,20,Grad/Prof Degree,Male,5,Not allowed,Other,0
+Upper,No But I Might,No But I Might,66,70,16,Grad/Prof Degree,Male,2,Allowed,White,6
+Upper,No And I Will Not,Before Last Year,67,66,16,College Degree,Female,7,Not allowed,White,1
+Working,No And I Will Not,No But I Might,69,25,16,College Degree,Male,5,Allowed,White,1
+Working,No But I Might,No But I Might,70,33,12,HS Diploma,Male,4,Not allowed,White,0
+Middle,In Past Year,In Past Year,75,40,20,Grad/Prof Degree,Female,2,Allowed,White,8
+Upper,Before Last Year,In Past Year,78,59,16,College Degree,Female,3,Not allowed,White,5
+Working,No And I Will Not,No And I Will Not,82,41,10,Less Than HS,Female,2,Allowed,Hispanic,0
+Working,No But I Might,No And I Will Not,88,42,16,College Degree,Male,4,Allowed,Black,0
+Middle,No And I Will Not,No And I Will Not,92,73,12,HS Diploma,Female,4,Not allowed,Hispanic,0
+Middle,Before Last Year,Before Last Year,93,28,16,College Degree,Female,3,Allowed,Black,7
+Working,No But I Might,No But I Might,96,27,14,Some College,Female,5,Not allowed,Black,1
+Working,No But I Might,Before Last Year,97,29,13,HS Diploma,Female,4,Allowed,Hispanic,3
+Working,No But I Might,No But I Might,98,38,12,HS Diploma,Female,6,Not allowed,Black,1
+Middle,No But I Might,No But I Might,99,18,17,Grad/Prof Degree,Female,4,Not allowed,Black,3
+Working,No But I Might,No But I Might,103,66,12,HS Diploma,Female,6,Not allowed,Black,1
+Middle,Before Last Year,Before Last Year,119,45,20,Grad/Prof Degree,Male,2,Not allowed,Hispanic,7
+Working,Before Last Year,Before Last Year,121,42,16,College Degree,Male,2,Allowed,White,8
+Middle,Before Last Year,In Past Year,126,69,19,Grad/Prof Degree,Female,4,Allowed,White,7
+Working,No But I Might,No But I Might,129,30,16,Some College,Female,4,Not allowed,Black,1
+Working,Before Last Year,No And I Will Not,133,55,14,HS Diploma,Female,4,Not allowed,Black,4
+Middle,Before Last Year,Before Last Year,134,65,18,Grad/Prof Degree,Female,2,Allowed,Black,5
+Middle,No But I Might,No But I Might,136,31,20,Grad/Prof Degree,Female,3,Allowed,Hispanic,3
+Middle,No But I Might,No But I Might,137,62,20,Grad/Prof Degree,Male,7,Allowed,White,3
+Working,No And I Will Not,No And I Will Not,139,42,20,Grad/Prof Degree,Male,4,Allowed,Hispanic,0
+Middle,No And I Will Not,No But I Might,140,58,16,College Degree,Female,5,Not allowed,Other,2
+Middle,No But I Might,No But I Might,142,41,20,Grad/Prof Degree,Male,6,Allowed,White,1
+Working,No But I Might,Before Last Year,148,46,18,Grad/Prof Degree,Female,2,Allowed,White,5
+Lower,In Past Year,No And I Will Not,159,52,6,Less Than HS,Male,5,Not allowed,Hispanic,2
+Middle,No And I Will Not,No And I Will Not,166,83,12,HS Diploma,Female,4,Allowed,White,0
+Working,No But I Might,No But I Might,167,51,14,Some College,Female,4,Allowed,White,4
+Working,No But I Might,Before Last Year,173,56,14,Some College,Male,6,Allowed,Hispanic,3
+Middle,No But I Might,In Past Year,174,63,17,Grad/Prof Degree,Female,5,Allowed,White,5
+Middle,No And I Will Not,Before Last Year,175,78,12,HS Diploma,Female,4,Not allowed,White,3
+Middle,No But I Might,No But I Might,176,47,16,College Degree,Male,2,Allowed,White,5
+Working,Before Last Year,Before Last Year,189,49,16,College Degree,Male,3,Allowed,Black,4
+Working,No And I Will Not,No But I Might,190,32,14,HS Diploma,Male,4,Not allowed,Black,3
+Working,No And I Will Not,No And I Will Not,193,27,12,HS Diploma,Female,2,Not allowed,Hispanic,0
+Working,No And I Will Not,No And I Will Not,194,55,10,Less Than HS,Female,4,Not allowed,Hispanic,0
+Middle,No And I Will Not,No And I Will Not,196,80,12,HS Diploma,Female,4,Not allowed,White,1
+Working,No And I Will Not,No And I Will Not,198,28,12,HS Diploma,Male,2,Allowed,Hispanic,2
+Working,Before Last Year,No And I Will Not,202,26,13,HS Diploma,Male,4,Allowed,Black,2
+Lower,No And I Will Not,No And I Will Not,204,35,5,Less Than HS,Female,4,Allowed,Black,1
+Working,No But I Might,No And I Will Not,207,35,11,HS Diploma,Female,2,Not allowed,Hispanic,0
+Working,No And I Will Not,No And I Will Not,208,23,11,Less Than HS,Female,4,Allowed,Hispanic,0
+Working,No And I Will Not,No And I Will Not,212,55,6,Less Than HS,Female,5,Not allowed,Hispanic,0
+Working,No And I Will Not,No And I Will Not,216,20,12,HS Diploma,Male,4,Allowed,Black,0
+Middle,No But I Might,No But I Might,218,47,16,HS Diploma,Male,4,Allowed,Other,4
+Upper,Before Last Year,Before Last Year,227,62,17,Grad/Prof Degree,Male,2,Allowed,White,6
+Lower,No And I Will Not,No And I Will Not,228,79,13,HS Diploma,Female,4,Not allowed,Black,0
+Middle,Before Last Year,No But I Might,233,38,14,Some College,Male,2,Allowed,Hispanic,2
+Working,No But I Might,No But I Might,238,31,16,College Degree,Female,2,Not allowed,White,2
+Lower,No And I Will Not,No And I Will Not,240,47,5,Less Than HS,Female,5,Not allowed,Hispanic,0
+Working,No And I Will Not,No And I Will Not,245,59,2,Less Than HS,Male,4,Not allowed,Hispanic,0
+Middle,No And I Will Not,No And I Will Not,248,89,12,HS Diploma,Male,7,Allowed,White,0
+Working,No But I Might,No But I Might,255,46,12,HS Diploma,Female,4,Allowed,White,5
+Middle,No And I Will Not,No And I Will Not,262,43,11,Less Than HS,Female,5,Not allowed,Hispanic,0
+Middle,No And I Will Not,No And I Will Not,265,81,11,Less Than HS,Female,4,Not allowed,White,1
+Middle,No But I Might,Before Last Year,272,82,16,College Degree,Male,6,Allowed,White,5
+Middle,No And I Will Not,No And I Will Not,273,64,16,College Degree,Female,5,Not allowed,Black,0
+Working,Before Last Year,No But I Might,274,49,12,HS Diploma,Male,4,Not allowed,Black,3
+Middle,No And I Will Not,No And I Will Not,275,49,12,HS Diploma,Female,4,Not allowed,Hispanic,0
+Middle,No And I Will Not,No And I Will Not,276,58,13,HS Diploma,Male,5,Allowed,Black,1
+Middle,No And I Will Not,No And I Will Not,277,30,14,HS Diploma,Female,2,Not allowed,Hispanic,2
+Middle,No And I Will Not,No And I Will Not,289,40,10,Less Than HS,Female,5,Allowed,Hispanic,0
+Working,No But I Might,In Past Year,291,40,15,HS Diploma,Female,6,Allowed,White,6
+Middle,No And I Will Not,Before Last Year,294,82,10,Less Than HS,Female,4,Not allowed,White,2
+Working,No And I Will Not,In Past Year,297,32,15,HS Diploma,Female,3,Allowed,White,3
+Middle,Before Last Year,Before Last Year,298,62,12,HS Diploma,Male,7,Allowed,Hispanic,5
+Middle,No But I Might,No But I Might,303,85,16,Grad/Prof Degree,Female,5,Allowed,White,2
+Middle,No And I Will Not,No And I Will Not,308,79,8,Less Than HS,Female,2,Not allowed,White,1
+Working,No And I Will Not,No And I Will Not,310,74,11,Less Than HS,Female,6,Allowed,Hispanic,1
+Middle,No But I Might,No But I Might,312,31,20,Grad/Prof Degree,Female,3,Allowed,White,4
+Working,No And I Will Not,No And I Will Not,315,41,12,HS Diploma,Female,5,Allowed,Black,0
+Working,No And I Will Not,No But I Might,326,51,12,HS Diploma,Female,4,Not allowed,Hispanic,1
+Working,No But I Might,No But I Might,327,37,9,HS Diploma,Female,3,Not allowed,Hispanic,3
+Middle,No But I Might,No But I Might,328,35,15,HS Diploma,Female,3,Allowed,Hispanic,2
+Middle,Before Last Year,Before Last Year,341,40,18,HS Diploma,Female,3,Allowed,Other,7
+Middle,In Past Year,In Past Year,350,43,20,Grad/Prof Degree,Female,2,Not allowed,White,8
+Middle,No But I Might,Before Last Year,351,71,18,Grad/Prof Degree,Male,6,Allowed,White,6
+Middle,No But I Might,No And I Will Not,353,54,13,HS Diploma,Female,3,Not allowed,White,2
+Working,No But I Might,No But I Might,356,29,13,HS Diploma,Male,2,Allowed,Other,2
+Lower,No And I Will Not,No But I Might,359,36,11,Less Than HS,Female,4,Allowed,White,6
+Middle,Before Last Year,In Past Year,360,51,16,Grad/Prof Degree,Female,2,Allowed,White,6
+Working,No But I Might,Before Last Year,363,33,17,HS Diploma,Female,1,Allowed,White,6
+Middle,No But I Might,No But I Might,366,50,16,College Degree,Male,6,Allowed,White,4
+Middle,No But I Might,No But I Might,369,50,16,College Degree,Female,4,Allowed,White,3
+Upper,No And I Will Not,No And I Will Not,372,68,20,Grad/Prof Degree,Male,4,Allowed,Other,1
+Middle,No And I Will Not,No But I Might,373,70,16,College Degree,Female,6,Allowed,White,2
+Middle,No But I Might,In Past Year,374,66,15,HS Diploma,Male,5,Not allowed,White,3
+Middle,No But I Might,No But I Might,375,53,12,HS Diploma,Male,6,Allowed,White,4
+Middle,Before Last Year,No But I Might,377,61,13,HS Diploma,Male,2,Allowed,White,2
+Middle,No And I Will Not,No But I Might,380,37,18,Grad/Prof Degree,Female,4,Not allowed,White,1
+Working,No And I Will Not,No But I Might,382,20,10,Less Than HS,Male,4,Not allowed,White,0
+Lower,No And I Will Not,No And I Will Not,387,39,15,Some College,Female,4,Not allowed,Black,1
+Middle,Before Last Year,Before Last Year,400,65,16,College Degree,Female,2,Allowed,White,7
+Working,No But I Might,No But I Might,401,42,12,HS Diploma,Female,4,Allowed,White,3
+Working,No But I Might,No But I Might,402,59,12,HS Diploma,Male,6,Allowed,White,2
+Middle,No And I Will Not,No But I Might,411,36,19,Grad/Prof Degree,Male,3,Allowed,White,2
+Working,No And I Will Not,No And I Will Not,412,73,13,HS Diploma,Female,6,Allowed,White,1
+Working,No But I Might,No But I Might,417,38,16,College Degree,Female,3,Allowed,Black,5
+Middle,No But I Might,No But I Might,418,36,17,College Degree,Female,3,Not allowed,White,3
+Middle,No But I Might,No But I Might,419,63,13,HS Diploma,Female,4,Not allowed,Black,1
+Working,No And I Will Not,Before Last Year,421,71,16,College Degree,Male,6,Allowed,White,4
+Middle,No But I Might,Before Last Year,425,56,20,Grad/Prof Degree,Male,5,Allowed,White,5
+Middle,No And I Will Not,No And I Will Not,429,43,9,Less Than HS,Male,4,Not allowed,Hispanic,0
+Middle,No But I Might,No But I Might,434,19,11,Less Than HS,Female,3,Allowed,Black,1
+Middle,Before Last Year,Before Last Year,435,42,11,HS Diploma,Male,4,Allowed,White,8
+Middle,No But I Might,No But I Might,436,57,18,Grad/Prof Degree,Male,6,Allowed,White,4
+Middle,No And I Will Not,No But I Might,437,46,12,HS Diploma,Male,4,Allowed,White,1
+Working,No But I Might,In Past Year,440,26,16,Grad/Prof Degree,Female,3,Not allowed,Other,4
+Middle,No And I Will Not,No And I Will Not,442,37,20,Grad/Prof Degree,Male,4,Allowed,White,1
+Working,No But I Might,No But I Might,443,66,12,HS Diploma,Male,2,Allowed,White,4
+Working,In Past Year,In Past Year,453,32,19,Grad/Prof Degree,Male,4,Allowed,Black,6
+Middle,Before Last Year,Before Last Year,454,33,20,Grad/Prof Degree,Male,1,Allowed,White,7
+Lower,No And I Will Not,No But I Might,460,66,13,HS Diploma,Male,4,Not allowed,White,4
+Middle,No And I Will Not,No And I Will Not,462,46,18,Grad/Prof Degree,Female,4,Not allowed,White,1
+Working,Before Last Year,Before Last Year,467,61,12,HS Diploma,Male,2,Not allowed,Other,7
+Middle,Before Last Year,No But I Might,468,39,9,Less Than HS,Male,5,Not allowed,White,3
+Working,No But I Might,No But I Might,474,25,17,HS Diploma,Female,4,Not allowed,White,1
+Middle,No But I Might,Before Last Year,477,56,16,College Degree,Female,4,Allowed,White,3
+Middle,No And I Will Not,No But I Might,478,71,12,HS Diploma,Male,5,Allowed,White,2
+Working,No And I Will Not,In Past Year,480,64,13,HS Diploma,Male,6,Allowed,White,2
+Middle,No But I Might,Before Last Year,481,70,16,College Degree,Female,4,Allowed,White,4
+Lower,In Past Year,In Past Year,484,44,19,Grad/Prof Degree,Male,5,Allowed,White,8
+Working,No But I Might,No And I Will Not,485,32,12,Less Than HS,Male,5,Allowed,White,1
+Upper,Before Last Year,Before Last Year,490,48,18,Grad/Prof Degree,Female,3,Allowed,White,7
+Working,No But I Might,No And I Will Not,491,55,16,College Degree,Female,3,Allowed,Other,2
+Upper,Before Last Year,Before Last Year,494,55,18,Grad/Prof Degree,Female,2,Allowed,White,4
+Middle,Before Last Year,Before Last Year,495,58,18,Grad/Prof Degree,Female,2,Allowed,White,7
+Middle,No And I Will Not,No But I Might,498,70,12,Less Than HS,Male,4,Not allowed,White,1
+Working,In Past Year,No But I Might,500,66,13,HS Diploma,Female,4,Not allowed,Other,1
+Middle,Before Last Year,Before Last Year,504,55,16,College Degree,Male,3,Allowed,White,7
+Middle,No But I Might,Before Last Year,507,41,16,Grad/Prof Degree,Female,4,Not allowed,Other,4
+Middle,No And I Will Not,No And I Will Not,510,59,16,HS Diploma,Female,4,Allowed,Hispanic,0
+Working,No And I Will Not,No And I Will Not,511,38,15,HS Diploma,Female,4,Not allowed,Black,0
+Working,Before Last Year,In Past Year,513,61,17,Some College,Female,7,Allowed,Hispanic,6
+Working,No But I Might,Before Last Year,522,38,16,Some College,Female,1,Allowed,Black,3
+Middle,Before Last Year,No But I Might,531,29,17,College Degree,Male,1,Allowed,White,6
+Working,No But I Might,No But I Might,537,34,12,HS Diploma,Female,5,Not allowed,Hispanic,1
+Middle,No But I Might,No But I Might,538,43,17,College Degree,Female,3,Allowed,White,3
+Working,No And I Will Not,No And I Will Not,544,31,16,College Degree,Female,2,Not allowed,White,2
+Middle,No And I Will Not,No But I Might,549,65,16,College Degree,Female,5,Allowed,White,3
+Middle,No But I Might,Before Last Year,552,51,17,College Degree,Male,4,Allowed,White,7
+Working,No But I Might,Before Last Year,553,39,16,College Degree,Female,6,Not allowed,Hispanic,6
+Middle,No And I Will Not,No And I Will Not,557,50,14,HS Diploma,Female,2,Allowed,White,3
+Middle,No But I Might,Before Last Year,562,69,13,HS Diploma,Female,6,Allowed,White,5
+Working,No But I Might,No But I Might,564,54,12,HS Diploma,Male,6,Allowed,White,3
+Upper,No And I Will Not,Before Last Year,568,45,16,College Degree,Female,6,Allowed,White,3
+Upper,Before Last Year,In Past Year,569,57,14,HS Diploma,Male,2,Allowed,Black,8
+Upper,No And I Will Not,No And I Will Not,570,32,13,Less Than HS,Female,1,Allowed,Black,1
+Middle,No And I Will Not,No But I Might,581,73,20,Grad/Prof Degree,Female,5,Allowed,White,4
+Working,No And I Will Not,No And I Will Not,584,55,16,College Degree,Female,5,Allowed,White,1
+Lower,No And I Will Not,No And I Will Not,589,48,13,HS Diploma,Male,4,Not allowed,Black,0
+Working,No And I Will Not,Before Last Year,591,43,15,HS Diploma,Female,4,Not allowed,Black,1
+Middle,No But I Might,No But I Might,593,67,15,HS Diploma,Male,7,Allowed,White,1
+Working,No And I Will Not,No And I Will Not,597,59,13,HS Diploma,Female,2,Not allowed,White,1
+Working,No And I Will Not,Before Last Year,598,77,14,Some College,Female,4,Not allowed,White,3
+Middle,Before Last Year,No But I Might,599,67,16,College Degree,Male,2,Not allowed,Black,2
+Middle,No And I Will Not,No And I Will Not,606,62,12,HS Diploma,Female,4,Allowed,White,1
+Middle,No But I Might,No And I Will Not,615,30,16,College Degree,Male,4,Not allowed,Other,2
+Upper,No But I Might,No But I Might,616,37,16,College Degree,Male,2,Allowed,White,2
+Working,No But I Might,No But I Might,624,41,16,College Degree,Male,2,Allowed,Other,2
+Middle,Before Last Year,Before Last Year,632,42,13,HS Diploma,Male,1,Allowed,White,8
+Lower,Before Last Year,Before Last Year,636,31,13,HS Diploma,Male,5,Not allowed,White,6
+Working,No But I Might,In Past Year,639,27,14,Some College,Female,4,Allowed,Black,4
+Working,No But I Might,No But I Might,643,51,13,HS Diploma,Female,4,Not allowed,White,2
+Middle,Before Last Year,Before Last Year,646,54,14,HS Diploma,Male,4,Allowed,White,4
+Lower,No But I Might,No And I Will Not,647,32,13,HS Diploma,Female,5,Not allowed,White,0
+Middle,Before Last Year,No And I Will Not,648,38,17,College Degree,Female,4,Not allowed,Black,3
+Middle,Before Last Year,No But I Might,650,41,19,Grad/Prof Degree,Female,1,Allowed,White,5
+Working,No But I Might,Before Last Year,655,58,15,HS Diploma,Male,4,Allowed,White,5
+Middle,Before Last Year,No And I Will Not,658,25,13,HS Diploma,Female,5,Not allowed,Black,1
+Working,No And I Will Not,No And I Will Not,660,63,12,HS Diploma,Female,5,Allowed,Black,3
+Working,Before Last Year,No And I Will Not,662,55,12,HS Diploma,Male,4,Not allowed,Black,1
+Working,In Past Year,Before Last Year,666,28,12,HS Diploma,Female,4,Not allowed,Black,5
+Middle,No But I Might,In Past Year,667,37,16,College Degree,Male,5,Allowed,White,7
+Middle,No And I Will Not,Before Last Year,669,60,12,HS Diploma,Female,5,Not allowed,White,4
+Working,No But I Might,No But I Might,670,64,13,HS Diploma,Male,7,Allowed,White,3
+Middle,No But I Might,No But I Might,673,37,18,Grad/Prof Degree,Female,6,Allowed,Black,3
+Working,No But I Might,No But I Might,691,62,16,College Degree,Female,6,Not allowed,White,2
+Middle,In Past Year,No But I Might,696,34,16,College Degree,Female,6,Not allowed,White,4
+Middle,No And I Will Not,Before Last Year,698,35,16,College Degree,Female,4,Allowed,White,6
+Working,Before Last Year,Before Last Year,701,40,20,Grad/Prof Degree,Male,2,Allowed,Black,6
+Upper,No And I Will Not,No And I Will Not,702,71,12,HS Diploma,Female,4,Not allowed,Black,1
+Working,No But I Might,No But I Might,707,58,12,HS Diploma,Male,5,Not allowed,White,1
+Working,No But I Might,Before Last Year,709,54,11,HS Diploma,Male,5,Allowed,White,5
+Middle,No But I Might,No But I Might,713,88,12,HS Diploma,Female,6,Allowed,White,3
+Working,No But I Might,No But I Might,719,22,12,HS Diploma,Male,4,Not allowed,Black,3
+Upper,In Past Year,In Past Year,721,60,8,Less Than HS,Female,5,Allowed,Black,6
+Working,No And I Will Not,No And I Will Not,723,38,6,Less Than HS,Male,4,Not allowed,Hispanic,0
+Working,No But I Might,No But I Might,729,54,16,College Degree,Female,4,Allowed,Black,2
+Middle,No But I Might,No But I Might,735,53,10,Less Than HS,Female,6,Allowed,White,2
+Middle,No And I Will Not,No But I Might,736,49,12,HS Diploma,Female,6,Not allowed,White,4
+Middle,No But I Might,No But I Might,745,30,12,HS Diploma,Male,4,Not allowed,Hispanic,0
+Working,No And I Will Not,No And I Will Not,746,33,14,Some College,Female,4,Not allowed,Black,1
+Working,No But I Might,No But I Might,748,49,20,College Degree,Female,3,Allowed,Hispanic,0
+Working,No But I Might,No But I Might,749,54,12,HS Diploma,Male,4,Not allowed,Hispanic,1
+Working,No And I Will Not,No And I Will Not,750,46,11,Less Than HS,Male,4,Not allowed,Hispanic,0
+Working,No But I Might,No But I Might,754,80,9,Less Than HS,Male,4,Not allowed,Black,3
+Middle,Before Last Year,No But I Might,760,73,8,Less Than HS,Female,6,Not allowed,Hispanic,1
+Middle,No And I Will Not,No And I Will Not,762,80,12,HS Diploma,Male,4,Not allowed,Hispanic,0
+Working,No And I Will Not,No And I Will Not,764,76,12,HS Diploma,Female,5,Not allowed,Hispanic,0
+Middle,No But I Might,No But I Might,772,41,20,Grad/Prof Degree,Male,6,Allowed,Hispanic,2
+Lower,No But I Might,No But I Might,780,19,13,HS Diploma,Female,5,Allowed,Black,3
+Working,No But I Might,No But I Might,781,34,13,HS Diploma,Male,4,Allowed,Hispanic,1
+Working,Before Last Year,No And I Will Not,782,43,12,HS Diploma,Male,7,Allowed,White,3
+Middle,Before Last Year,No And I Will Not,786,41,19,Grad/Prof Degree,Female,4,Allowed,White,4
+Working,No But I Might,Before Last Year,790,67,13,HS Diploma,Male,3,Not allowed,Black,2
+Middle,No But I Might,No And I Will Not,792,50,13,HS Diploma,Male,3,Not allowed,Black,3
+Middle,No And I Will Not,No And I Will Not,797,57,10,Less Than HS,Female,2,Allowed,Black,1
+Working,Before Last Year,In Past Year,798,27,15,HS Diploma,Male,4,Allowed,Black,5
+Working,No But I Might,No But I Might,799,27,16,HS Diploma,Female,3,Not allowed,Black,2
+Middle,Before Last Year,Before Last Year,800,21,12,HS Diploma,Male,4,Not allowed,White,5
+Middle,No But I Might,Before Last Year,807,54,19,Grad/Prof Degree,Male,6,Allowed,White,5
+Middle,No But I Might,No But I Might,808,38,19,College Degree,Male,5,Allowed,White,1
+Working,No And I Will Not,No And I Will Not,810,55,8,Less Than HS,Male,1,Allowed,Hispanic,0
+Lower,No But I Might,Before Last Year,812,38,16,Some College,Female,2,Allowed,Black,5
+Lower,Before Last Year,No And I Will Not,814,23,12,HS Diploma,Male,7,Allowed,White,2
+Working,No But I Might,No And I Will Not,818,57,12,HS Diploma,Female,2,Not allowed,White,3
+Working,No But I Might,No But I Might,823,54,11,HS Diploma,Female,4,Not allowed,White,2
+Working,No But I Might,No But I Might,827,37,14,Some College,Female,2,Allowed,White,3
+Working,No And I Will Not,No And I Will Not,829,32,16,HS Diploma,Female,4,Allowed,White,0
+Lower,No But I Might,No But I Might,833,24,13,HS Diploma,Female,5,Allowed,Black,3
+Working,No But I Might,No But I Might,836,20,14,Some College,Female,4,Allowed,Black,0
+Middle,No But I Might,No But I Might,837,74,14,HS Diploma,Female,1,Not allowed,White,3
+Working,Before Last Year,No But I Might,839,74,16,College Degree,Female,2,Not allowed,White,5
+Middle,Before Last Year,Before Last Year,844,68,17,College Degree,Female,3,Allowed,White,6
+Upper,No And I Will Not,No And I Will Not,845,62,18,Grad/Prof Degree,Female,4,Allowed,Other,2
+Middle,No But I Might,Before Last Year,847,40,16,College Degree,Female,2,Allowed,White,6
+Middle,No But I Might,No But I Might,858,60,12,HS Diploma,Female,6,Not allowed,Black,0
+Middle,Before Last Year,No But I Might,862,61,19,Grad/Prof Degree,Female,2,Allowed,White,5
+Lower,In Past Year,No And I Will Not,870,55,14,Less Than HS,Female,6,Not allowed,Hispanic,4
+Middle,Before Last Year,Before Last Year,872,53,20,Grad/Prof Degree,Male,5,Allowed,White,8
+Middle,No And I Will Not,No And I Will Not,876,39,10,Less Than HS,Female,3,Allowed,Hispanic,0
+Middle,No But I Might,No But I Might,878,32,13,HS Diploma,Male,4,Not allowed,White,3
+Working,No And I Will Not,No And I Will Not,879,57,16,HS Diploma,Female,5,Not allowed,Black,0
+Working,Before Last Year,Before Last Year,880,35,17,Grad/Prof Degree,Male,4,Allowed,White,4
+Middle,No And I Will Not,No And I Will Not,885,69,7,Less Than HS,Male,6,Not allowed,Hispanic,0
+Lower,No And I Will Not,No And I Will Not,888,72,8,Less Than HS,Female,4,Not allowed,White,2
+Middle,No But I Might,Before Last Year,889,31,16,College Degree,Female,6,Allowed,White,5
+Middle,Before Last Year,Before Last Year,891,29,14,HS Diploma,Female,4,Allowed,White,2
+Middle,No But I Might,Before Last Year,892,61,20,Grad/Prof Degree,Male,6,Allowed,White,7
+Working,No But I Might,No But I Might,893,38,12,HS Diploma,Male,5,Allowed,White,4
+Middle,No But I Might,No But I Might,896,20,13,HS Diploma,Male,3,Not allowed,White,2
+Middle,No And I Will Not,No But I Might,907,60,13,HS Diploma,Female,7,Allowed,White,3
+Working,No And I Will Not,No But I Might,909,33,14,HS Diploma,Female,4,Allowed,Other,2
+Working,No And I Will Not,No And I Will Not,914,45,8,Less Than HS,Female,2,Allowed,Other,0
+Working,No And I Will Not,No But I Might,915,45,12,HS Diploma,Male,3,Not allowed,Hispanic,0
+Middle,No But I Might,In Past Year,921,54,16,College Degree,Male,6,Allowed,White,5
+Working,No And I Will Not,No But I Might,925,61,12,HS Diploma,Male,5,Allowed,White,3
+Middle,No And I Will Not,Before Last Year,926,55,8,Less Than HS,Female,6,Not allowed,Other,5
+Working,No And I Will Not,Before Last Year,927,39,16,College Degree,Female,4,Not allowed,Hispanic,2
+Working,Before Last Year,Before Last Year,931,60,12,HS Diploma,Male,4,Allowed,White,6
+Middle,No But I Might,No But I Might,933,38,14,HS Diploma,Male,2,Not allowed,White,0
+Working,No And I Will Not,No And I Will Not,938,28,11,Less Than HS,Female,4,Not allowed,Hispanic,0
+Middle,No But I Might,Before Last Year,951,72,18,Grad/Prof Degree,Female,3,Not allowed,White,6
+Middle,Before Last Year,In Past Year,958,54,16,College Degree,Male,2,Allowed,White,7
+Middle,No But I Might,No And I Will Not,966,71,16,College Degree,Female,2,Allowed,White,3
+Working,No But I Might,No And I Will Not,967,28,5,Less Than HS,Female,2,Allowed,White,3
+Middle,Before Last Year,Before Last Year,970,65,16,College Degree,Male,5,Allowed,White,6
+Middle,In Past Year,In Past Year,976,19,12,HS Diploma,Male,4,Allowed,Hispanic,3
+Working,No But I Might,No But I Might,979,63,16,HS Diploma,Male,6,Allowed,White,4
+Working,No But I Might,No But I Might,981,51,12,HS Diploma,Female,2,Not allowed,White,4
+Upper,No And I Will Not,No But I Might,982,24,16,College Degree,Female,5,Allowed,White,3
+Middle,No And I Will Not,No And I Will Not,990,89,13,HS Diploma,Female,4,Allowed,White,0
+Middle,No And I Will Not,No And I Will Not,994,89,12,HS Diploma,Female,4,Not allowed,White,0
+Middle,No And I Will Not,Before Last Year,997,76,12,HS Diploma,Female,4,Not allowed,White,2
+Working,No And I Will Not,Before Last Year,1001,36,13,HS Diploma,Male,5,Allowed,White,3
+Middle,No But I Might,No But I Might,1003,22,12,HS Diploma,Male,4,Not allowed,White,1
+Middle,No But I Might,No But I Might,1008,34,16,College Degree,Female,4,Not allowed,White,1
+Working,No And I Will Not,No And I Will Not,1011,37,12,HS Diploma,Male,3,Allowed,White,0
+Working,No And I Will Not,No But I Might,1029,60,12,HS Diploma,Female,2,Allowed,White,0
+Working,No And I Will Not,No And I Will Not,1034,68,12,HS Diploma,Female,6,Allowed,White,1
+Middle,No But I Might,No But I Might,1038,61,12,HS Diploma,Male,4,Allowed,White,1
+Upper,No But I Might,Before Last Year,1048,68,18,Grad/Prof Degree,Male,5,Allowed,White,4
+Middle,No But I Might,Before Last Year,1054,63,18,Grad/Prof Degree,Male,2,Not allowed,Hispanic,6
+Middle,No And I Will Not,Before Last Year,1055,84,18,Grad/Prof Degree,Female,6,Not allowed,White,3
+Middle,No And I Will Not,Before Last Year,1056,42,18,College Degree,Female,3,Not allowed,White,3
+Working,No But I Might,No But I Might,1060,27,13,HS Diploma,Male,2,Not allowed,White,1
+Working,No And I Will Not,No And I Will Not,1063,73,16,College Degree,Female,4,Not allowed,Black,2
+Middle,No But I Might,No But I Might,1071,43,16,Some College,Female,4,Not allowed,White,1
+Middle,No And I Will Not,No And I Will Not,1073,67,15,HS Diploma,Male,6,Allowed,Black,1
+Working,No But I Might,No But I Might,1076,26,15,Some College,Female,1,Allowed,White,5
+Working,No And I Will Not,No And I Will Not,1077,79,17,HS Diploma,Female,3,Not allowed,Hispanic,0
+Lower,No But I Might,No And I Will Not,1082,32,12,HS Diploma,Male,4,Not allowed,White,0
+Lower,No And I Will Not,No But I Might,1083,59,13,HS Diploma,Male,6,Allowed,White,0
+Working,Before Last Year,Before Last Year,1085,63,12,HS Diploma,Male,4,Allowed,White,6
+Middle,No And I Will Not,No But I Might,1091,77,5,Less Than HS,Female,6,Not allowed,Hispanic,0
+Middle,No And I Will Not,No And I Will Not,1092,22,12,HS Diploma,Male,3,Allowed,Black,2
+Working,No But I Might,No But I Might,1093,43,14,Some College,Female,4,Not allowed,Hispanic,1
+Working,No But I Might,No But I Might,1095,43,16,College Degree,Female,6,Not allowed,Hispanic,0
+Working,No And I Will Not,No But I Might,1105,89,16,Grad/Prof Degree,Female,2,Allowed,White,3
+Working,Before Last Year,No But I Might,1111,22,14,HS Diploma,Female,4,Not allowed,Hispanic,1
+Working,No But I Might,No But I Might,1112,33,14,HS Diploma,Female,4,Allowed,White,3
+Working,No And I Will Not,No And I Will Not,1113,79,12,HS Diploma,Male,4,Not allowed,White,1
+Middle,No But I Might,No But I Might,1116,33,14,HS Diploma,Male,5,Not allowed,White,3
+Middle,No And I Will Not,No And I Will Not,1118,28,14,Some College,Female,4,Not allowed,Other,2
+Middle,No And I Will Not,No And I Will Not,1119,39,14,HS Diploma,Male,6,Not allowed,Other,0
+Middle,Before Last Year,No But I Might,1121,35,16,Grad/Prof Degree,Male,3,Allowed,Other,4
+Middle,No But I Might,No But I Might,1124,40,18,College Degree,Female,4,Allowed,White,4
+Middle,Before Last Year,In Past Year,1129,40,18,Grad/Prof Degree,Female,5,Allowed,White,7
+Working,No And I Will Not,No But I Might,1133,65,14,HS Diploma,Male,4,Allowed,White,3
+Working,No And I Will Not,No And I Will Not,1138,44,16,College Degree,Female,3,Not allowed,Black,0
+Middle,No And I Will Not,No And I Will Not,1139,39,11,Less Than HS,Female,6,Allowed,Black,0
+Working,In Past Year,In Past Year,1142,32,15,HS Diploma,Female,4,Not allowed,Black,8
+Working,No But I Might,No But I Might,1146,51,12,HS Diploma,Female,5,Allowed,White,1
+Working,No And I Will Not,No And I Will Not,1150,48,19,College Degree,Female,5,Allowed,White,1
+Working,In Past Year,In Past Year,1158,57,16,College Degree,Male,4,Allowed,Black,7
+Working,In Past Year,In Past Year,1169,49,10,Less Than HS,Male,3,Not allowed,White,6
+Middle,No But I Might,No But I Might,1181,50,14,HS Diploma,Male,2,Allowed,White,5
+Lower,No And I Will Not,No And I Will Not,1182,58,12,HS Diploma,Female,3,Allowed,White,2
+Working,Before Last Year,No And I Will Not,1183,27,15,HS Diploma,Male,2,Not allowed,White,2
+Working,No But I Might,In Past Year,1185,43,14,Some College,Female,6,Allowed,White,4
+Lower,No But I Might,Before Last Year,1187,64,12,HS Diploma,Male,4,Allowed,White,5
+Working,Before Last Year,No But I Might,1188,52,10,HS Diploma,Male,4,Not allowed,White,3
+Middle,No And I Will Not,No And I Will Not,1189,51,14,Some College,Male,4,Allowed,White,1
+Working,Before Last Year,No But I Might,1194,28,10,HS Diploma,Male,4,Allowed,White,3
+Working,Before Last Year,No But I Might,1196,20,11,Less Than HS,Female,4,Allowed,White,3
+Working,No And I Will Not,No And I Will Not,1206,53,12,HS Diploma,Male,4,Allowed,White,2
+Working,No And I Will Not,No And I Will Not,1209,26,14,HS Diploma,Female,4,Not allowed,White,0
+Working,No And I Will Not,No And I Will Not,1210,40,14,Some College,Female,5,Not allowed,Hispanic,0
+Middle,No And I Will Not,No But I Might,1212,30,16,College Degree,Male,5,Allowed,White,1
+Working,No But I Might,No And I Will Not,1214,23,13,HS Diploma,Female,4,Not allowed,Hispanic,0
+Working,No And I Will Not,No And I Will Not,1220,57,14,HS Diploma,Female,4,Allowed,Hispanic,1
+Middle,No And I Will Not,No And I Will Not,1221,71,6,Less Than HS,Female,7,Allowed,Hispanic,0
+Working,Before Last Year,Before Last Year,1228,64,12,HS Diploma,Male,2,Allowed,Hispanic,6
+Working,No And I Will Not,No And I Will Not,1229,50,12,HS Diploma,Female,4,Not allowed,White,0
+Working,No And I Will Not,No And I Will Not,1235,62,11,Less Than HS,Female,4,Not allowed,Black,2
+Middle,In Past Year,In Past Year,1239,54,20,Grad/Prof Degree,Male,1,Not allowed,White,8
+Middle,No But I Might,No But I Might,1252,65,12,HS Diploma,Female,3,Allowed,White,1
+Middle,No But I Might,Before Last Year,1260,77,14,HS Diploma,Male,6,Not allowed,White,4
+Middle,Before Last Year,Before Last Year,1261,80,15,HS Diploma,Female,2,Allowed,White,7
+Middle,No And I Will Not,Before Last Year,1271,48,12,HS Diploma,Male,5,Allowed,White,4
+Middle,Before Last Year,Before Last Year,1275,38,12,HS Diploma,Male,4,Allowed,Hispanic,3
+Working,No But I Might,No And I Will Not,1276,58,14,HS Diploma,Male,4,Allowed,White,4
+Working,No And I Will Not,No And I Will Not,1279,45,11,Less Than HS,Female,2,Allowed,Hispanic,0
+Middle,Before Last Year,Before Last Year,1287,41,14,HS Diploma,Female,2,Allowed,White,7
+Working,No But I Might,No But I Might,1288,27,12,HS Diploma,Female,1,Allowed,Hispanic,0
+Middle,No But I Might,No But I Might,1308,21,13,HS Diploma,Male,4,Allowed,White,1
+Working,Before Last Year,Before Last Year,1310,34,13,HS Diploma,Female,2,Allowed,White,6
+Middle,Before Last Year,Before Last Year,1312,48,18,Grad/Prof Degree,Female,2,Allowed,White,8
+Working,In Past Year,No But I Might,1313,27,17,College Degree,Male,2,Not allowed,Other,3
+Middle,No And I Will Not,No And I Will Not,1315,48,17,College Degree,Female,4,Not allowed,White,4
+Middle,In Past Year,No But I Might,1318,59,16,College Degree,Female,3,Allowed,White,6
+Middle,No But I Might,No But I Might,1319,52,16,College Degree,Female,6,Allowed,White,1
+Middle,No But I Might,No But I Might,1323,41,20,Grad/Prof Degree,Male,6,Allowed,White,2
+Middle,No And I Will Not,Before Last Year,1324,62,13,HS Diploma,Female,4,Not allowed,Black,2
+Middle,No But I Might,In Past Year,1329,33,18,Grad/Prof Degree,Male,5,Allowed,White,3
+Working,No And I Will Not,No And I Will Not,1330,61,7,Less Than HS,Female,5,Not allowed,Hispanic,0
+Middle,No But I Might,No But I Might,1332,37,12,HS Diploma,Male,5,Allowed,White,0
+Working,No But I Might,No But I Might,1338,33,18,College Degree,Female,2,Allowed,White,3
+Middle,No But I Might,Before Last Year,1346,32,16,College Degree,Male,4,Allowed,White,6
+Middle,In Past Year,No But I Might,1348,37,14,HS Diploma,Male,5,Not allowed,White,3
+Lower,No But I Might,No But I Might,1352,73,12,HS Diploma,Female,7,Allowed,White,1
+Middle,No But I Might,No And I Will Not,1362,45,11,Less Than HS,Male,5,Allowed,White,0
+Middle,No But I Might,Before Last Year,1364,75,12,HS Diploma,Male,2,Allowed,Black,5
+Working,No But I Might,No But I Might,1367,54,16,HS Diploma,Female,3,Allowed,White,1
+Middle,No But I Might,No But I Might,1368,70,12,HS Diploma,Male,4,Not allowed,White,0
+Middle,No And I Will Not,Before Last Year,1370,79,14,HS Diploma,Female,3,Allowed,White,2
+Middle,No But I Might,Before Last Year,1372,44,13,HS Diploma,Female,4,Allowed,White,4
+Middle,No But I Might,No But I Might,1378,41,12,HS Diploma,Female,6,Allowed,White,5
+Middle,No But I Might,No But I Might,1380,54,19,Grad/Prof Degree,Male,2,Allowed,White,2
+Middle,In Past Year,No But I Might,1381,20,12,HS Diploma,Female,4,Not allowed,White,2
+Working,No And I Will Not,No But I Might,1382,54,12,HS Diploma,Female,4,Allowed,White,4
+Working,No But I Might,No But I Might,1387,53,9,Less Than HS,Male,5,Allowed,White,2
+Lower,Before Last Year,Before Last Year,1390,51,12,HS Diploma,Male,1,Not allowed,White,6
+Middle,Before Last Year,Before Last Year,1393,68,15,Some College,Male,4,Allowed,White,6
+Working,No And I Will Not,No And I Will Not,1394,72,10,Less Than HS,Female,4,Not allowed,White,0
+Middle,Before Last Year,Before Last Year,1399,67,16,Grad/Prof Degree,Male,2,Allowed,White,7
+Middle,No And I Will Not,No But I Might,1404,58,12,HS Diploma,Male,4,Allowed,White,2
+Middle,Before Last Year,In Past Year,1405,43,18,Grad/Prof Degree,Female,2,Allowed,White,8
+Middle,Before Last Year,Before Last Year,1406,65,20,Grad/Prof Degree,Female,2,Not allowed,White,5
+Working,No And I Will Not,No And I Will Not,1415,47,9,HS Diploma,Male,4,Allowed,White,1
+Middle,In Past Year,In Past Year,1418,37,15,College Degree,Male,2,Allowed,White,7
+Working,No But I Might,No But I Might,1420,28,18,Grad/Prof Degree,Male,1,Allowed,Other,2
+Middle,Before Last Year,In Past Year,1422,26,16,College Degree,Female,1,Allowed,White,8
+Middle,No And I Will Not,No But I Might,1425,40,12,HS Diploma,Female,6,Allowed,White,0
+Middle,No But I Might,Before Last Year,1427,68,15,HS Diploma,Female,3,Not allowed,White,5
+Middle,No But I Might,Before Last Year,1439,74,12,HS Diploma,Female,4,Not allowed,Other,3
+Working,No And I Will Not,No But I Might,1443,35,13,HS Diploma,Female,4,Allowed,White,2
+Working,No And I Will Not,No And I Will Not,1456,61,12,HS Diploma,Male,4,Not allowed,White,2
+Working,Before Last Year,Before Last Year,1458,81,14,HS Diploma,Male,6,Allowed,White,5
+Working,No And I Will Not,No But I Might,1461,31,10,HS Diploma,Male,4,Allowed,White,0
+Middle,No But I Might,No But I Might,1469,67,12,HS Diploma,Female,5,Allowed,White,1
+Working,No And I Will Not,No But I Might,1471,56,12,HS Diploma,Male,4,Allowed,White,0
+Working,No And I Will Not,No And I Will Not,1472,63,16,College Degree,Male,4,Allowed,White,0
+Middle,No And I Will Not,No And I Will Not,1476,51,12,HS Diploma,Female,5,Allowed,White,2
+Working,No But I Might,No But I Might,1479,27,16,College Degree,Male,4,Allowed,White,2
+Middle,No But I Might,Before Last Year,1482,75,14,HS Diploma,Female,4,Allowed,White,4
+Middle,No But I Might,No But I Might,1483,61,12,HS Diploma,Male,4,Not allowed,White,3
+Working,No But I Might,No But I Might,1485,42,15,HS Diploma,Female,2,Allowed,White,5
+Lower,Before Last Year,Before Last Year,1491,74,12,HS Diploma,Male,6,Allowed,White,6
+Working,Before Last Year,Before Last Year,1492,35,14,HS Diploma,Male,2,Not allowed,White,4
+Working,No But I Might,Before Last Year,1496,73,14,Some College,Female,6,Allowed,White,5
+Working,No And I Will Not,No But I Might,1503,34,14,HS Diploma,Female,4,Allowed,White,0
+Working,No But I Might,In Past Year,1505,67,12,HS Diploma,Male,7,Not allowed,White,2
+Middle,No But I Might,No But I Might,1511,63,15,HS Diploma,Male,5,Allowed,White,3
+Middle,No But I Might,No But I Might,1514,42,16,College Degree,Male,6,Allowed,White,4
+Middle,No And I Will Not,No And I Will Not,1515,64,12,HS Diploma,Female,5,Not allowed,White,1
+Middle,No But I Might,No And I Will Not,1516,34,16,College Degree,Female,2,Allowed,White,3
+Lower,No And I Will Not,No But I Might,1520,37,10,Less Than HS,Female,5,Not allowed,Black,0
+Working,In Past Year,Before Last Year,1524,50,12,HS Diploma,Female,5,Allowed,White,4
+Middle,Before Last Year,Before Last Year,1530,84,17,College Degree,Female,1,Allowed,White,7
+Middle,No But I Might,No But I Might,1533,23,16,College Degree,Male,4,Allowed,White,3
+Working,Before Last Year,In Past Year,1534,56,16,College Degree,Female,4,Allowed,White,6
+Working,No But I Might,No And I Will Not,1541,28,10,Less Than HS,Female,4,Allowed,White,0
+Working,No But I Might,No And I Will Not,1543,32,12,HS Diploma,Male,6,Not allowed,White,0
+Middle,No But I Might,In Past Year,1544,41,16,Grad/Prof Degree,Male,6,Not allowed,White,5
+Working,No But I Might,Before Last Year,1551,63,12,HS Diploma,Male,7,Not allowed,White,3
+Working,No And I Will Not,No And I Will Not,1554,67,12,HS Diploma,Male,4,Not allowed,White,0
+Middle,In Past Year,Before Last Year,1560,38,16,Grad/Prof Degree,Male,4,Allowed,White,4
+Middle,No And I Will Not,No And I Will Not,1567,59,13,HS Diploma,Male,4,Allowed,White,1
+Working,No And I Will Not,No And I Will Not,1569,57,12,HS Diploma,Female,4,Not allowed,Black,0
+Working,No And I Will Not,In Past Year,1572,87,16,College Degree,Male,6,Allowed,White,2
+Working,No And I Will Not,No But I Might,1573,33,14,Some College,Male,6,Allowed,White,1
+Upper,No And I Will Not,No And I Will Not,1574,62,11,Less Than HS,Female,4,Not allowed,Black,0
+Working,No And I Will Not,No And I Will Not,1582,67,10,Less Than HS,Male,4,Allowed,Black,1
+Working,No And I Will Not,No And I Will Not,1587,31,12,HS Diploma,Female,4,Not allowed,Black,1
+Middle,No But I Might,No And I Will Not,1592,51,20,Grad/Prof Degree,Male,4,Not allowed,White,2
+Middle,No But I Might,Before Last Year,1595,29,8,Less Than HS,Male,4,Not allowed,White,2
+Working,No And I Will Not,No And I Will Not,1596,66,12,HS Diploma,Female,4,Allowed,White,1
+Working,No And I Will Not,No And I Will Not,1598,69,16,College Degree,Female,4,Allowed,White,1
+Middle,Before Last Year,Before Last Year,1600,67,18,College Degree,Female,5,Allowed,White,7
+Lower,No But I Might,No But I Might,1606,34,13,HS Diploma,Male,4,Allowed,Black,0
+Working,No And I Will Not,No And I Will Not,1612,66,8,Less Than HS,Female,4,Allowed,White,1
+Working,No But I Might,No But I Might,1620,74,11,Less Than HS,Female,3,Not allowed,Black,1
+Working,No But I Might,No But I Might,1623,47,12,HS Diploma,Female,4,Allowed,Black,2
+Lower,No But I Might,No And I Will Not,1624,38,11,HS Diploma,Female,3,Allowed,Black,1
+Lower,No But I Might,No But I Might,1627,23,11,Less Than HS,Male,4,Not allowed,White,2
+Middle,No But I Might,No But I Might,1628,18,10,HS Diploma,Female,4,Allowed,White,0
+Middle,No But I Might,No And I Will Not,1630,31,16,College Degree,Female,4,Not allowed,Black,3
+Working,No And I Will Not,No But I Might,1631,42,15,Some College,Female,6,Allowed,White,2
+Middle,Before Last Year,Before Last Year,1634,73,12,HS Diploma,Male,6,Allowed,White,6
+Middle,Before Last Year,Before Last Year,1636,50,14,Some College,Female,2,Allowed,White,6
+Middle,No And I Will Not,No And I Will Not,1637,49,13,HS Diploma,Female,4,Not allowed,Black,0
+Working,No But I Might,Before Last Year,1642,33,13,HS Diploma,Female,4,Allowed,Black,2
+Middle,No And I Will Not,No And I Will Not,1650,73,16,College Degree,Female,6,Allowed,White,3
+Upper,No But I Might,Before Last Year,1652,72,16,College Degree,Male,3,Allowed,White,6
+Middle,No And I Will Not,No But I Might,1654,80,16,College Degree,Female,6,Not allowed,White,2
+Working,In Past Year,No But I Might,1659,21,12,HS Diploma,Female,1,Not allowed,White,6
+Middle,Before Last Year,Before Last Year,1660,70,19,Grad/Prof Degree,Female,4,Allowed,White,6
+Working,No And I Will Not,No And I Will Not,1665,48,12,HS Diploma,Male,4,Allowed,Hispanic,0
+Middle,No But I Might,No But I Might,1666,66,13,HS Diploma,Male,4,Allowed,White,1
+Working,No And I Will Not,No And I Will Not,1674,36,10,HS Diploma,Male,4,Allowed,Hispanic,0
+Working,No And I Will Not,No But I Might,1677,42,14,HS Diploma,Female,5,Allowed,White,1
+Middle,No But I Might,No But I Might,1686,59,18,Grad/Prof Degree,Male,5,Not allowed,White,2
+Middle,Before Last Year,No But I Might,1688,46,12,HS Diploma,Female,7,Allowed,White,3
+Middle,No And I Will Not,No But I Might,1695,88,12,HS Diploma,Female,5,Not allowed,White,1
+Working,No And I Will Not,In Past Year,1699,70,14,HS Diploma,Female,4,Not allowed,White,5
+Working,No And I Will Not,No And I Will Not,1701,65,10,Less Than HS,Male,4,Not allowed,White,1
+Middle,No And I Will Not,No But I Might,1704,57,12,HS Diploma,Female,5,Allowed,White,4
+Middle,No And I Will Not,No And I Will Not,1709,42,20,Grad/Prof Degree,Female,4,Allowed,Black,3
+Working,No But I Might,No But I Might,1712,44,16,College Degree,Female,4,Allowed,Black,3
+Lower,No But I Might,No But I Might,1713,23,16,College Degree,Female,6,Not allowed,Black,0
+Middle,No But I Might,No But I Might,1715,31,12,HS Diploma,Female,4,Allowed,Black,1
+Working,No But I Might,No But I Might,1717,21,14,HS Diploma,Male,6,Not allowed,Black,0
+Middle,No And I Will Not,No But I Might,1720,59,11,HS Diploma,Female,5,Allowed,Black,0
+Lower,In Past Year,In Past Year,1722,68,16,College Degree,Male,2,Allowed,Black,7
+Working,No And I Will Not,No And I Will Not,1729,69,12,HS Diploma,Female,4,Allowed,Black,0
+Working,No And I Will Not,Before Last Year,1730,47,12,HS Diploma,Male,2,Not allowed,Black,3
+Middle,No But I Might,In Past Year,1739,76,11,HS Diploma,Female,4,Allowed,White,4
+Working,No But I Might,No But I Might,1740,31,12,HS Diploma,Male,6,Allowed,White,1
+Working,No But I Might,No But I Might,1743,29,14,Some College,Female,6,Allowed,White,2
+Working,No But I Might,No But I Might,1746,43,16,College Degree,Female,4,Allowed,Black,2
+Working,No And I Will Not,No But I Might,1749,69,12,HS Diploma,Female,7,Allowed,White,3
+Working,No But I Might,No But I Might,1753,65,14,HS Diploma,Male,3,Allowed,White,2
+Upper,No And I Will Not,No But I Might,1754,75,20,Grad/Prof Degree,Male,2,Not allowed,Other,4
+Middle,No But I Might,Before Last Year,1755,45,16,College Degree,Male,7,Allowed,White,7
+Middle,No But I Might,Before Last Year,1757,52,16,College Degree,Female,5,Allowed,White,3
+Middle,No And I Will Not,No And I Will Not,1760,79,16,Grad/Prof Degree,Female,5,Allowed,White,1
+Middle,No But I Might,No But I Might,1765,67,18,Grad/Prof Degree,Male,4,Allowed,White,5
+Working,No But I Might,Before Last Year,1768,57,19,Grad/Prof Degree,Female,6,Allowed,White,5
+Working,Before Last Year,No But I Might,1772,27,14,HS Diploma,Male,4,Allowed,White,4
+Middle,No And I Will Not,No But I Might,1773,61,14,HS Diploma,Female,6,Not allowed,White,4
+Middle,Before Last Year,No But I Might,1774,54,12,HS Diploma,Female,2,Allowed,White,6
+Working,No And I Will Not,No And I Will Not,1776,81,12,HS Diploma,Female,2,Allowed,White,2
+Middle,No And I Will Not,No And I Will Not,1783,57,12,HS Diploma,Female,3,Not allowed,White,1
+Lower,No And I Will Not,No And I Will Not,1785,46,13,HS Diploma,Female,2,Allowed,White,0
+Middle,Before Last Year,In Past Year,1786,66,16,College Degree,Male,6,Allowed,White,7
+Middle,No And I Will Not,No But I Might,1787,79,16,College Degree,Female,2,Allowed,White,1
+Working,No But I Might,No But I Might,1789,24,13,HS Diploma,Male,4,Allowed,White,0
+Middle,No But I Might,Before Last Year,1793,62,14,HS Diploma,Female,3,Not allowed,White,6
+Middle,No And I Will Not,No And I Will Not,1794,81,12,HS Diploma,Female,3,Not allowed,White,2
+Middle,Before Last Year,In Past Year,1798,51,16,College Degree,Female,2,Allowed,White,8
+Working,No And I Will Not,No And I Will Not,1799,42,14,HS Diploma,Male,5,Allowed,White,2
+Working,No But I Might,Before Last Year,1800,34,12,HS Diploma,Female,4,Not allowed,White,5
+Working,No But I Might,No But I Might,1801,64,12,HS Diploma,Male,4,Not allowed,White,3
+Middle,No And I Will Not,No And I Will Not,1808,65,11,Less Than HS,Male,4,Not allowed,White,2
+Working,No And I Will Not,No And I Will Not,1815,78,13,HS Diploma,Female,4,Not allowed,White,2
+Middle,No And I Will Not,No And I Will Not,1816,42,16,College Degree,Female,2,Allowed,White,1
+Working,In Past Year,Before Last Year,1819,34,12,HS Diploma,Female,4,Not allowed,White,7
+Working,No But I Might,No But I Might,1821,37,12,HS Diploma,Female,4,Allowed,White,2
+Working,No And I Will Not,No And I Will Not,1825,44,12,HS Diploma,Female,2,Allowed,White,1
+Lower,No And I Will Not,No And I Will Not,1826,63,12,HS Diploma,Male,7,Allowed,White,0
+Middle,No But I Might,No But I Might,1827,43,9,Less Than HS,Male,2,Not allowed,Hispanic,0
+Middle,Before Last Year,Before Last Year,1829,58,12,HS Diploma,Male,6,Not allowed,White,7
+Middle,Before Last Year,In Past Year,1830,57,19,Grad/Prof Degree,Male,7,Allowed,White,8
+Middle,No But I Might,No But I Might,1836,75,16,College Degree,Female,3,Not allowed,White,4
+Middle,In Past Year,In Past Year,1844,21,14,HS Diploma,Female,6,Allowed,White,6
+Working,No And I Will Not,No And I Will Not,1845,32,12,HS Diploma,Male,4,Not allowed,White,0
+Working,No And I Will Not,No But I Might,1846,45,14,HS Diploma,Female,4,Allowed,White,3
+Working,No And I Will Not,No And I Will Not,1853,61,12,HS Diploma,Female,4,Allowed,White,1
+Working,Before Last Year,Before Last Year,1854,30,16,College Degree,Female,2,Allowed,White,6
+Working,No But I Might,No But I Might,1855,73,14,HS Diploma,Female,4,Not allowed,White,0
+Middle,No But I Might,No But I Might,1859,57,18,Grad/Prof Degree,Female,4,Allowed,White,0
+Working,No And I Will Not,No But I Might,1860,45,17,HS Diploma,Female,5,Allowed,White,2
+Lower,No And I Will Not,No And I Will Not,1861,32,16,Some College,Female,4,Allowed,Black,2
+Working,No And I Will Not,No And I Will Not,1864,85,12,HS Diploma,Male,5,Not allowed,White,2
+Middle,No And I Will Not,No But I Might,1865,68,13,HS Diploma,Female,4,Not allowed,White,1
+Working,Before Last Year,Before Last Year,1866,59,12,HS Diploma,Female,4,Allowed,White,6
+Middle,No But I Might,No But I Might,1867,54,12,HS Diploma,Male,5,Allowed,White,3
+Lower,No But I Might,In Past Year,1868,40,15,HS Diploma,Male,1,Allowed,White,7
+Working,Before Last Year,In Past Year,1872,74,13,HS Diploma,Male,4,Allowed,White,5
+Working,No But I Might,No But I Might,1873,68,12,HS Diploma,Male,6,Not allowed,White,1
+Middle,No And I Will Not,No And I Will Not,1874,48,18,Grad/Prof Degree,Female,4,Not allowed,Other,2
+Working,No But I Might,No But I Might,1875,79,12,HS Diploma,Male,7,Allowed,White,3
+Middle,Before Last Year,Before Last Year,1878,88,11,Less Than HS,Female,4,Allowed,White,3
+Middle,No And I Will Not,No But I Might,1886,40,18,Grad/Prof Degree,Female,6,Not allowed,White,2
+Working,No But I Might,Before Last Year,1887,42,13,HS Diploma,Female,6,Not allowed,White,2
+Working,No And I Will Not,No But I Might,1892,42,14,Some College,Female,4,Allowed,White,1
+Middle,No But I Might,No But I Might,1897,57,16,College Degree,Female,2,Allowed,White,1
+Working,Before Last Year,In Past Year,1898,40,16,College Degree,Female,4,Not allowed,White,6
+Middle,Before Last Year,Before Last Year,1906,40,14,HS Diploma,Male,6,Allowed,White,8
+Middle,No And I Will Not,In Past Year,1907,85,12,HS Diploma,Female,6,Allowed,White,5
+Working,Before Last Year,No But I Might,1908,44,12,HS Diploma,Male,4,Allowed,Black,5
+Working,No And I Will Not,No And I Will Not,1915,89,12,HS Diploma,Male,4,Allowed,White,0
+Middle,No But I Might,In Past Year,1927,28,16,HS Diploma,Male,4,Allowed,Black,5
+Working,No But I Might,No And I Will Not,1930,30,12,HS Diploma,Male,5,Not allowed,White,1
+Middle,No And I Will Not,No And I Will Not,1937,86,14,HS Diploma,Male,4,Allowed,White,1
+Working,No But I Might,No And I Will Not,1941,66,12,HS Diploma,Female,4,Allowed,White,1
+Middle,No But I Might,No And I Will Not,1945,35,11,Less Than HS,Male,4,Not allowed,White,2
+Working,No And I Will Not,No But I Might,1946,56,12,HS Diploma,Male,4,Allowed,Black,2
+Working,No And I Will Not,No And I Will Not,1959,75,9,Less Than HS,Female,7,Not allowed,White,0
+Working,No But I Might,No But I Might,1961,68,15,HS Diploma,Male,6,Allowed,White,2
+Middle,No And I Will Not,Before Last Year,1962,60,18,Grad/Prof Degree,Female,4,Allowed,White,7
+Middle,No And I Will Not,No And I Will Not,1963,56,12,HS Diploma,Female,4,Allowed,Black,0
+Middle,Before Last Year,No And I Will Not,1968,62,17,HS Diploma,Male,2,Allowed,Black,5
+Working,No But I Might,Before Last Year,1969,31,17,College Degree,Female,3,Not allowed,Black,4
+Middle,No But I Might,No And I Will Not,1975,72,16,HS Diploma,Female,5,Not allowed,Hispanic,2
+Working,No But I Might,Before Last Year,1978,39,18,Grad/Prof Degree,Female,6,Not allowed,Black,2
+Working,In Past Year,No But I Might,1984,27,12,HS Diploma,Male,4,Not allowed,White,6
+Middle,Before Last Year,No But I Might,1985,53,12,HS Diploma,Female,7,Allowed,White,6
+Middle,No But I Might,No But I Might,1988,45,11,HS Diploma,Female,4,Allowed,White,2
+Lower,No And I Will Not,No And I Will Not,1989,68,8,Less Than HS,Female,3,Not allowed,Hispanic,1
+Lower,No But I Might,Before Last Year,1990,64,14,HS Diploma,Female,6,Allowed,White,5
+Working,No And I Will Not,No But I Might,1991,30,16,College Degree,Female,4,Not allowed,White,0
+Middle,No But I Might,No But I Might,1993,21,12,HS Diploma,Male,2,Not allowed,Hispanic,0
+Working,No And I Will Not,No And I Will Not,1994,66,12,HS Diploma,Female,6,Not allowed,White,2
+Middle,Before Last Year,No And I Will Not,1999,20,13,HS Diploma,Female,4,Not allowed,White,1
+Working,No And I Will Not,No But I Might,2002,76,12,Less Than HS,Male,4,Allowed,White,1
+Middle,Before Last Year,Before Last Year,2005,71,18,Grad/Prof Degree,Female,3,Allowed,White,7
+Working,No And I Will Not,No And I Will Not,2010,81,7,Less Than HS,Male,4,Allowed,Hispanic,1
+Working,No But I Might,No And I Will Not,2014,43,15,Some College,Female,6,Not allowed,Hispanic,0
+Working,No And I Will Not,No And I Will Not,2016,55,12,HS Diploma,Male,6,Allowed,White,0
+Working,No But I Might,No And I Will Not,2022,44,8,Less Than HS,Male,2,Not allowed,Hispanic,0
+Working,No But I Might,No But I Might,2026,23,9,Less Than HS,Male,7,Allowed,Hispanic,0
+Working,No And I Will Not,No And I Will Not,2027,36,12,HS Diploma,Female,4,Allowed,Hispanic,2
+Lower,No And I Will Not,No And I Will Not,2031,71,6,Less Than HS,Female,6,Not allowed,Hispanic,0
+Middle,No But I Might,In Past Year,2043,42,18,Grad/Prof Degree,Female,4,Allowed,White,4
+Middle,No But I Might,No And I Will Not,2045,75,18,Grad/Prof Degree,Female,5,Allowed,White,0
+Upper,Before Last Year,In Past Year,2047,47,14,HS Diploma,Female,4,Allowed,White,5
+Lower,No But I Might,No And I Will Not,2056,20,8,Less Than HS,Female,5,Allowed,Hispanic,2
+Working,No But I Might,Before Last Year,2058,61,15,HS Diploma,Male,7,Allowed,White,2
+Working,No But I Might,No And I Will Not,2059,35,12,HS Diploma,Female,2,Allowed,Hispanic,0
+Middle,In Past Year,Before Last Year,2061,58,18,Grad/Prof Degree,Female,1,Allowed,White,7
+Working,No And I Will Not,No And I Will Not,2062,25,17,College Degree,Female,3,Not allowed,Hispanic,3
+Lower,No And I Will Not,No And I Will Not,2064,64,12,HS Diploma,Female,4,Not allowed,White,0
+Lower,No And I Will Not,No And I Will Not,2069,62,12,HS Diploma,Female,4,Not allowed,White,3
+Middle,No But I Might,No But I Might,2074,59,16,Grad/Prof Degree,Male,2,Allowed,White,4
+Working,No But I Might,In Past Year,2076,25,16,College Degree,Male,4,Allowed,Hispanic,4
+Working,No And I Will Not,No And I Will Not,2078,27,12,HS Diploma,Male,4,Allowed,Black,2
+Working,No But I Might,Before Last Year,2081,61,14,HS Diploma,Female,3,Not allowed,White,5
+Middle,No But I Might,No But I Might,2083,39,14,HS Diploma,Female,4,Not allowed,White,0
+Working,No And I Will Not,No And I Will Not,2084,62,13,HS Diploma,Female,4,Not allowed,Black,1
+Middle,No But I Might,No And I Will Not,2085,66,17,HS Diploma,Male,6,Allowed,White,3
+Working,In Past Year,In Past Year,2087,33,9,Less Than HS,Male,4,Allowed,Black,6
+Working,No And I Will Not,No And I Will Not,2091,49,12,HS Diploma,Male,7,Allowed,Black,0
+Working,No And I Will Not,No But I Might,2093,78,15,HS Diploma,Male,6,Allowed,White,1
+Lower,No But I Might,No But I Might,2094,30,13,HS Diploma,Male,4,Allowed,Hispanic,4
+Lower,In Past Year,No But I Might,2097,24,13,HS Diploma,Female,4,Allowed,White,3
+Middle,No But I Might,In Past Year,2098,68,12,HS Diploma,Female,4,Allowed,Hispanic,1
+Middle,No And I Will Not,No And I Will Not,2099,29,11,Less Than HS,Male,6,Allowed,Hispanic,0
+Lower,In Past Year,No And I Will Not,2100,23,13,HS Diploma,Male,5,Allowed,Hispanic,3
+Middle,No And I Will Not,No And I Will Not,2104,40,14,HS Diploma,Male,6,Allowed,Hispanic,0
+Middle,No And I Will Not,No And I Will Not,2110,18,16,College Degree,Female,4,Not allowed,White,4
+Working,Before Last Year,Before Last Year,2116,36,14,HS Diploma,Female,6,Allowed,White,7
+Lower,Before Last Year,In Past Year,2121,27,18,Grad/Prof Degree,Male,1,Not allowed,Hispanic,7
+Middle,No And I Will Not,No And I Will Not,2125,38,12,HS Diploma,Female,4,Not allowed,Hispanic,1
+Working,Before Last Year,No And I Will Not,2126,68,16,Some College,Male,6,Allowed,Black,4
+Working,No But I Might,No But I Might,2129,31,18,College Degree,Female,5,Allowed,Hispanic,0
+Working,No But I Might,No But I Might,2137,42,11,Less Than HS,Female,4,Allowed,White,4
+Middle,Before Last Year,Before Last Year,2141,46,20,Grad/Prof Degree,Male,3,Allowed,White,5
+Middle,No But I Might,In Past Year,2142,55,17,College Degree,Male,2,Allowed,White,4
+Middle,No And I Will Not,No And I Will Not,2145,64,9,HS Diploma,Female,5,Allowed,White,0
+Middle,No But I Might,In Past Year,2146,55,12,HS Diploma,Male,6,Allowed,White,5
+Working,No But I Might,No But I Might,2152,49,12,HS Diploma,Male,5,Allowed,White,3
+Middle,No But I Might,In Past Year,2154,63,14,HS Diploma,Female,4,Not allowed,White,4
+Middle,Before Last Year,In Past Year,2156,55,17,College Degree,Female,5,Allowed,White,8
+Middle,No But I Might,No But I Might,2157,40,16,College Degree,Female,6,Not allowed,White,3
+Working,No But I Might,No But I Might,2160,66,12,HS Diploma,Male,3,Not allowed,White,3
+Working,No But I Might,No But I Might,2162,34,14,Some College,Female,5,Allowed,White,6
+Working,No But I Might,No But I Might,2164,25,13,HS Diploma,Male,6,Allowed,White,1
+Working,No But I Might,No But I Might,2165,21,15,Some College,Female,2,Not allowed,White,2
+Lower,No And I Will Not,No But I Might,2169,80,12,HS Diploma,Male,4,Allowed,White,1
+Working,No But I Might,No And I Will Not,2171,45,14,Some College,Female,4,Allowed,White,1
+Working,No And I Will Not,No And I Will Not,2174,28,12,HS Diploma,Female,4,Not allowed,White,0
+Working,Before Last Year,Before Last Year,2176,48,16,College Degree,Male,1,Allowed,White,7
+Middle,No But I Might,No But I Might,2179,34,14,HS Diploma,Male,2,Not allowed,White,3
+Middle,In Past Year,In Past Year,2182,30,18,College Degree,Male,1,Allowed,White,8
+Working,No But I Might,Before Last Year,2184,27,14,Some College,Male,2,Not allowed,White,4
+Middle,Before Last Year,In Past Year,2185,68,18,HS Diploma,Male,3,Allowed,White,6
+Middle,Before Last Year,Before Last Year,2189,33,16,College Degree,Male,3,Allowed,White,7
+Working,No But I Might,No But I Might,2190,33,14,HS Diploma,Male,4,Allowed,Hispanic,2
+Middle,Before Last Year,Before Last Year,2193,56,14,HS Diploma,Male,2,Allowed,White,8
+Working,No But I Might,No But I Might,2198,64,12,HS Diploma,Female,5,Allowed,White,2
+Working,No But I Might,No But I Might,2207,55,12,HS Diploma,Male,6,Allowed,White,2
+Middle,Before Last Year,Before Last Year,2208,72,18,Grad/Prof Degree,Female,6,Allowed,White,6
+Lower,No And I Will Not,No And I Will Not,2211,77,10,HS Diploma,Male,3,Allowed,White,3
+Middle,No And I Will Not,No And I Will Not,2213,27,11,Less Than HS,Female,4,Not allowed,Hispanic,1
+Middle,No And I Will Not,No And I Will Not,2229,30,15,Some College,Female,4,Allowed,White,0
+Working,In Past Year,No But I Might,2230,27,9,HS Diploma,Male,4,Not allowed,Hispanic,3
+Working,Before Last Year,No But I Might,2232,29,16,HS Diploma,Male,4,Not allowed,White,2
+Working,No But I Might,No But I Might,2234,37,12,HS Diploma,Female,3,Not allowed,White,4
+Working,No But I Might,No But I Might,2238,62,12,HS Diploma,Female,4,Allowed,White,1
+Working,Before Last Year,Before Last Year,2240,25,13,HS Diploma,Female,1,Allowed,White,7
+Lower,No But I Might,No But I Might,2244,32,13,HS Diploma,Female,2,Allowed,White,3
+Working,No But I Might,Before Last Year,2245,45,12,HS Diploma,Male,5,Allowed,White,4
+Working,No And I Will Not,No And I Will Not,2252,50,12,Less Than HS,Female,4,Allowed,White,1
+Working,No But I Might,Before Last Year,2255,65,15,Some College,Female,6,Not allowed,White,5
+Working,No But I Might,No And I Will Not,2257,59,9,HS Diploma,Male,1,Not allowed,White,1
+Working,No But I Might,No But I Might,2258,60,12,HS Diploma,Male,4,Allowed,White,0
+Upper,Before Last Year,Before Last Year,2267,65,16,College Degree,Male,5,Not allowed,White,6
+Middle,No And I Will Not,No But I Might,2283,61,12,HS Diploma,Female,6,Allowed,White,4
+Middle,No And I Will Not,No And I Will Not,2284,30,12,HS Diploma,Female,4,Allowed,White,1
+Working,No But I Might,Before Last Year,2286,48,13,HS Diploma,Female,4,Allowed,Black,3
+Lower,Before Last Year,Before Last Year,2292,59,11,HS Diploma,Male,7,Allowed,White,6
+Working,Before Last Year,Before Last Year,2298,63,16,Grad/Prof Degree,Male,6,Allowed,White,8
+Lower,No And I Will Not,In Past Year,2303,50,16,College Degree,Female,1,Allowed,White,5
+Working,No But I Might,No But I Might,2308,60,12,HS Diploma,Female,4,Allowed,White,5
+Working,No And I Will Not,In Past Year,2310,79,12,HS Diploma,Female,7,Allowed,White,2
+Working,No And I Will Not,No And I Will Not,2312,42,16,College Degree,Female,2,Allowed,White,1
+Working,No But I Might,No But I Might,2313,63,12,HS Diploma,Male,2,Not allowed,White,3
+Working,No But I Might,No But I Might,2321,63,16,College Degree,Male,5,Allowed,White,2
+Middle,No But I Might,No But I Might,2322,29,10,HS Diploma,Male,5,Allowed,Black,2
+Lower,No And I Will Not,No But I Might,2323,76,8,Less Than HS,Male,4,Not allowed,White,1
+Working,No But I Might,In Past Year,2325,32,16,Some College,Male,4,Allowed,White,6
+Working,No But I Might,No But I Might,2330,35,15,HS Diploma,Female,4,Allowed,Hispanic,1
+Middle,Before Last Year,Before Last Year,2334,64,13,HS Diploma,Female,6,Allowed,White,5
+Lower,No And I Will Not,Before Last Year,2335,60,8,Less Than HS,Female,6,Allowed,White,4
+Working,No And I Will Not,No But I Might,2336,59,12,HS Diploma,Male,5,Allowed,White,3
+Working,No And I Will Not,No But I Might,2337,31,14,Some College,Female,4,Allowed,Black,2
+Middle,No And I Will Not,No And I Will Not,2342,45,14,Some College,Female,5,Not allowed,Black,1
+Middle,No But I Might,No But I Might,2343,27,16,College Degree,Female,5,Not allowed,White,4
+Working,No And I Will Not,No But I Might,2344,25,13,HS Diploma,Female,4,Not allowed,White,1
+Working,No But I Might,No But I Might,2347,52,14,HS Diploma,Female,2,Allowed,Black,3
+Working,No But I Might,No But I Might,2348,45,14,Some College,Male,2,Allowed,Black,1
+Working,No But I Might,No But I Might,2352,21,12,HS Diploma,Female,4,Not allowed,Other,1
+Working,No But I Might,Before Last Year,2356,32,12,HS Diploma,Female,2,Allowed,White,6
+Upper,No And I Will Not,No But I Might,2358,83,16,College Degree,Male,4,Not allowed,White,2
+Working,No And I Will Not,No And I Will Not,2360,51,11,HS Diploma,Female,6,Allowed,Other,0
+Middle,No And I Will Not,No And I Will Not,2361,22,12,HS Diploma,Female,2,Not allowed,Other,1
+Middle,No But I Might,No But I Might,2366,61,14,HS Diploma,Male,4,Allowed,White,3
+Working,No And I Will Not,No But I Might,2373,65,12,HS Diploma,Female,4,Not allowed,White,1
+Working,No But I Might,No But I Might,2376,48,12,HS Diploma,Female,4,Allowed,White,2
+Lower,No But I Might,No But I Might,2377,35,11,Less Than HS,Female,4,Not allowed,Other,1
+Working,No But I Might,In Past Year,2383,25,17,College Degree,Female,3,Allowed,White,6
+Working,No But I Might,No But I Might,2386,31,12,HS Diploma,Female,2,Not allowed,White,3
+Working,No But I Might,No But I Might,2390,39,16,College Degree,Female,2,Allowed,White,2
+Middle,No But I Might,No But I Might,2391,28,12,HS Diploma,Female,3,Allowed,White,1
+Working,No And I Will Not,No And I Will Not,2394,39,17,HS Diploma,Female,6,Not allowed,White,2
+Middle,No But I Might,Before Last Year,2407,56,16,College Degree,Male,6,Allowed,White,5
+Working,No But I Might,No But I Might,2411,40,16,College Degree,Female,3,Allowed,White,2
+Middle,No But I Might,No And I Will Not,2415,59,16,College Degree,Male,3,Not allowed,White,5
+Middle,No But I Might,No But I Might,2416,27,13,HS Diploma,Male,3,Not allowed,Hispanic,1
+Middle,No But I Might,In Past Year,2417,52,14,Some College,Male,6,Allowed,White,6
+Working,No But I Might,No But I Might,2420,32,11,HS Diploma,Female,6,Allowed,White,1
+Working,No But I Might,No But I Might,2425,59,12,HS Diploma,Female,4,Not allowed,White,1
+Middle,Before Last Year,Before Last Year,2426,32,16,College Degree,Male,6,Allowed,White,4
+Middle,No And I Will Not,No And I Will Not,2430,54,10,Less Than HS,Male,4,Allowed,White,0
+Lower,In Past Year,In Past Year,2432,70,14,HS Diploma,Male,6,Not allowed,White,7
+Working,No But I Might,No And I Will Not,2435,46,19,Grad/Prof Degree,Female,4,Allowed,White,3
+Working,No And I Will Not,Before Last Year,2436,82,12,HS Diploma,Male,6,Allowed,White,3
+Lower,Before Last Year,Before Last Year,2438,73,9,Less Than HS,Female,5,Not allowed,White,4
+Middle,No But I Might,No But I Might,2441,36,11,Less Than HS,Male,4,Not allowed,White,1
+Working,No But I Might,No But I Might,2444,58,10,HS Diploma,Female,4,Not allowed,Black,2
+Middle,No But I Might,No But I Might,2448,39,11,Less Than HS,Female,4,Not allowed,Other,0
+Working,No But I Might,No But I Might,2452,63,8,Less Than HS,Female,4,Allowed,Black,1
+Lower,Before Last Year,No And I Will Not,2455,63,12,HS Diploma,Female,4,Allowed,Black,4
+Working,No But I Might,No But I Might,2462,75,12,HS Diploma,Male,7,Not allowed,White,3
+Working,No But I Might,No But I Might,2463,51,12,HS Diploma,Female,7,Not allowed,White,1
+Working,No But I Might,No But I Might,2464,41,16,College Degree,Male,4,Not allowed,Black,2
+Middle,In Past Year,No And I Will Not,2469,21,12,HS Diploma,Male,4,Allowed,Black,2
+Working,No And I Will Not,No And I Will Not,2475,35,9,Less Than HS,Male,4,Not allowed,Hispanic,0
+Working,In Past Year,In Past Year,2477,66,18,Grad/Prof Degree,Female,4,Not allowed,Black,6
+Middle,Before Last Year,In Past Year,2479,39,16,College Degree,Female,5,Allowed,White,6
+Middle,No But I Might,No But I Might,2483,38,18,Grad/Prof Degree,Female,4,Not allowed,Black,1
+Working,In Past Year,No And I Will Not,2484,29,9,HS Diploma,Female,7,Allowed,Black,3
+Working,No But I Might,No But I Might,2487,54,13,HS Diploma,Female,6,Allowed,White,3
+Working,Before Last Year,No But I Might,2492,30,11,HS Diploma,Male,4,Not allowed,Black,4
+Working,No And I Will Not,No But I Might,2495,47,11,HS Diploma,Female,4,Not allowed,Black,1
+Working,No And I Will Not,No And I Will Not,2504,44,12,HS Diploma,Male,4,Not allowed,White,0
+Middle,No But I Might,No But I Might,2510,88,12,HS Diploma,Female,2,Not allowed,White,2
+Middle,No And I Will Not,No And I Will Not,2518,55,12,HS Diploma,Female,6,Not allowed,White,0
+Working,No But I Might,No But I Might,2519,35,14,HS Diploma,Female,2,Allowed,White,5
+Middle,No And I Will Not,No And I Will Not,2521,37,12,HS Diploma,Female,4,Allowed,White,0
+Middle,Before Last Year,In Past Year,2522,66,16,Grad/Prof Degree,Male,2,Allowed,White,8
+Working,Before Last Year,In Past Year,2523,49,16,College Degree,Female,3,Not allowed,White,7
+Working,No And I Will Not,No And I Will Not,2529,50,16,College Degree,Male,4,Allowed,White,1
+Working,No And I Will Not,No But I Might,2534,55,12,HS Diploma,Male,6,Not allowed,White,3
+Middle,No And I Will Not,No And I Will Not,2538,76,14,HS Diploma,Female,5,Not allowed,White,2
+Middle,No And I Will Not,No And I Will Not,2539,89,14,Some College,Female,6,Allowed,White,2
+Working,No And I Will Not,No And I Will Not,2540,57,12,HS Diploma,Male,4,Not allowed,White,1
+Working,No But I Might,No But I Might,2541,25,14,HS Diploma,Male,3,Not allowed,White,3
