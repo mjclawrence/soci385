@@ -1,0 +1,108 @@
+## Setting Up
+
+Load the `cupid.csv` file on Canvas as a data frame called `cupid` and load the usual packages:
+
+```{r, include = FALSE, warning = FALSE}
+cupid <- read.csv("https://raw.githubusercontent.com/mjclawrence/soci385/master/data/cupid.csv")
+library(tidyverse)
+library(pander)
+```
+
+
+## Recapping Wednesday
+
+When a variable is normally distributed, useful to know how far a value is from the mean in standardized units.
+
+The formula for standardizing the value of a normally distributed variable is: 
+
+$\Large{z = \frac{x-\mu}{\sigma} = \frac{x - mean}{sd}}$
+
+
+Find the z-score for your height (in inches) using the `height` variable:
+
+###REPLACE THIS LINE WITH YOUR CODE###
+
+
+Find the probability that someone in this sample will be shorter than you:
+
+###REPLACE THIS LINE WITH YOUR CODE###
+
+Find the probability that someone in this sample will be taller than you:
+
+###REPLACE THIS LINE WITH YOUR CODE###
+
+
+## Standard Errors
+
+The standard deviation of the sampling distribution is called the *standard error*. It is calculated as:
+
+$\Large{\sigma_{\bar{y}} = \frac{\sigma}{\sqrt{n}} = \frac{sd}{\sqrt{sample size}}}$
+
+
+Let's find the standard error of the `age` variable. We'll save this as an object, not as a new variable (since it is the same for the entire sample):
+
+```{r}
+age_se <- sd(cupid$age) / sqrt(length(cupid$age))
+
+age_se
+```
+
+
+## From Standard Errors to Confidence Intervals
+
+For a 95% confidence interval, we need the z-scores that are associated with .025 and .975. To find them, use `qnorm()`:
+
+```{r}
+qnorm(.025)
+
+qnorm(.975)
+```
+
+In common practice, we round this to 1.96. We'll use this number a lot; remember it so you don't have to use `qnorm()` every time you need it.
+
+
+## Margin of Error
+
+The margin of error is the z-score associated with the confidence interval we are constructing multipled by the standard error:
+
+```{r}
+1.96*age_se
+```
+
+
+## Building Confidence Intervals
+
+The sample mean plus and minus the margin of error is the confidence interval.
+
+For the *lower limit* of the confidence interval:
+
+```{r}
+age_ll <- mean(cupid$age) - 1.96*age_se
+```
+
+For the *upper limit* of the confidence interval:
+
+```{r}
+age_ul <- mean(cupid$age) + 1.96*age_se
+```
+
+Save the 95% confidence interval in a vector:
+
+```{r}
+age_ci <- c(age_ll, mean(cupid$age), age_ul)
+
+age_ci
+```
+
+How do you interpret this confidence interval? 95% of the repeated samples we might imagine pulling would be expected to have means within this range, giving us 95% confidence that the true population mean falls within this range.
+
+
+## Exercise
+
+What is the 99% confidence interval for height?
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+What is the 90% confidence interval for age?
+
+### REPLACE THIS LINE WITH YOUR CODE
