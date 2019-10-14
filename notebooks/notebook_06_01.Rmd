@@ -1,6 +1,6 @@
 ## Setting Up
 
-Load the `cupid.csv` file on Canvas as a data frame called `cupid` and load the usual packages:
+Load the `cupid.csv` file as a data frame called `cupid` and load the usual packages:
 
 ```{r, include = FALSE, warning = FALSE}
 cupid <- read.csv("https://raw.githubusercontent.com/mjclawrence/soci385/master/data/cupid.csv")
