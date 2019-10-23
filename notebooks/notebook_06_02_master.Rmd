@@ -74,6 +74,10 @@ cupid <- cupid %>%
   mutate(kids = ifelse(grepl("has", offspring, ignore.case = TRUE), 1, 0))
 ```
 
+```{r}
+table(cupid$kids)
+```
+
 
 Find the 99% confidence intervals of age for respondents with and without kids.
 
@@ -98,6 +102,15 @@ kids_1_ci <- c(kids_1_ll, mean(kids_1$age), kids_1_ul)
 kids_1_ci
 ```
 
+```{r}
+cupid %>%
+  group_by(kids) %>%
+  mutate(se = (sd(age) / sqrt(length(age))),
+         ll = (mean(age) - 2.58*se),
+         ul = (mean(age) + 2.58*se)) %>%
+  summarise(mean = mean(age)) %>%
+  select(kids, ll, mean, ul)
+```
 
 
 ## Finding The Confidence Interval For A Proportion
@@ -116,7 +129,7 @@ Today we'll find the 95% confidence interval for the proportion of OK Cupid user
 round(prop.table(table(cupid$orientation)),3)
 ```
 
-How does the distribution of `orientation` vary by `sex`?
+How does the distribution of `orientation` proportions vary by `sex`?
 
 ### REPLACE THIS LINE WITH YOUR CODE
 
