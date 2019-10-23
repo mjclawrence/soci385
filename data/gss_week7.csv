@@ -1,0 +1,1267 @@
+year,id,childs,parsol,kidssol,ideal_childs
+2014,3,1,,,2
+2014,4,2,Much better,About the same,3
+2012,6,2,,,2
+2014,6,1,,,2
+2012,12,3,Much better,Much better,2
+2010,13,2,,,2
+2010,14,3,,,3
+2014,14,2,,,2
+2010,15,1,About the same,Somewhat better,2
+2014,16,3,About the same,Much worse,3
+2012,17,3,Much better,Much better,2
+2012,18,5,Somewhat better,About the same,2
+2014,19,2,Much better,About the same,2
+2010,20,0,Somewhat worse,Much worse,3
+2010,22,5,,,3
+2014,22,3,About the same,About the same,2
+2012,23,2,Somewhat worse,About the same,2
+2012,24,2,Much better,Much worse,2
+2010,25,2,Somewhat better,Much better,3
+2014,27,2,,,2
+2010,30,0,Somewhat worse,,3
+2014,33,0,,,2
+2010,35,2,,,2
+2012,35,0,Somewhat better,,2
+2010,38,2,,,2
+2012,38,0,Somewhat better,Somewhat worse,3
+2012,43,0,About the same,,2
+2014,43,0,,,0
+2010,49,0,Much better,,2
+2010,50,2,Somewhat better,Much better,2
+2014,51,3,About the same,About the same,2
+2012,52,2,Much better,Somewhat better,3
+2012,53,2,,,0
+2010,53,2,Much better,Somewhat better,2
+2014,55,1,,,2
+2012,56,3,,,3
+2014,59,0,Somewhat better,,2
+2010,62,2,Somewhat better,Much better,2
+2010,67,1,About the same,Somewhat better,3
+2014,68,3,Much better,Somewhat better,3
+2012,68,1,,,3
+2010,69,2,Somewhat worse,Somewhat better,2
+2012,69,0,Somewhat worse,,2
+2010,70,2,Much better,Much better,3
+2014,71,2,Somewhat better,About the same,2
+2014,73,2,About the same,Somewhat better,2
+2012,74,2,,,3
+2012,75,2,Somewhat better,About the same,2
+2010,75,0,Somewhat worse,Much worse,2
+2010,76,3,,,2
+2010,77,4,,,4
+2012,78,3,Somewhat better,Much better,2
+2010,78,3,,,2
+2010,79,3,About the same,Somewhat worse,3
+2010,81,0,,,2
+2014,81,3,Much better,Much better,2
+2012,81,0,Somewhat worse,Somewhat worse,2
+2012,83,2,,,2
+2014,84,0,,,5
+2012,91,3,,,2
+2014,91,1,Somewhat better,,3
+2010,92,1,,,2
+2012,94,2,,,1
+2014,95,3,Somewhat worse,Much worse,3
+2012,95,3,Somewhat better,About the same,2
+2010,95,3,,,4
+2010,98,3,,,3
+2012,99,0,,,2
+2012,101,2,Somewhat better,Much better,2
+2010,104,0,,,3
+2014,105,0,,,2
+2010,105,0,Much better,,2
+2014,106,1,About the same,Somewhat worse,2
+2012,109,2,About the same,Somewhat better,2
+2010,109,2,,,3
+2014,110,3,Somewhat worse,Somewhat worse,3
+2010,110,3,,,3
+2012,110,0,About the same,,4
+2010,114,3,Somewhat worse,Much worse,2
+2012,115,2,,,4
+2010,116,0,,,2
+2014,116,0,Somewhat better,About the same,4
+2010,117,1,About the same,Somewhat worse,2
+2014,117,3,Much better,Much better,2
+2012,118,2,Somewhat better,About the same,2
+2014,119,0,,,2
+2010,119,0,About the same,About the same,3
+2014,120,0,,,2
+2012,124,0,About the same,,2
+2012,127,2,,,2
+2014,133,0,,,2
+2010,136,1,Somewhat worse,Somewhat better,2
+2012,137,4,Somewhat better,Much better,5
+2010,138,2,,,2
+2012,139,2,Much better,Much better,2
+2014,139,1,,,2
+2014,140,2,,,2
+2012,142,2,About the same,Much better,3
+2010,144,4,,,2
+2010,145,1,Much better,About the same,2
+2010,149,0,,,3
+2012,150,2,,,2
+2014,150,3,Somewhat better,Somewhat better,3
+2010,155,2,,,4
+2010,156,0,About the same,,2
+2014,157,1,,,2
+2012,158,0,About the same,,2
+2014,158,0,,,3
+2010,163,2,Somewhat better,,2
+2014,167,3,,,2
+2012,167,0,Much worse,,2
+2010,175,4,Somewhat worse,Much better,4
+2014,176,0,,,2
+2014,181,0,Much better,Much better,2
+2012,181,3,,,3
+2010,182,0,About the same,,3
+2014,184,1,,,3
+2014,185,4,,,2
+2012,187,2,,,2
+2014,189,4,,,2
+2010,189,1,About the same,About the same,2
+2010,190,3,Much better,Somewhat worse,2
+2014,192,2,Much better,Much better,4
+2014,195,1,About the same,Somewhat worse,2
+2012,203,1,Somewhat better,Much better,3
+2010,205,1,About the same,Somewhat better,4
+2014,205,2,,,3
+2010,209,1,,,2
+2014,209,2,Somewhat better,Somewhat better,3
+2014,215,4,Much better,Somewhat better,2
+2010,220,0,,,2
+2014,220,0,,,2
+2010,221,2,,,3
+2014,223,0,,,2
+2012,224,3,,,2
+2010,224,3,,,3
+2012,226,0,Somewhat better,,2
+2014,230,2,Somewhat worse,Much better,3
+2012,231,0,,,2
+2014,235,2,,,2
+2010,238,3,,,3
+2010,239,4,Somewhat better,Somewhat better,2
+2012,241,1,Somewhat better,Somewhat better,4
+2014,242,1,Much better,Somewhat better,2
+2010,243,2,Somewhat better,Somewhat better,2
+2010,246,0,Somewhat better,,2
+2012,247,1,,,3
+2014,249,2,,,2
+2012,250,3,Somewhat better,Somewhat worse,2
+2014,251,2,About the same,About the same,2
+2014,256,0,Somewhat better,Much better,2
+2014,257,2,About the same,Much worse,2
+2014,258,1,Somewhat better,About the same,2
+2014,259,1,Somewhat worse,Much worse,2
+2010,259,0,About the same,,2
+2010,262,2,About the same,About the same,2
+2012,264,2,,,3
+2014,264,1,,,2
+2014,266,0,Much worse,,2
+2012,267,3,,,4
+2012,270,2,About the same,About the same,2
+2014,270,3,About the same,About the same,3
+2010,270,1,,,1
+2010,271,0,About the same,About the same,2
+2012,274,4,Much better,Somewhat better,4
+2010,274,0,Much better,Somewhat worse,2
+2010,278,0,About the same,Somewhat worse,2
+2012,279,1,,,2
+2012,282,0,,,3
+2012,283,1,Much better,Somewhat better,2
+2010,285,2,,,3
+2010,286,2,Somewhat better,Somewhat better,2
+2014,286,0,About the same,,2
+2014,288,1,Much better,Much worse,3
+2014,291,3,,,4
+2012,291,4,Much better,Much better,3
+2010,298,2,,,4
+2014,299,2,Somewhat worse,Somewhat worse,4
+2010,301,0,Somewhat better,,3
+2010,306,2,,,2
+2012,307,2,,,2
+2010,309,1,,,2
+2012,311,5,,,2
+2014,313,3,Somewhat better,Much better,3
+2010,313,1,,,2
+2010,314,0,Much better,,2
+2012,314,2,,,2
+2010,316,0,,,3
+2014,317,2,,,2
+2010,320,3,,,4
+2012,323,3,,,2
+2014,324,0,Much better,Somewhat worse,3
+2010,325,1,,,3
+2014,325,1,Much better,Somewhat better,2
+2012,327,0,,,3
+2010,327,3,,,4
+2014,327,2,,,3
+2010,329,2,Somewhat better,About the same,2
+2010,331,3,,,2
+2014,333,0,About the same,,2
+2014,334,2,Somewhat better,Somewhat better,2
+2014,335,0,About the same,Much better,4
+2012,340,3,Much worse,Somewhat worse,3
+2012,341,2,,,2
+2014,343,3,Somewhat better,Somewhat better,2
+2012,344,0,About the same,Somewhat better,3
+2014,346,4,Somewhat better,Somewhat better,3
+2010,347,3,About the same,Somewhat better,2
+2012,347,0,,,1
+2014,348,2,Somewhat worse,Somewhat better,2
+2012,348,0,Somewhat worse,About the same,3
+2012,349,1,,,4
+2012,351,1,,,2
+2010,352,0,,,3
+2014,353,3,,,2
+2010,353,2,About the same,Somewhat better,2
+2010,355,2,Much better,About the same,3
+2012,358,0,,,2
+2010,361,3,About the same,Somewhat better,2
+2014,362,1,,,0
+2012,362,2,,,2
+2010,363,3,,,3
+2010,365,4,,,2
+2014,366,3,,,4
+2014,367,1,Much better,Somewhat worse,2
+2010,368,0,,,2
+2010,369,0,,,4
+2010,374,4,,,4
+2012,374,2,About the same,Much worse,3
+2014,379,4,About the same,Somewhat worse,2
+2012,380,0,,,2
+2014,380,1,,,2
+2010,384,2,Somewhat better,Somewhat better,2
+2010,385,4,About the same,Somewhat better,2
+2012,387,3,,,2
+2010,387,3,Somewhat worse,About the same,2
+2014,390,5,Somewhat better,Much better,4
+2010,392,2,,,2
+2010,394,0,Somewhat better,About the same,3
+2014,396,2,Much better,About the same,3
+2012,396,2,Somewhat worse,Somewhat better,1
+2014,397,4,,,4
+2012,398,2,,,2
+2014,398,2,About the same,About the same,2
+2010,400,1,,,3
+2012,406,3,,,2
+2010,407,1,Much worse,Much better,2
+2012,412,1,,,2
+2012,414,2,Somewhat worse,Somewhat better,2
+2014,416,0,Somewhat better,About the same,2
+2012,418,4,About the same,Somewhat worse,2
+2014,418,0,,,2
+2012,420,3,,,3
+2014,422,2,Somewhat worse,Much better,2
+2010,423,3,,,2
+2014,424,1,,,2
+2010,425,3,,,3
+2012,425,0,Somewhat worse,,2
+2012,428,2,,,2
+2012,432,0,Much better,,2
+2010,433,2,About the same,About the same,3
+2012,435,2,About the same,About the same,2
+2010,436,1,,,4
+2012,436,2,,,2
+2010,441,2,Somewhat better,Somewhat better,2
+2010,442,4,Somewhat worse,Somewhat better,4
+2014,442,0,,,2
+2010,443,1,Somewhat better,Much worse,4
+2014,444,0,,,2
+2012,447,2,,,2
+2012,449,0,,,2
+2010,449,1,Much better,Somewhat better,3
+2014,450,1,About the same,Somewhat worse,2
+2010,451,0,,,3
+2012,453,0,,,2
+2010,453,0,About the same,,3
+2012,458,3,Much better,Much better,3
+2012,460,2,Somewhat better,About the same,4
+2012,462,2,Somewhat worse,Much better,2
+2014,462,2,,,2
+2012,464,1,Much better,About the same,2
+2012,467,2,,,2
+2010,469,0,,,2
+2012,469,0,,,3
+2012,473,3,Somewhat better,Somewhat better,2
+2010,473,0,,,3
+2014,475,1,,,3
+2014,477,2,,,2
+2012,477,0,,,2
+2014,479,3,About the same,Somewhat worse,3
+2012,481,1,,,2
+2014,484,0,,,2
+2010,485,2,Somewhat worse,Much better,2
+2014,487,3,Much better,Somewhat better,2
+2012,490,5,,,3
+2010,490,2,,,2
+2010,500,3,About the same,About the same,3
+2010,503,2,Somewhat better,Much better,2
+2010,505,2,Somewhat worse,Somewhat better,2
+2012,507,0,,,3
+2012,509,0,,,2
+2010,510,2,,,2
+2010,512,2,,,3
+2014,512,2,,,2
+2010,513,3,Much better,Somewhat better,3
+2010,515,3,Somewhat better,Somewhat better,3
+2012,515,2,,,3
+2012,517,3,Somewhat better,Much worse,3
+2012,521,1,Much better,Much better,3
+2010,524,3,Somewhat better,Somewhat better,4
+2014,525,0,Somewhat better,Somewhat better,2
+2012,526,2,Much better,Somewhat better,2
+2010,529,4,Somewhat better,Somewhat worse,4
+2010,530,2,About the same,About the same,2
+2012,530,0,About the same,Somewhat worse,3
+2012,537,2,Much better,Somewhat worse,2
+2010,538,2,Somewhat worse,About the same,2
+2012,538,2,,,2
+2010,540,3,Somewhat better,Somewhat better,2
+2010,541,1,Somewhat worse,Much better,3
+2012,543,4,,,3
+2010,549,5,Much better,About the same,2
+2014,552,2,,,2
+2012,556,2,Somewhat better,Somewhat worse,3
+2014,560,2,,,2
+2014,561,4,Much better,Much better,2
+2014,564,2,,,2
+2012,567,2,Much better,Much better,2
+2010,571,0,,,2
+2012,572,1,,,2
+2014,576,2,,,3
+2012,577,3,,,2
+2010,578,3,,,2
+2010,580,3,,,3
+2014,583,1,About the same,About the same,3
+2012,584,2,Much better,Somewhat worse,2
+2014,584,0,,,2
+2014,587,2,,,2
+2012,587,2,Somewhat better,About the same,3
+2014,591,4,,,3
+2014,592,1,,,2
+2012,593,2,,,2
+2014,594,2,About the same,About the same,2
+2012,595,2,,,3
+2012,597,0,Much worse,Somewhat worse,2
+2012,598,2,,,2
+2012,600,1,,,2
+2014,602,2,Much better,Somewhat worse,2
+2010,605,1,,,2
+2012,607,3,Somewhat better,Somewhat worse,2
+2010,607,2,About the same,Somewhat better,2
+2010,609,1,Somewhat worse,About the same,2
+2012,610,2,,,3
+2014,611,3,,,3
+2010,612,1,,,2
+2014,613,3,About the same,About the same,2
+2010,615,2,Somewhat better,Somewhat better,2
+2012,616,1,,,3
+2014,616,2,,,2
+2014,617,4,Much better,About the same,3
+2010,623,1,About the same,Somewhat better,2
+2010,624,2,,,2
+2014,625,0,Somewhat better,About the same,2
+2012,626,2,,,2
+2010,629,3,Somewhat worse,Somewhat worse,1
+2012,631,0,,,2
+2012,634,1,,,1
+2010,636,2,,,2
+2012,638,3,About the same,Somewhat worse,2
+2010,639,2,Much better,About the same,3
+2012,640,2,Much better,Much better,3
+2014,642,1,About the same,Much better,2
+2014,643,1,,,3
+2010,643,4,,,3
+2012,643,3,Much better,Somewhat better,2
+2010,644,3,About the same,About the same,2
+2012,644,2,,,3
+2012,645,5,About the same,Somewhat better,2
+2014,646,1,,,2
+2012,648,0,,,1
+2010,650,1,Somewhat worse,Somewhat better,1
+2012,650,0,Somewhat better,About the same,2
+2010,651,1,,,1
+2014,653,0,Somewhat better,Somewhat worse,2
+2012,655,1,About the same,Much better,2
+2010,657,2,Somewhat better,Somewhat better,3
+2010,661,2,,,2
+2010,664,2,,,2
+2014,667,1,,,3
+2012,670,1,Somewhat better,Much worse,2
+2012,673,1,,,2
+2014,673,3,,,2
+2010,677,1,About the same,Somewhat better,2
+2014,678,1,Much worse,Much worse,2
+2012,679,0,,,2
+2010,679,0,About the same,Somewhat worse,2
+2010,680,3,Somewhat worse,Much better,3
+2012,681,2,Much better,Somewhat better,2
+2012,685,2,,,2
+2010,686,3,Somewhat worse,Much better,2
+2010,688,2,,,2
+2014,688,1,Much better,Somewhat better,2
+2012,697,3,Much better,Somewhat worse,3
+2014,699,1,About the same,About the same,3
+2014,700,0,Somewhat better,Somewhat worse,3
+2010,701,1,Much better,Much better,2
+2010,702,1,,,2
+2012,703,0,,,2
+2014,705,2,,,2
+2012,705,2,,,2
+2014,707,3,,,4
+2010,717,0,,,2
+2010,720,2,,,2
+2010,722,3,About the same,Somewhat worse,2
+2014,724,2,,,2
+2012,724,0,,,2
+2014,725,0,,,2
+2010,725,2,,,2
+2012,727,2,,,2
+2010,729,3,Much worse,Much better,3
+2012,732,3,Much worse,Somewhat better,2
+2014,734,1,Somewhat better,Somewhat worse,3
+2010,734,4,Somewhat better,Somewhat better,4
+2010,735,3,,,3
+2012,738,1,Somewhat better,Somewhat worse,2
+2010,740,1,About the same,About the same,1
+2014,741,3,,,3
+2010,742,2,Much better,Much worse,3
+2012,744,0,,,0
+2012,747,1,,,2
+2010,749,0,,,2
+2010,750,1,Much worse,Somewhat worse,3
+2014,750,2,,,2
+2014,751,3,Somewhat worse,Much better,3
+2010,752,0,,,2
+2010,753,1,Somewhat better,Somewhat better,2
+2014,756,2,Somewhat worse,Much better,2
+2012,756,2,Somewhat better,Somewhat better,2
+2010,756,2,,,2
+2012,757,2,,,3
+2010,757,0,,,2
+2010,758,0,About the same,,3
+2014,758,3,,,3
+2010,759,0,,,2
+2010,760,0,Somewhat better,,2
+2012,761,2,About the same,Much better,2
+2012,763,2,About the same,Much better,2
+2012,767,0,,,2
+2014,768,1,,,2
+2012,769,2,Much better,Much better,2
+2012,771,4,,,4
+2012,773,5,,,2
+2012,778,0,,,2
+2010,779,2,Somewhat better,Somewhat better,2
+2012,788,5,,,3
+2014,789,0,,,2
+2010,791,0,About the same,,3
+2012,792,2,Somewhat better,Somewhat better,2
+2012,796,2,,Much better,2
+2010,797,0,,,3
+2012,797,2,,,2
+2012,801,2,Somewhat better,Somewhat better,2
+2010,801,0,Much better,Somewhat worse,3
+2014,803,3,,,3
+2010,805,0,Much better,Much better,4
+2014,805,2,Much better,Much better,3
+2014,807,2,,,3
+2012,807,2,Much better,Much better,3
+2014,808,1,,,2
+2010,810,1,About the same,Somewhat better,2
+2012,811,0,,,3
+2010,812,0,Somewhat worse,Somewhat worse,2
+2010,813,1,About the same,Somewhat better,2
+2010,815,2,,,2
+2012,815,1,Somewhat better,Somewhat worse,2
+2010,819,0,Much worse,,2
+2014,820,0,,,2
+2012,821,4,,,2
+2012,825,4,,,2
+2012,829,3,Much better,Much better,2
+2010,830,1,Somewhat better,Somewhat better,4
+2012,837,4,,,3
+2014,838,2,Somewhat better,Somewhat better,3
+2012,842,2,,,2
+2010,845,2,,,4
+2014,846,0,,,2
+2010,847,0,Somewhat better,,2
+2014,847,3,,,3
+2010,848,0,,,2
+2014,849,3,Somewhat better,Somewhat better,3
+2012,849,0,,,3
+2012,852,1,Somewhat worse,,3
+2010,853,5,About the same,About the same,5
+2010,855,1,,,2
+2012,855,0,Much worse,,3
+2012,858,0,,,2
+2010,858,3,,,2
+2012,861,4,,,2
+2012,862,3,Somewhat better,Somewhat better,1
+2010,863,4,,,4
+2012,865,1,Much better,Somewhat better,3
+2014,866,1,Much better,Much worse,2
+2014,867,2,Much worse,Somewhat worse,2
+2014,868,1,About the same,About the same,3
+2010,868,2,Somewhat better,Somewhat better,2
+2012,868,0,About the same,,2
+2014,871,2,,,2
+2010,873,0,Somewhat better,Much worse,2
+2014,875,1,Somewhat better,About the same,2
+2014,877,2,Somewhat better,Somewhat better,2
+2010,878,1,Much better,Much worse,3
+2010,883,3,Somewhat worse,About the same,2
+2014,883,2,Much better,About the same,2
+2010,885,1,About the same,About the same,2
+2012,889,2,,,2
+2014,894,3,Somewhat worse,Somewhat better,3
+2012,896,2,,,2
+2010,897,4,,,3
+2012,897,2,Somewhat better,Much better,2
+2014,897,1,Somewhat better,Somewhat better,4
+2014,898,0,Somewhat worse,,2
+2014,899,0,,,3
+2012,900,0,Much better,About the same,3
+2010,901,2,Somewhat better,Somewhat better,2
+2014,901,0,About the same,About the same,3
+2012,901,1,,,2
+2012,906,1,,,2
+2014,907,0,,,3
+2012,908,0,,,2
+2012,911,2,,,3
+2010,916,2,Somewhat better,Somewhat better,2
+2014,919,1,Somewhat better,Somewhat better,3
+2014,920,2,Much better,About the same,2
+2014,921,2,,,2
+2014,922,2,About the same,About the same,3
+2014,924,3,Somewhat better,Somewhat worse,3
+2012,928,1,Much better,About the same,2
+2014,930,2,About the same,Somewhat better,2
+2012,932,1,,,2
+2014,933,0,,,2
+2014,937,2,Somewhat better,Somewhat better,2
+2012,939,3,,,3
+2012,940,1,Somewhat worse,,2
+2012,944,0,,,2
+2014,947,0,Much better,,2
+2012,947,3,,,2
+2010,952,0,Much better,,2
+2014,953,2,,,2
+2014,955,3,Much better,Much better,3
+2012,955,3,,,3
+2014,956,1,Somewhat worse,Much better,2
+2014,957,2,About the same,Much better,2
+2010,958,0,,,2
+2010,962,1,Much better,Much better,2
+2014,963,0,About the same,,2
+2010,964,2,Much better,About the same,2
+2012,968,1,,,2
+2010,970,2,,,2
+2014,971,1,,,2
+2012,973,4,,,3
+2014,974,0,About the same,,2
+2010,975,1,Somewhat worse,Somewhat worse,1
+2010,976,0,,,0
+2012,977,1,About the same,Somewhat better,2
+2014,978,0,Much better,,3
+2014,980,3,,,2
+2012,985,3,Somewhat worse,Much worse,2
+2014,985,0,,,2
+2012,987,0,Somewhat better,About the same,2
+2012,988,2,About the same,Somewhat worse,2
+2014,991,2,Somewhat worse,Somewhat worse,3
+2010,992,0,Somewhat worse,Somewhat better,3
+2014,993,2,,,2
+2012,993,0,,,3
+2014,995,2,About the same,Much better,2
+2014,1000,1,Much worse,Somewhat better,2
+2010,1000,3,Somewhat worse,Somewhat better,2
+2012,1001,1,Somewhat better,Somewhat better,2
+2014,1001,1,,,1
+2012,1004,0,About the same,,4
+2012,1006,2,,,2
+2012,1009,0,Somewhat worse,,2
+2010,1009,4,,,3
+2014,1011,1,,,3
+2010,1011,2,,,3
+2012,1014,2,About the same,Much better,2
+2010,1015,2,About the same,Much better,3
+2014,1015,0,Somewhat better,Much worse,3
+2014,1016,0,Much better,,2
+2014,1017,5,About the same,About the same,2
+2010,1019,4,,,2
+2014,1020,4,About the same,Somewhat better,3
+2010,1022,0,Somewhat worse,Somewhat better,2
+2014,1022,1,,,2
+2014,1023,3,Somewhat better,Much better,3
+2014,1026,1,,,2
+2014,1027,3,Much better,Somewhat better,2
+2014,1030,0,Somewhat worse,,2
+2014,1032,2,,,2
+2014,1035,1,Much better,About the same,2
+2012,1037,0,Somewhat better,Somewhat worse,1
+2012,1038,2,,,2
+2014,1039,2,,,3
+2012,1042,0,About the same,,2
+2014,1044,1,About the same,Much worse,2
+2014,1045,2,Much better,Much better,2
+2010,1048,0,,,2
+2010,1050,4,Somewhat better,Somewhat better,2
+2012,1053,4,,,2
+2014,1053,4,Somewhat better,Somewhat better,2
+2010,1056,4,Somewhat worse,Somewhat better,2
+2014,1057,0,,,2
+2014,1058,3,Somewhat better,Somewhat better,3
+2012,1061,2,,,2
+2012,1062,3,,,3
+2010,1063,3,,,2
+2010,1065,3,,,2
+2014,1068,3,,,3
+2012,1070,2,Much better,About the same,2
+2014,1071,0,,,2
+2010,1072,1,About the same,Much better,3
+2010,1075,1,About the same,Somewhat better,2
+2010,1078,2,Much better,Somewhat better,2
+2012,1079,0,,,2
+2014,1081,4,Somewhat better,Much better,4
+2010,1082,3,Somewhat better,Somewhat better,2
+2012,1087,3,,,2
+2014,1090,2,,,2
+2010,1093,0,Somewhat worse,Much worse,2
+2012,1096,1,,,0
+2010,1097,0,,,3
+2012,1097,3,,,2
+2012,1102,1,Somewhat better,Much worse,2
+2010,1104,2,,,2
+2014,1104,2,,,2
+2010,1106,3,,,3
+2010,1107,2,About the same,Much better,2
+2010,1110,3,,,2
+2014,1110,3,About the same,Somewhat better,2
+2012,1110,3,Somewhat worse,Somewhat better,3
+2010,1113,2,About the same,Much better,2
+2010,1114,3,,,2
+2012,1115,1,Much better,Much better,3
+2010,1115,1,Much better,Much better,2
+2014,1117,0,Much better,Somewhat better,2
+2012,1117,0,,,2
+2014,1119,0,,,2
+2010,1123,0,Much better,,2
+2012,1124,0,Much worse,,2
+2014,1126,2,Somewhat better,Somewhat better,2
+2014,1127,4,,,3
+2010,1127,0,,,2
+2014,1130,3,Somewhat better,Much better,4
+2010,1130,2,Somewhat better,Somewhat worse,3
+2014,1135,0,About the same,Somewhat worse,2
+2012,1135,5,Much better,Somewhat worse,2
+2014,1138,1,,,3
+2012,1141,2,,,2
+2010,1142,3,Somewhat better,Much better,4
+2014,1143,3,Somewhat worse,Much better,2
+2012,1144,2,Somewhat better,About the same,2
+2010,1144,3,Much worse,About the same,1
+2012,1145,2,,,3
+2014,1146,3,,,2
+2014,1147,2,Much better,Much better,2
+2012,1153,1,,,3
+2010,1156,2,,,3
+2012,1157,0,,,2
+2014,1157,1,,,2
+2012,1158,4,About the same,Somewhat better,3
+2014,1161,0,,,0
+2010,1162,3,About the same,Somewhat better,3
+2012,1162,3,About the same,Much worse,2
+2010,1165,5,,,2
+2010,1166,3,Somewhat worse,Somewhat better,2
+2010,1167,0,Somewhat better,,2
+2010,1168,3,,,3
+2012,1168,3,,,3
+2010,1170,2,About the same,Somewhat worse,2
+2010,1171,2,,,2
+2014,1171,0,,,2
+2012,1172,3,About the same,Somewhat worse,3
+2014,1176,2,Somewhat worse,Much worse,2
+2010,1176,1,About the same,About the same,1
+2014,1177,4,Much worse,About the same,2
+2012,1181,3,About the same,Somewhat worse,3
+2012,1183,2,Somewhat better,Somewhat worse,1
+2014,1186,2,About the same,About the same,2
+2014,1188,4,,,2
+2014,1189,2,,,3
+2014,1190,2,,,2
+2012,1191,2,Much worse,Somewhat better,2
+2010,1195,3,Somewhat worse,Much better,5
+2012,1197,2,,,2
+2010,1201,4,,,3
+2014,1202,3,Somewhat better,Much better,5
+2010,1204,1,Much better,Somewhat worse,3
+2012,1206,3,,,4
+2010,1207,0,Much worse,About the same,2
+2014,1207,2,Somewhat better,Somewhat better,3
+2010,1209,0,,,3
+2014,1210,0,,,2
+2012,1211,2,Somewhat worse,Somewhat worse,2
+2012,1215,1,Somewhat worse,Much better,2
+2014,1229,3,,,2
+2010,1229,0,Somewhat better,,2
+2010,1232,0,,,0
+2014,1236,1,,,2
+2014,1237,5,,,5
+2012,1238,0,Somewhat better,,1
+2010,1240,0,About the same,,2
+2012,1244,0,Somewhat better,,4
+2010,1244,2,,,2
+2014,1245,4,,,2
+2010,1246,0,About the same,,2
+2012,1247,4,,,2
+2012,1248,2,Somewhat better,Somewhat better,2
+2014,1249,1,,,2
+2014,1250,0,Somewhat worse,,3
+2010,1251,2,,,5
+2012,1252,0,,,2
+2012,1253,0,Somewhat better,Somewhat worse,3
+2014,1254,4,Much better,Somewhat better,3
+2014,1255,3,,,2
+2010,1255,3,,,3
+2010,1256,3,About the same,Somewhat better,2
+2012,1258,0,Much better,Somewhat better,3
+2010,1259,0,,,2
+2012,1262,2,Somewhat worse,Somewhat worse,2
+2012,1264,2,About the same,Much better,2
+2012,1266,2,,,2
+2014,1268,0,Much better,,5
+2012,1269,0,,,2
+2012,1272,0,Somewhat better,,3
+2014,1274,2,Much worse,Much better,0
+2010,1275,2,,,2
+2010,1276,2,About the same,Somewhat better,2
+2010,1278,1,,,2
+2014,1279,3,,,3
+2010,1280,2,,,2
+2012,1282,0,,,1
+2010,1282,0,Much better,Much better,2
+2014,1284,2,,,2
+2014,1285,2,Much worse,Somewhat better,2
+2010,1285,0,Somewhat worse,,2
+2012,1287,2,,,3
+2014,1287,4,,,4
+2010,1289,2,,,2
+2012,1290,3,,,3
+2010,1291,2,Somewhat better,Somewhat worse,3
+2010,1294,0,Somewhat better,Somewhat better,3
+2010,1296,2,Much better,About the same,2
+2010,1297,0,Somewhat worse,,2
+2014,1297,3,,,3
+2010,1299,0,Somewhat better,Much better,3
+2014,1302,1,About the same,Somewhat worse,2
+2010,1302,0,,,2
+2014,1309,1,About the same,About the same,2
+2012,1310,2,,,2
+2014,1314,2,Somewhat better,Somewhat worse,3
+2010,1314,4,Much better,Much better,2
+2012,1314,0,,,1
+2014,1317,0,,,2
+2010,1317,1,About the same,Much better,3
+2012,1319,2,Somewhat worse,Somewhat better,2
+2014,1319,0,,,3
+2012,1321,2,,,5
+2010,1326,2,,,2
+2012,1327,2,Much better,Somewhat worse,2
+2010,1328,3,Much better,Much better,2
+2010,1330,2,Somewhat better,Somewhat better,2
+2012,1331,0,,,3
+2010,1333,1,Much better,Somewhat better,2
+2010,1334,3,,,3
+2014,1336,1,About the same,Much better,3
+2010,1342,2,,,2
+2014,1344,2,Somewhat better,Somewhat better,3
+2014,1345,3,About the same,About the same,3
+2012,1346,4,,,2
+2014,1348,3,,,3
+2010,1348,1,,,2
+2014,1353,2,Much better,About the same,2
+2012,1356,4,,,2
+2012,1357,2,About the same,About the same,3
+2010,1357,3,,,2
+2010,1360,3,,,3
+2014,1361,2,About the same,Much better,2
+2012,1365,1,,,2
+2010,1370,3,,,2
+2010,1371,2,,,3
+2010,1372,2,Much better,Somewhat worse,2
+2014,1372,0,,,3
+2014,1375,0,Somewhat better,Somewhat better,2
+2012,1377,2,About the same,Much better,3
+2010,1380,1,,,3
+2012,1384,4,,,2
+2014,1384,0,Somewhat better,Somewhat worse,3
+2014,1388,1,Much worse,Much better,2
+2014,1389,2,About the same,Somewhat better,2
+2012,1390,3,,,2
+2012,1392,0,Somewhat better,Somewhat better,2
+2012,1394,0,About the same,,2
+2010,1399,3,,,3
+2012,1399,1,Much worse,About the same,2
+2014,1404,2,,,2
+2014,1405,2,,,2
+2012,1407,3,About the same,Much worse,3
+2012,1409,2,,,2
+2010,1409,1,,,2
+2012,1410,2,Much better,Somewhat worse,2
+2012,1412,2,About the same,About the same,2
+2012,1413,2,,,2
+2010,1414,1,Somewhat better,About the same,2
+2010,1415,2,Somewhat worse,Somewhat worse,2
+2012,1416,2,Somewhat better,Somewhat better,3
+2012,1418,3,,,4
+2014,1419,1,About the same,About the same,2
+2012,1424,3,Much worse,Much better,2
+2014,1425,2,,,3
+2010,1428,2,Much better,About the same,2
+2010,1429,1,Somewhat worse,Much better,2
+2010,1430,1,,,2
+2014,1431,0,,,2
+2010,1433,3,,,2
+2012,1435,1,,,3
+2014,1437,4,Much better,Somewhat better,3
+2012,1437,3,About the same,Somewhat better,3
+2010,1438,2,,,2
+2012,1446,1,About the same,Somewhat worse,2
+2012,1448,3,Somewhat better,Somewhat better,2
+2010,1451,3,Somewhat better,About the same,2
+2012,1454,2,Much better,Somewhat better,3
+2014,1455,3,About the same,Somewhat better,3
+2012,1458,3,,,3
+2010,1459,1,Much better,Somewhat worse,2
+2012,1460,2,,,2
+2012,1461,2,Somewhat worse,Somewhat better,3
+2010,1463,3,,,2
+2012,1464,0,Somewhat worse,Somewhat worse,2
+2014,1467,0,Much better,,3
+2014,1468,0,Much worse,,2
+2012,1469,2,About the same,Much better,2
+2014,1471,0,,,2
+2010,1474,1,,,2
+2010,1475,1,Somewhat worse,About the same,2
+2014,1476,2,,,3
+2014,1477,3,,,3
+2010,1479,2,About the same,Somewhat worse,2
+2012,1480,1,,,3
+2014,1481,0,,,0
+2010,1481,0,About the same,,2
+2010,1483,1,,,2
+2012,1484,0,About the same,,2
+2010,1486,3,,,2
+2014,1486,1,About the same,About the same,2
+2014,1487,3,Much better,About the same,4
+2012,1488,0,Much better,,2
+2010,1489,2,,,2
+2010,1490,1,Much worse,About the same,2
+2014,1490,2,About the same,Much better,2
+2012,1490,2,,,3
+2014,1494,2,About the same,Somewhat worse,2
+2012,1495,1,Somewhat better,,2
+2010,1498,3,Somewhat better,Somewhat better,3
+2014,1499,0,Somewhat worse,Somewhat better,2
+2012,1500,2,Somewhat worse,Somewhat better,2
+2014,1501,3,Somewhat better,Somewhat better,2
+2012,1503,2,,,2
+2014,1506,0,Somewhat worse,,3
+2010,1511,0,,,2
+2012,1513,1,,,2
+2014,1514,1,,,2
+2012,1514,2,About the same,About the same,3
+2010,1516,5,,,4
+2014,1520,2,,,3
+2012,1523,0,,,2
+2014,1527,4,About the same,About the same,3
+2012,1528,0,,,2
+2012,1529,3,Somewhat better,Somewhat better,5
+2012,1530,2,,,5
+2010,1533,3,Much better,Somewhat better,4
+2012,1535,3,,Much worse,3
+2010,1536,3,About the same,About the same,3
+2014,1536,1,,,2
+2014,1537,2,,,3
+2010,1537,2,Much worse,About the same,2
+2010,1543,2,Somewhat better,,2
+2014,1545,0,About the same,Somewhat better,2
+2014,1546,1,Somewhat worse,Somewhat better,2
+2010,1547,2,Much better,Much better,2
+2014,1549,1,About the same,Somewhat better,2
+2014,1550,1,Much better,Somewhat better,3
+2012,1551,0,Much better,Somewhat worse,2
+2010,1552,0,Much better,Much better,3
+2014,1558,2,Somewhat better,Somewhat better,2
+2010,1558,0,Much better,,2
+2014,1559,3,Much better,Somewhat worse,3
+2012,1559,1,,,2
+2012,1560,0,Somewhat worse,,2
+2014,1560,1,,,2
+2014,1561,3,,,4
+2014,1562,4,,,3
+2010,1563,0,,,2
+2010,1564,0,Much better,,2
+2014,1565,1,,,3
+2012,1565,2,About the same,About the same,5
+2012,1566,2,,,2
+2014,1567,1,,,2
+2010,1568,1,Somewhat worse,Much better,4
+2014,1570,0,Somewhat worse,,2
+2014,1576,3,About the same,Much worse,2
+2010,1578,0,Somewhat worse,Somewhat better,2
+2014,1581,1,,,2
+2010,1581,0,,,2
+2012,1583,4,,,3
+2012,1585,0,Much better,Somewhat better,2
+2010,1585,4,Much better,Much better,3
+2010,1586,2,Somewhat better,Much better,3
+2012,1586,4,Much better,About the same,4
+2014,1591,1,Much better,Much better,2
+2014,1592,2,,,2
+2012,1592,4,Much better,Much better,3
+2010,1593,2,Somewhat worse,Somewhat better,3
+2014,1597,3,About the same,Much worse,3
+2012,1599,4,Somewhat better,Much better,2
+2014,1602,1,Somewhat better,Somewhat worse,2
+2012,1603,3,Somewhat better,Somewhat better,2
+2012,1604,2,,,0
+2012,1606,0,Somewhat worse,,2
+2010,1612,2,,,2
+2010,1614,0,,,2
+2014,1614,0,Much worse,,2
+2014,1615,0,Much worse,,2
+2010,1617,2,Much better,About the same,2
+2014,1622,2,Much better,Much better,3
+2010,1623,1,,,3
+2010,1629,4,,,4
+2014,1632,2,,,2
+2014,1635,0,Somewhat better,,2
+2014,1636,2,,,2
+2010,1637,0,,,2
+2014,1638,2,,,4
+2012,1638,2,Somewhat worse,About the same,2
+2014,1640,2,Much worse,Much worse,4
+2010,1640,1,,,3
+2012,1640,3,,,2
+2010,1641,5,Much better,Much better,5
+2012,1641,0,Much worse,,2
+2014,1644,3,,,2
+2014,1646,0,,,2
+2012,1647,3,,,3
+2010,1648,1,,,3
+2010,1651,3,,,2
+2012,1652,2,,,2
+2010,1652,0,About the same,,2
+2014,1656,1,Much worse,Much worse,1
+2010,1656,2,Much better,Much better,2
+2010,1657,0,,,2
+2012,1657,1,,,4
+2014,1657,1,Somewhat worse,Somewhat worse,2
+2012,1662,0,Somewhat worse,,2
+2012,1664,2,Somewhat worse,Much better,2
+2012,1666,0,Somewhat worse,Much worse,2
+2010,1668,4,Somewhat worse,About the same,4
+2012,1671,1,Somewhat worse,Somewhat better,1
+2012,1672,1,,,1
+2010,1673,2,,,2
+2012,1674,0,Somewhat better,Somewhat worse,2
+2014,1678,2,,,4
+2010,1679,1,About the same,Somewhat better,1
+2012,1685,0,About the same,Somewhat worse,2
+2012,1689,0,,,2
+2010,1693,0,,,3
+2010,1695,2,,,3
+2010,1697,0,About the same,,2
+2012,1697,1,Much worse,Much worse,2
+2010,1698,3,About the same,Somewhat better,2
+2010,1699,1,Somewhat better,Somewhat better,3
+2014,1700,0,,,2
+2014,1703,2,Somewhat better,Much better,4
+2010,1705,4,,,2
+2010,1706,5,Somewhat better,Somewhat worse,5
+2010,1707,1,Somewhat better,Much better,2
+2010,1708,1,Somewhat better,About the same,1
+2010,1710,2,,,2
+2012,1712,2,Much better,Somewhat worse,2
+2014,1712,3,,,2
+2010,1712,4,,,3
+2010,1716,2,,,2
+2012,1719,2,,,4
+2012,1721,5,,,2
+2010,1723,1,,Somewhat better,2
+2014,1724,0,,,3
+2012,1726,2,Somewhat worse,Somewhat better,2
+2010,1729,3,,,1
+2012,1730,1,Much better,Much better,2
+2012,1733,0,,,2
+2010,1733,0,,,2
+2012,1734,4,,,4
+2012,1735,0,Much better,Much better,3
+2010,1735,2,,,2
+2010,1739,2,,,3
+2012,1740,3,,Much better,2
+2010,1741,1,Somewhat better,About the same,2
+2014,1742,2,,Much worse,2
+2012,1742,2,,,2
+2010,1744,0,Much better,,2
+2012,1744,2,,,3
+2014,1745,1,,,3
+2012,1747,1,,,2
+2014,1748,0,,,1
+2010,1751,1,Much better,Much worse,2
+2010,1752,2,Somewhat better,Much better,2
+2014,1752,1,About the same,Somewhat better,2
+2010,1757,2,,,2
+2010,1758,1,About the same,Somewhat better,2
+2014,1759,3,,,3
+2014,1763,0,Somewhat worse,Much worse,2
+2014,1767,3,Somewhat worse,Somewhat better,2
+2010,1769,1,Somewhat worse,Somewhat better,2
+2012,1770,2,,,3
+2010,1772,3,About the same,Somewhat better,3
+2010,1773,2,About the same,Somewhat worse,2
+2014,1774,0,,,2
+2012,1775,1,About the same,Somewhat better,3
+2010,1775,0,Somewhat better,,2
+2014,1778,2,,,2
+2010,1779,1,Somewhat better,Somewhat better,3
+2014,1783,2,,,2
+2012,1783,0,,,2
+2014,1788,3,,,2
+2012,1789,2,,,2
+2014,1790,0,Much better,About the same,2
+2012,1794,2,,,5
+2010,1794,2,Somewhat better,Somewhat better,2
+2010,1795,2,,,3
+2012,1798,0,,,2
+2014,1799,2,,,2
+2012,1799,4,Somewhat better,Somewhat better,3
+2010,1799,0,Somewhat better,Somewhat better,2
+2010,1800,0,Somewhat worse,,3
+2010,1802,2,,,2
+2014,1802,1,Somewhat worse,Somewhat worse,3
+2010,1804,2,Somewhat worse,Much better,2
+2014,1809,2,,,2
+2010,1810,2,Much worse,Much worse,2
+2014,1811,2,Much better,Somewhat better,3
+2014,1812,3,,,3
+2014,1813,1,,,2
+2010,1815,3,,,3
+2012,1815,3,Somewhat better,Somewhat better,2
+2010,1817,0,,,2
+2012,1820,2,,,3
+2014,1821,2,,,2
+2010,1822,0,,,4
+2010,1826,2,,Somewhat better,2
+2012,1827,1,,,2
+2012,1829,1,,,2
+2010,1830,2,Much better,Much better,2
+2012,1831,1,,,2
+2010,1836,2,,,4
+2010,1837,0,,,3
+2010,1838,2,,,2
+2014,1838,1,About the same,Somewhat worse,3
+2014,1842,0,About the same,,4
+2014,1843,1,Much better,Somewhat worse,2
+2010,1844,1,Much better,Much better,1
+2014,1846,4,,,3
+2014,1848,5,,,2
+2012,1850,2,Somewhat worse,Somewhat worse,2
+2014,1859,1,,,2
+2014,1860,2,,,3
+2014,1863,3,,,3
+2014,1866,2,,,2
+2012,1869,2,,,2
+2014,1870,0,,,0
+2010,1874,0,Somewhat better,Somewhat better,2
+2014,1874,4,,,3
+2012,1875,1,Somewhat better,Much better,2
+2014,1876,1,Much better,About the same,2
+2010,1876,2,,,3
+2010,1878,5,,,3
+2010,1882,2,Much better,,3
+2014,1884,3,About the same,Somewhat better,2
+2010,1884,0,Much better,,2
+2014,1886,2,,,2
+2012,1890,2,,,3
+2014,1890,2,About the same,Somewhat better,2
+2014,1893,2,Much better,About the same,3
+2014,1898,2,,,2
+2012,1899,1,,,3
+2014,1900,1,,,2
+2014,1901,2,Much worse,Much better,2
+2014,1902,0,Much better,,2
+2014,1904,2,,,2
+2014,1906,4,,,4
+2014,1910,2,Much better,Much better,3
+2014,1914,3,Somewhat better,Somewhat better,2
+2010,1915,2,,,2
+2010,1917,0,,,3
+2012,1922,2,,,2
+2010,1923,0,Much better,Much worse,5
+2014,1923,3,About the same,Somewhat better,3
+2012,1925,4,,,2
+2010,1925,1,,,3
+2010,1926,0,About the same,,2
+2012,1928,2,About the same,Somewhat better,3
+2014,1928,2,,,2
+2014,1929,2,,,2
+2010,1933,3,Somewhat worse,Much worse,4
+2010,1935,3,,,2
+2012,1936,2,,,2
+2010,1937,2,Much better,Much better,2
+2010,1939,3,,,3
+2010,1940,0,Somewhat better,About the same,2
+2014,1943,1,,,2
+2010,1943,0,Somewhat worse,Somewhat worse,2
+2014,1944,0,,,3
+2014,1946,0,,,3
+2012,1947,1,Somewhat better,Somewhat worse,2
+2014,1947,2,Somewhat worse,Somewhat better,2
+2012,1951,0,Somewhat worse,Somewhat better,2
+2012,1952,0,,,2
+2010,1953,2,About the same,About the same,2
+2014,1953,2,About the same,Somewhat better,3
+2010,1955,4,,,2
+2010,1958,1,About the same,Somewhat worse,2
+2012,1963,3,,,2
+2014,1964,3,,,3
+2014,1965,0,Much better,About the same,2
+2010,1968,2,,,0
+2014,1971,1,,,2
+2014,1972,0,,,2
+2012,1972,2,,,3
+2010,1973,3,About the same,About the same,2
+2014,1976,5,,,4
+2010,1977,2,,,3
+2010,1978,0,Much worse,,2
+2014,1982,1,Somewhat better,Somewhat better,2
+2010,1982,3,,,3
+2010,1983,2,About the same,Much worse,1
+2010,1994,0,Somewhat worse,,2
+2010,2002,2,,,3
+2010,2005,2,About the same,Somewhat worse,2
+2014,2006,5,Somewhat worse,Somewhat better,2
+2010,2012,2,Somewhat better,Somewhat worse,2
+2014,2012,2,About the same,About the same,2
+2010,2015,2,Somewhat better,About the same,2
+2014,2016,2,,,3
+2014,2019,3,,,3
+2010,2023,1,,,2
+2014,2024,3,,,3
+2014,2029,4,About the same,Somewhat worse,3
+2010,2030,1,,,2
+2010,2031,0,,,2
+2010,2033,1,Somewhat worse,Much worse,1
+2014,2034,0,Somewhat better,Much better,5
+2014,2038,2,,,2
+2014,2039,1,Much better,About the same,3
+2010,2042,2,Somewhat better,Somewhat worse,2
+2014,2047,1,,,2
+2014,2050,1,,,2
+2014,2054,1,Somewhat worse,Somewhat worse,2
+2014,2068,2,Much better,Much better,2
+2014,2071,3,Somewhat worse,About the same,2
+2014,2072,2,,,2
+2014,2077,0,Much better,,2
+2014,2086,2,,,3
+2014,2091,4,,,3
+2014,2114,2,Somewhat worse,Much better,2
+2014,2116,3,,,3
+2014,2117,4,,,2
+2014,2131,4,,,3
+2014,2132,4,Somewhat better,Somewhat better,2
+2014,2141,1,,,2
+2014,2146,0,,,2
+2014,2148,3,,,3
+2014,2149,3,Much better,Much better,2
+2014,2150,2,Somewhat better,Somewhat better,3
+2014,2157,2,,,3
+2014,2170,1,Somewhat better,Somewhat worse,2
+2014,2171,2,,,2
+2014,2176,2,,,2
+2014,2177,0,Somewhat better,,1
+2014,2181,0,,,2
+2014,2188,4,Somewhat worse,About the same,2
+2014,2193,4,,,3
+2014,2196,0,About the same,,3
+2014,2197,0,Somewhat better,,2
+2014,2199,2,Much better,Somewhat worse,2
+2014,2221,2,,,2
+2014,2222,0,About the same,Much better,3
+2014,2228,2,,,2
+2014,2231,2,Much better,Much better,4
+2014,2234,3,,,3
+2014,2235,3,,,3
+2014,2237,2,Somewhat worse,Much better,2
+2014,2242,0,Much worse,,2
+2014,2248,3,,,1
+2014,2251,2,,,2
+2014,2252,2,,,2
+2014,2257,0,,,2
+2014,2258,3,,,2
+2014,2260,5,,,2
+2014,2261,1,Somewhat worse,Somewhat worse,2
+2014,2262,2,Much worse,Much worse,2
+2014,2271,2,Somewhat better,Much better,2
+2014,2274,2,About the same,About the same,2
+2014,2279,2,Much worse,Somewhat better,2
+2014,2280,1,,,5
+2014,2285,2,Much better,Much better,3
+2014,2287,5,,,2
+2014,2292,2,,,2
+2014,2294,1,Somewhat better,Much better,3
+2014,2297,3,Somewhat better,Much better,3
+2014,2299,2,About the same,Somewhat better,2
+2014,2300,2,About the same,Somewhat better,3
+2014,2303,2,,,3
+2014,2307,1,About the same,Much worse,2
+2014,2308,0,,,0
+2014,2312,3,,,2
+2014,2316,3,Somewhat worse,About the same,3
+2014,2331,4,Somewhat better,Somewhat better,3
+2014,2348,3,,,3
+2014,2362,1,Somewhat better,Much better,4
+2014,2368,4,About the same,Somewhat worse,2
+2014,2369,0,Somewhat better,,4
+2014,2370,2,,,2
+2014,2378,2,Somewhat worse,About the same,2
+2014,2379,2,Somewhat better,Somewhat worse,2
+2014,2388,4,Much better,Somewhat worse,2
+2014,2392,2,,,3
+2014,2393,2,Somewhat worse,About the same,2
+2014,2397,0,,,2
+2014,2399,2,,,4
+2014,2403,2,Much better,Somewhat better,2
+2014,2408,0,Somewhat worse,About the same,1
+2014,2411,4,,,3
+2014,2417,2,,,2
+2014,2418,1,,,2
+2014,2421,4,About the same,Somewhat worse,2
+2014,2424,2,Much better,About the same,2
+2014,2427,3,,,3
+2014,2431,4,Somewhat worse,Somewhat worse,2
+2014,2435,3,,,2
+2014,2437,2,About the same,Somewhat worse,2
+2014,2448,3,,,3
+2014,2454,2,Much better,Somewhat worse,2
+2014,2463,2,,,2
+2014,2474,5,About the same,Somewhat better,4
+2014,2480,0,Somewhat better,,3
+2014,2499,1,Much better,About the same,2
+2014,2505,1,Somewhat worse,Somewhat better,2
+2014,2507,3,,,3
+2014,2508,3,About the same,Somewhat better,0
+2014,2511,3,,,2
+2014,2513,5,,,2
+2014,2514,2,Somewhat worse,Much better,2
+2014,2515,1,,,2
+2014,2516,3,Somewhat better,Somewhat better,2
+2014,2523,2,,,2
+2014,2526,2,,,2
+2014,2527,3,,,3
+2014,2530,2,Somewhat better,Somewhat better,3
+2014,2531,0,Much better,,2
+2014,2534,2,,,2
