@@ -1,0 +1,194 @@
+---
+title: "Differences in Means"
+date: "October 28, 2019"
+author: "SOAN 385 - Social Statistics"
+fontsize: 11pt
+output:
+  pdf_document: default
+  html_notebook: default
+---
+
+## Setting Up
+
+We'll use the `week_8_1.csv` file today. Load it as a data frame called `week_8_1` and load the usual packages.
+
+```{r, include = FALSE, warning = FALSE, message = FALSE}
+week_8_1 <- read.csv("https://raw.githubusercontent.com/mjclawrence/soci385/master/data/week_8_1.csv")
+library(tidyverse)
+library(pander)
+```
+
+
+## Warm Up
+
+Question 1: At the .05 alpha level, can you reject the null hypothesis that the mean number of memberships (`memnum`) is 1.5? Why or why not?
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r}
+t.test(week_8_1$memnum, mu = 1.5)
+```
+
+Question 2: At the .01 alpha level, can you reject the null hypothesis that the mean number of memberships is 1.5? Why or why not?
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r}
+t.test(week_8_1$memnum, mu = 1.5, conf.level = .99)
+```
+
+
+## Introducing Differences in Means
+
+This week, we move from calculating confidence intervals for means to calculating confidence intervals for *differences* in means. In this example, we only want the observations with non-missing values for the `memnum` variable. Create a new data frame called `subset` with the filtered observations.
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r filter out missing values}
+subset <- filter(week_8_1, memnum!="NA")
+```
+
+We want to compare mean memberships across two degree categories. This sounds like a job for binary variables or indexing. Let's use a binary variable first.
+
+Create a binary variable where respondents with at least a college degree get a 1 and everyone else gets a 0:
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r create binary variable}
+subset <- mutate(subset, college = ifelse(
+      degree=="College Degree" | degree =="Grad/Prof Degree", 
+      1, 0))
+```
+
+For the standard error formula, we will need the number of respondents in each category of `college`:
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r table of college}
+table(subset$college)
+```
+
+Using the `college` binary variable, find the mean memberships for college degree holders and the mean memberships for non-college degree holders:
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r find means}
+mean(subset$memnum[subset$college==1])
+mean(subset$memnum[subset$college==0])
+```
+
+Now that we have the means for both groups, we want to know if the difference between them is significant. Eventually we will find a test statistic and a p-value for the difference. But we'll start by finding the confidence interval for the difference. The confidence interval formula is similar to other confidence interval formulas we have seen:
+
+$\Large{CI = (\bar{y}_2 - \bar{y}_1) \pm t(se)}$
+
+Our first step is to find the standard error of the difference:
+
+$\Large{se = \sqrt{ \frac{var_1}{n_1} + \frac{var_2}{n_2}}}$
+
+Start with the difference between the means:
+
+```{r find the difference}
+diff <- 2.551163 - 1.218357
+diff
+```
+
+Now find the standard error:
+
+```{r find the standard error}
+diffse_college0 <- var(subset$memnum[subset$college==0]) / 
+                              1035
+
+diffse_college1 <- var(subset$memnum[subset$college==1]) / 
+                              430
+
+diffse <- sqrt(diffse_college0 + diffse_college1)
+
+diffse
+```
+
+Then use `diff` and `diffse` to construct the 95% of the confidence interval for the difference:
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r calculate confidence intervals}
+diff_ll95 <- diff - 1.96*diffse
+diff_ul95 <- diff + 1.96*diffse
+diff_ci95 <- c(diff_ll95, diff, diff_ul95)
+
+diff_ci95
+```
+
+
+## Significance of Differences in Means
+
+The significance test for a difference in means is similar to the significance test for a mean. We need a null hypothesis (usually that the true difference is zero), an alternative hypothesis (usually that the true difference is not zero), a test statistic, a critical value (1.96 for 95% confidence level, 2.58 for 99% confidence level if sample sizes are sufficient), a p-value, and an alpha level (.05 for 95% confidence level, .01 for 99% confidence level).
+
+The test statistic is the difference in means divided by the standard error of that difference. For our example:
+
+```{r calculate test statistic}
+
+# Test Statistic:
+(2.551163 - 1.218357) / diffse
+```
+
+How would you interpret this test statistic for a confidence level of 95%?
+
+
+## Comparing Means in R
+
+The `t.test()` function can be expanded to test the difference between two means. Simply include the two means you want to compare:
+
+```{r ttest in r}
+t.test(subset$memnum[subset$college==1], 
+          subset$memnum[subset$college==0])
+```
+
+How would you interpret this output?
+
+Try another example. Is the difference in mean memberships between those in the "Some College" degree category and those in the "HS Diploma" degree category significantly different at the .01 alpha level?
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r ttest in r 2}
+t.test(subset$memnum[subset$degree=="Some College"],
+       subset$memnum[subset$degree=="HS Diploma"],
+       conf.level = .99)
+```
+
+
+## Group Exercises
+
+Here are some of the other comparisons we have discussed that we can finally test:
+
+- Age at first birth (`agekdbrn`) by race (`racehisp`)
+- Age (`age`) by self employment status (`wrkslf`)
+- Number of political actions (`polactions`) by sex (`sex`)
+- Number of political actions (`polactions`) by sex (`sex`) *and* class (`class`)
+
+
+Use the full `week_8_1` dataframe (not `subset`) to test these differences.
+
+Give a sociological hypothesis for why you expect the difference you are testing will or will not be statistically significant.
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r}
+t.test(week_8_1$agekdbrn[week_8_1$racehisp=="White"],
+       week_8_1$agekdbrn[week_8_1$racehisp=="Black"])
+```
+
+```{r}
+t.test(week_8_1$polactions[week_8_1$sex=="Male"],
+       week_8_1$polactions[week_8_1$sex=="Female"])
+```
+
+```{r}
+t.test(week_8_1$age[week_8_1$wrkslf=="Work For Someone Else"],
+       week_8_1$age[week_8_1$wrkslf=="Self Employed"])
+```
+
+```{r}
+t.test(week_8_1$polactions[week_8_1$class=="Lower" & week_8_1$sex=="Male"],
+       week_8_1$polactions[week_8_1$class=="Lower" & week_8_1$sex=="Female"])
+```
+
