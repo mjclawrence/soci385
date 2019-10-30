@@ -1,0 +1,103 @@
+## Setting Up
+
+We'll start with the `week_8_1.csv` file again today. Load it with the usual packages.
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+library(tidyverse)
+library(pander)
+week_8_1 <- read.csv("https://raw.githubusercontent.com/mjclawrence/soci385/master/data/week_8_1.csv")
+```
+
+
+## Comparing Proportions
+
+We have seen over the last couple weeks that proportions and means have different standard errors. That is still true when we are comparing differences in proportions. Also, when working with differences in proportions, we will use different SEs for confidence intervals and for significance tests.
+
+The SE for a CI of a difference in proportions is very similar to what we used last week as the SE for a CI of a proportion:
+
+$\Large{se = \sqrt{ \frac {\hat{\pi}_1 (1 - \hat{\pi}_1)} {n_1} + \frac {\hat{\pi}_2 (1 - \hat{\pi}_2)} {n_2} }}$
+
+The SE for difference uses a pooled estimate of the proportion and the n's for each sample:
+
+$\Large{se = \sqrt{ \hat{\pi}(1-\hat{\pi})  (\frac {1} {n_1} + \frac{1}{n_2})  }}$
+
+The null hypothesis is that proportions are the same in each sample. Formally, this is written as:
+
+$\Large{\pi_2 - \pi_1 = 0}$
+
+The test statistic is calculated as:
+
+$\Large{\frac{\hat{\pi}_1 - {\hat{\pi}_2}}{se}}$
+
+
+## Example
+
+Let's look at racial differences in the proportion of female respondents who have their first child when they are teenagers.
+
+What do we need?
+
+Start by cleaning up the data frame so we only have female respondents.
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+Let's review a proportion table with `racehisp` in the rows and `agekdbrn` in the columns.
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+This is going to be easier if we make a binary variable called `teen_birth` where respondents who were 19 or younger when they had their first birth are coded with a 1 and everyone else gets a 0.
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+And look at the proportions with a 1 by race.
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+Is there a significant difference in the Black and Hispanic proportions at the .05 alpha level?
+
+To find out, we'll use a new function: `prop.test()`. The key difference between `prop.test()` and `t.test()` is that the new function requires a frequency table rather than two variables. So we need a table of the number of respondents in each `racehisp` category that interests us who have a 0 and 1 for our `teen_birth` variable.
+
+We know how to get a table for *all* the racehisp categories. How do we get just the Black and Hispanic rows?
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+
+Now create a frequency table (not a proportion table) as an object...
+
+```{r}
+racehisp_teenbirth_table <- table(racehisp_teenbirth$racehisp,
+                                  racehisp_teenbirth$teen_birth)
+
+racehisp_teenbirth_table
+```
+
+...and feed that object into `prop.test()`.
+
+```{r}
+prop.test(racehisp_teenbirth_table)
+```
+
+How do you interpret these results?
+
+What are the `prop 1` and `prop 2` sample estimates?
+
+
+# Exercises
+
+Let's try a couple examples with a new dataset
+
+```{r}
+week_8_2 <- read.csv("https://raw.githubusercontent.com/mjclawrence/soci385/master/data/week_8_2.csv")
+```
+
+We'll start with class differences in how respondents think people "get ahead". We can check the GSS website for a description of this variable: https://gssdataexplorer.norc.org/variables/585/vshow
+
+
+## Exercise 1
+
+At the .05 level, test the difference between the proportion of working class respondents who say that hard work is how people get ahead and the proportion of middle class respondents who say that hard work is how people get ahead. 
+
+
+
+## Exercise 2
+
+Let's see if the proportions believing people get ahead through only hard work differ between Hispanic and White respondents at the .05 alpha level.
