@@ -173,8 +173,10 @@ Give a sociological hypothesis for why you expect the difference you are testing
 ### REPLACE THIS LINE WITH YOUR CODE
 
 ```{r}
-t.test(week_8_1$agekdbrn[week_8_1$racehisp=="White"],
-       week_8_1$agekdbrn[week_8_1$racehisp=="Black"])
+t.test(subset$agekdbrn[subset$racehisp=="Black" &
+                           subset$college==1],
+       subset$agekdbrn[subset$racehisp=="White" &
+                           subset$college==1])
 ```
 
 ```{r}
@@ -188,7 +190,8 @@ t.test(week_8_1$age[week_8_1$wrkslf=="Work For Someone Else"],
 ```
 
 ```{r}
-t.test(week_8_1$polactions[week_8_1$class=="Lower" & week_8_1$sex=="Male"],
-       week_8_1$polactions[week_8_1$class=="Lower" & week_8_1$sex=="Female"])
+t.test(week_8_1$polactions[week_8_1$class=="Upper" & week_8_1$racehisp=="White"],
+       week_8_1$polactions[week_8_1$class=="Middle" & week_8_1$racehisp=="White"],
+       conf.level = .99)
 ```
 
