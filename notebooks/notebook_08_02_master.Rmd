@@ -54,6 +54,8 @@ week_8_1 <- filter(week_8_1, sex == "Female")
 
 Let's review a proportion table with `racehisp` in the rows and `agekdbrn` in the columns.
 
+### REPLACE THIS LINE WITH YOUR CODE
+
 ```{r proportion table}
 pander(round(prop.table(table(week_8_1$racehisp, 
       week_8_1$agekdbrn),1),3))
@@ -179,7 +181,7 @@ prop.test(exercise2_table)
 
 ## Exercise 2
 
-Let's see if the proportions believing people get ahead through only hard work differ between Hispanic and White respondents at the .05 alpha level.
+Let's see if the proportions believing people get ahead through only hard work differ between Black and White respondents at the .05 alpha level.
 
 ### REPLACE THIS LINE WITH YOUR CODE
 
@@ -192,7 +194,7 @@ prop.table(table(week_8_2$racehisp, week_8_2$getahead),1)
 exercise2 <- week_8_2 %>%
             mutate(hardwork = 
                   ifelse(getahead == "Hard work", 1, 0)) %>%
-            filter(racehisp == "Hispanic" | 
+            filter(racehisp == "Black" | 
                   racehisp == "White") %>%
    droplevels()
 ```
