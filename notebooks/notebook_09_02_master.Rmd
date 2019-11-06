@@ -1,0 +1,220 @@
+---
+title: "More Tests of Association, Wrapping Up Inference"
+date: "November 6, 2019"
+author: "Matt Lawrence"
+output:
+  pdf_document: default
+---
+
+## Setting Up
+
+We'll use the `week_9.csv` file again today. Load it as a data frame called `week9` and load the usual packages:
+
+```{r, include = FALSE, warning = FALSE}
+week9 <- read.csv("https://raw.githubusercontent.com/mjclawrence/soci385/master/data/week_9.csv")
+library(tidyverse)
+library(pander)
+```
+
+## Reviewing Association
+
+Test if there is a significant association between class and marital status:
+
+### REPLACE THIS LINE WITH YOUR CODE
+```{r}
+chisq.test(week9$class, week9$marital)
+qchisq(.95, df = 9)
+```
+
+The chi-squared test requires that the expected frequency in each cell must be at least five. We know how to calculate these expected frequencies by hand *[(total in row X total in column) / (total in table)]* but we can also use a shortcut in R:
+
+```{r}
+chisq.test(week9$class, week9$marital)$expected
+```
+
+Looks like we are okay using the chi-squared test here. 
+
+## Small Samples
+
+What if we want to test the association between class and marital status only for respondents who were not born in this country?
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r}
+chisq.test(week9$class[week9$born=="No"],
+           week9$marital[week9$born=="No"])
+```
+
+Or:
+
+```{r}
+immigrant <- filter(week9, born == "No")
+chisq.test(immigrant$class, immigrant$marital)
+chisq.test(immigrant$class, immigrant$marital)$expected
+```
+
+We have some cells with low expected frequencies here, so we need to use a different test. If the expected frequency is any cell is less than 5, use Fisher's Exact Test rather than the chi-squared test. Fisher's Exact Test uses the probability foundations we have seen previously to create 2000 samples of the variables we are testing and uses the principles of sampling distributions to estimate the p-value:
+
+```{r}
+fisher.test(immigrant$class, immigrant$marital, 
+            simulate.p.value = TRUE)
+```
+
+We can reject the null hypothesis that the variables are not associated since the p-value is less than .05.
+
+
+## Strength of Association
+
+Are class and beliefs about abortion (the `abany` variable) associated?
+
+### REPLACE THIS LINE WITH YOUR CODE
+```{r}
+pander(round(prop.table(table(week9$class ,week9$abany),1),3))
+
+chisq.test(week9$class, week9$abany)
+
+qchisq(.95, df = 3)
+```
+
+One way to interpret the association between two variables is through the odds, which relate to probability.
+
+In this example, the odds of supporting abortion rather than not supporting abortion = probability of yes / probability of no. We can do this for any level of the class variable. For instance, for the upper class, the odds of supporting abortion rather than not supporting abortion are:
+
+```{r}
+.605 / (1 - .605)
+```
+
+In words, this means that upper class respondents are 1.53 times more likely to support abortion than they are to not support abortion. 
+
+To go from odds to probability, divide the odds by 1 + the odds. For the upper class again:
+
+```{r}
+1.532 / (1 + 1.532)
+```
+
+What are the odds for working class respondents?
+
+### REPLACE THIS LINE WITH YOUR CODE
+```{r}
+.410 / (1 - .410)
+```
+
+We interpret odds below 1 differently. In this case, working class respondents are .695 times as likely to support abortion as they are to not support abortion.
+
+##Odds Ratios
+
+Knowing how to calculate odds becomes more useful for understanding association when we construct odds ratios. In our example, the odds ratio for upper class vs working class respondents' beliefs in abortion is:
+
+```{r}
+1.532 / .695
+```
+
+
+## Testing Associations With Ordered Variables
+
+Use the chi-squared and Fisher's Exact tests when at least one of your categorical variables is not ordered. For ordinal variables, association works somewhat likes correlation. We'll use the Goodman Kruskal gamma test to measure association between ordered variables.
+
+For an example, look at the cross-table of `year` and `courts`:
+
+```{r}
+pander(table(week9$year, week9$courts))
+```
+
+These variables have a substantive ordering, but the levels for the courts variable are alphabetical. Let's put them in their actual order.
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r}
+week9 <- mutate(week9, courts = factor(courts, 
+     levels = c("Not harsh enough", "About right", "Too harsh")))
+```
+
+
+Save the ordered table as an object called `year_courts_table`:
+
+```{r}
+year_courts_table <- table(week9$year, week9$courts)
+
+year_courts_table
+```
+
+The `GKgamma()` function for the Goodman Kruskal test is in the `vcdExtra` package. Install the package using the "Packages" tab in the bottom right pane of R Studio. Then load the package to use it:
+
+```{r}
+library(vcdExtra)
+```
+
+The `GKgamma()` function requires a table (like `prop.test()`) rather than variable names (like `t.test()`):
+
+```{r}
+GKgamma(year_courts_table)
+```
+
+The gamma statistic is positive, which means that respondents with more education tend to report higher social classes. Is that positive association significant? Divide gamma by its standard error to get a number that you compare to 1.96 (for 95% significance level):
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r}
+.069 / .015
+```
+
+In this case, we can reject the null hypothesis of no association since 4.6 is more extreme than 1.96.
+
+What about `class` and `courts`? (Assume for today that class can be ordered...)
+
+### REPLACE THIS LINE WITH YOUR CODE
+```{r}
+# Order the levels of class:
+week9$class <- factor(week9$class, 
+     levels = c("Lower class", "Working class",
+               "Middle class", "Upper class"))
+
+# Save the table as an object:
+class_courts_table <- table(week9$class, week9$courts)
+
+# Run the test:
+GKgamma(class_courts_table)
+```
+
+Then calculate the test statistic:
+
+```{r}
+.035 / .018
+```
+
+
+What about `degree` and `nateduc`?
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r}
+#Order the levels of `degree`:
+week9$degree <- factor(week9$degree, levels =
+c("Lt high school", "High school", "Junior college",
+            "Bachelor", "Graduate"))
+
+#Order the levels of `nateduc`:
+week9$nateduc <- factor(week9$nateduc, levels = 
+      c("Too little", "About right", "Too much"))
+
+#Save the table as an object:
+degree_nateduc_table <- table(week9$degree, week9$nateduc)
+
+#Run the test:
+GKgamma(degree_nateduc_table)
+```
+
+```{r}
+round(prop.table(degree_nateduc_table,1),3)
+```
+
+Negative association means higher degree categories tend to be associated with responses that are lower on the courts scale. 
+
+Then calculate the test statistic:
+
+```{r}
+-.147 / .025
+```
+
+And this negative association is significant because -5.88 is more extreme than -1.96.
+

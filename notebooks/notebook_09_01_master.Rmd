@@ -160,11 +160,23 @@ chisq.test(week9$region, week9$nateduc)
 Test a pair of variables where you think there would be a significant association. Test a pair of variables where you do not think there would be a significant association.
 
 ```{r}
-chisq.test(week9$sex, week9$courts)
-#qchisq(.95, df = 12)
+chisq.test(week9$sex, week9$abany)
 ```
 
 ```{r}
-chisq.test(week9$born, week9$wrkslf)
+chisq.test(week9$class, week9$nateduc)
+```
+
+```{r}
+qchisq(.95, df = 6)
+```
+
+```{r}
+library(vcdExtra)
+```
+
+```{r}
+gamma_table <- table(week9$class, week9$nateduc)
+GKgamma(gamma_table)
 ```
 
