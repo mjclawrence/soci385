@@ -1,0 +1,205 @@
+---
+title: "Regression With Binary and Categorical Variables"
+date: "November 11, 2019"
+author: "Matt Lawrence"
+output:
+  pdf_document: default
+---
+
+## Setting Up
+
+We'll use the `hdi.csv` file again today. Load it as a data frame called `hdi` and load the usual packages.
+
+```{r, include = FALSE, warning = FALSE}
+hdi <- read.csv("/users/lawrence/desktop/soan385_data/hdi.csv")
+library(tidyverse)
+library(pander)
+```
+
+## Warm Up
+
+The adolescent birth rate (`adolescent_birth_rate`) is the number of births per 1,000 women ages 15-19. The female secondary education rate (`female_secondary_educ`) is the percentage of females ages 25 or older in the population who have completed at least some secondary education. Regress the adolescent birth rate on the female secondary education rate.
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r}
+birthrate_seceduc_model <- 
+      lm(adolescent_birth_rate ~ female_secondary_educ,
+            data = hdi)
+
+summary(birthrate_seceduc_model)
+```
+
+Using this model, find the predicted adolescent birth rate when 90% of female residents of a country complete some secondary education.
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r}
+#Model: y = 97.65697 - 0.87232X
+
+97.65697 - 0.87232*90
+```
+
+We should be able to locate that prediction on our line:
+
+```{r, echo = FALSE}
+birthrate_seceduc_plot <- ggplot(hdi, aes(x = female_secondary_educ,
+                                            y = adolescent_birth_rate))
+birthrate_seceduc_plot + geom_point() + geom_smooth(method = lm) + 
+labs(x = "Female Secondary Education Rate", y = "Adolescent Birth Rate",
+      title = "Adolescent Birth Rate and Secondary Education",
+      subtitle = "UNHDP, 2016") +
+geom_point(x = 90, y = 19.14817, color = "Deep Pink", size = 3)
+```
+
+
+
+## Binary Independent Variables
+
+Using binary and categorical variables as independent variables in regression models offers alternative ways to find means between groups. Before knowing anything about regression, how would you find the mean adolescent birth rate for countries without high scores on the human development index (`hdi_rank_hi==0`) and for countries with high scores on the human development index (`hdi_rank_hi==1`)?
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r}
+mean(hdi$adolescent_birth_rate[hdi$hdi_rank_hi==0])
+
+mean(hdi$adolescent_birth_rate[hdi$hdi_rank_hi==1])
+```
+
+
+What is the difference between these means?
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r}
+59.70372 - 12.90428
+```
+
+Regressing `adolescent_birth_rate` on `hdi_rank_hi` will give us the exact same information: 
+
+```{r}
+birthrate_rankhi_model <- 
+	lm(adolescent_birth_rate ~ hdi_rank_hi,
+		data = hdi)
+
+summary(birthrate_rankhi_model)
+```
+
+As with continuous variables, the intercept ($\alpha$) is the mean value of our dependent variable, Y, when our independent variable, X, is 0. The coefficient for our independent variable ($\beta$) is the difference in the mean of our dependent variable between cases with a 0 and 1 for our independent variable.
+
+The t value and p value are for a t-test of the difference with one small change. OLS requires the assumption that the sample variances are equal:
+
+```{r}
+t.test(hdi$adolescent_birth_rate[hdi$hdi_rank_hi==1],
+       hdi$adolescent_birth_rate[hdi$hdi_rank_hi==0],
+       var.equal = TRUE)
+```
+
+Use regression to test the significance of the difference in the maternal mortality ratio between countries where higher percentages of females than males completed some secondary education. Use the `maternal_mortality_ratio` variable. Create the education variable; call it `female_more_schl`.
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+Create the education variable:
+```{r, warning = FALSE}
+hdi <- mutate(hdi, female_more_schl = ifelse(female_secondary_educ>male_secondary_educ,1,0))
+```
+
+Use the new `female_more_schl` variable in the regression model:
+```{r}
+summary(lm(maternal_mortality_ratio ~ female_more_schl, data = hdi))
+```
+
+
+## Categorical Independent Variables
+
+When your independent variable has more than one category, one category becomes the *reference group*. The $\alpha$ is the average for that reference group. The coefficients are the differences in means for each other category compared to the reference group. The t-test compares the differences in means to the null hypothesis that the real difference between the reference group and the given category is actually zero.
+
+Create a new variable called `hdi_rank_cat` which has four categories of hdi_rank: 1-51, 52-106, 107-147, 148-188.
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r}
+hdi <- mutate(hdi, hdi_rank_cat = 
+      ifelse(hdi_rank %in% 1:51, 1,
+      ifelse(hdi_rank %in% 52:106, 2,
+                ifelse(hdi_rank %in% 107:147, 3, 4))))
+```
+
+Regress the adolescent birth rate variable on this new hdi rank categorical variable:
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+Without factor:
+```{r}
+birthrate_hdi_model1 <- lm(adolescent_birth_rate ~ hdi_rank_cat, data = hdi)
+summary(birthrate_hdi_model1)
+```
+
+When a variable has multiple categories, make sure R knows the variable is a factor variable. There are two options for how to do this. 
+
+First, you could use the variable as a factor just for this model:
+
+```{r}
+birthrate_hdicat_model2 <- 
+lm(adolescent_birth_rate ~ factor(hdi_rank_cat), # Uses hdi_rank_cat as a factor
+      data = hdi)
+
+summary(birthrate_hdicat_model2)
+```
+
+Second, you could make the variable a factor in your data frame (and add labels if you want), and then use your factor variable in the model without the need to restate that it is a factor variable:
+
+```{r}
+hdi <- mutate(hdi, hdi_rank_cat = factor(hdi_rank_cat,
+               labels = c("Very High", "High", "Medium" ,"Low")))
+
+birthrate_hdicat_model3 <- 
+lm(adolescent_birth_rate ~ hdi_rank_cat, 
+      data = hdi)
+
+summary(birthrate_hdicat_model3)
+```
+
+To change the reference group, use `relevel()`. In this example, we will make the "Low" category the reference group:
+
+```{r}
+hdi$hdi_rank_cat <- 
+      relevel(hdi$hdi_rank_cat, ref = "Low")
+
+birthrate_hdi_model4 <- 
+lm(adolescent_birth_rate ~ 
+      hdi_rank_cat, 
+      data = hdi)
+
+summary(birthrate_hdi_model4)
+```
+
+
+## Categorical Dependent Variables
+
+Like a model with a continuous dependent variable, an OLS model with a binary dependent variable estimates the mean of that dependent variable. The mean of a binary variable is the probability of having a 1 for that variable, so this is called a *linear probability model*.
+
+Let's go back to our variable identifying countries where higher percentages of females than males complete some secondary education (`female_more_schl`). Regress this measure on `schooling_mean` which is the average years of schooling completed by a country's residents.
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r}
+femalemore_schooling_model1 <- 
+lm(female_more_schl ~ 
+      schooling_mean, 
+      data = hdi)
+
+summary(femalemore_schooling_model1)
+```
+
+We'll wrap up with a model that has categorical dependent and independent variables. Regress `female_more_schl` on `hdi_rank_cat`:
+
+### REPLACE THIS LINE WITH YOUR CODE
+```{r}
+femalemore_hdi_model2 <- 
+lm(female_more_schl ~ 
+      hdi_rank_cat, 
+      data = hdi)
+
+summary(femalemore_hdi_model2)
+```
