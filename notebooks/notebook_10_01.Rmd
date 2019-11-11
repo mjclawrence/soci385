@@ -1,0 +1,211 @@
+## Setting Up
+
+We'll use the `hdi.csv` file on Canvas today. Load it as a data frame called `hdi` and load the usual packages:
+
+```{r, include = FALSE, warning = FALSE}
+hdi <- read.csv("https://raw.githubusercontent.com/mjclawrence/soci385/master/data/hdi.csv")
+library(tidyverse)
+library(pander)
+```
+
+## Introduction
+For two continuous variables, regression is based on fitting a line that has an *alpha* and a *beta*. This linear relationship is represented formally as:
+
+$\Large{\hat{y_i} = \alpha + \beta X_i + \epsilon_i}$
+
+- Read as: *regress y on x*
+- $\hat{y_i}$ = predicted outcome, the best guess
+- $\alpha$ = intercept or constant, where the line hits the y-axis when x is 0
+- $\beta$ = the slope, the multiplier for every X, known as the coefficient
+- $X_i$ = the observed value of X
+- $\epsilon_i$ = error (or residual), difference between observed and predicted values
+
+Lots of lines could pass through a scatterplot. The line we want to find is the one that makes *the sum of the squared residuals* as small as possible.
+
+
+## Finding Alpha and Beta
+Our first example will regress `life_expectancy` on the standardized values of schooling (the `std_schooling_expectancy` variable). To find alpha and beta, we need a few basic statistics: the mean and standard deviation of both variables and the correlation between them.
+
+```{r}
+# Correlation
+cor(hdi$std_schooling_expectancy, hdi$life_expectancy)
+
+# Mean and Standard Deviation of X
+mean(hdi$std_schooling_expectancy)
+sd(hdi$std_schooling_expectancy)
+
+# Mean and Standard Deviation of Y
+mean(hdi$life_expectancy)
+sd(hdi$life_expectancy)
+```
+
+To find beta, we need the correlation and the two standard deviations:
+$\Large{\beta = cor_{xy} \frac {s_{y}}{s_{x}}}$
+
+```{r}
+# Finding Beta
+beta <- cor(hdi$std_schooling_expectancy,
+             hdi$life_expectancy) *
+     (sd(hdi$life_expectancy) / sd(hdi$std_schooling_expectancy))
+
+beta
+```
+
+
+To find alpha, we need beta and the two means:
+$\Large{\alpha = \bar{y} - \beta \bar{x}}$
+
+```{r}
+# Finding alpha
+alpha <- mean(hdi$life_expectancy) - 
+            beta*(mean(hdi$std_schooling_expectancy))
+
+alpha
+```
+
+
+## Plotting Regressions, Part One
+
+Once we have alpha (the intercept) and beta (the slope), we can add the line to a plot using `geom_abline()`:
+
+```{r}
+schooling_life_plot1 <- ggplot(hdi, aes(
+     x = std_schooling_expectancy, y = life_expectancy))
+
+schooling_life_plot1 + geom_point(color = "Dark Gray") +
+     labs(x = "Standardized Schooling Expectancy", 
+      y = "Life Expectancy",
+      title = "Schooling and Life Expectancies", 
+      subtitle = "UNHDP, 2016") +
+     geom_abline(intercept = 71.8371, slope = 6.5826)
+```
+
+If this line is correct, there should be a point on the line where x = 0 and y = 71.8371:
+
+```{r}
+schooling_life_plot1 + geom_point(color = "Dark Gray") +
+     labs(x = "Standardized Schooling Expectancy", 
+      y = "Life Expectancy",
+      title = "Schooling and Life Expectancies", 
+      subtitle = "UNHDP, 2016") +
+     geom_abline(intercept = 71.8371, slope = 6.5826) +
+     geom_point(x = 0, y = 71.8371, color = "Red", size = 3)
+```
+
+
+## Predicting Values of Y
+
+Knowing alpha and beta will allow us to predict the value of Y for any value of X. And all of these predicted values will fall on our line.
+
+If x is 1 standard deviation above the mean, what is the predicted value of y?
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+If x is 1 standard deviation below the mean, what is the predicted value of y?
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+Now add these two points to the plot:
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+
+
+## Regression in R
+
+To find the estimates for a `linear model`, R uses the `lm()` function. The syntax here is to list the dependent (y) variable first, followed by a tilde (~) and the independent (x) variable, and then the name of the data frame where those variables are located. And it will be much more convenient if you save the output of this function as an object:
+
+```{r}
+schooling_life_model1 <- 
+     lm(life_expectancy ~ std_schooling_expectancy, data = hdi)
+```
+
+Now review the saved model using `summary()`:
+
+```{r}
+summary(schooling_life_model1)
+```
+
+You should see the numbers we just calculated and lots of test statistics (standard errors, t-values, p-values) that look familiar.
+
+For now, focus on the "Estimate" column in the center section. The estimate for the intercept is the value of alpha. The estimate for `std_schooling_expectancy` is the value of beta.
+
+In words, this model says that when x = 0, the predicted value of y is 71.8371. And for every one unit increase in x (in this example, our unit is standard deviations of expected schooling), the predicted value of y increases by 6.5826, on average.
+
+The `std.error` column reports the standard error of each coefficient. That standard error is calculated as:
+
+$\Large{se = \frac{s} {\sqrt{\sum{ (x - \bar{x})^2}}}}$
+
+with 
+
+$\Large{s = \sqrt {\frac {\sum{(y - \hat{y})^2}}{n-2}}}$
+
+The part of this equation that is important to learn is how to save predicted values of y based on the model. You do so with the `fitted.values()` function:
+
+```{r}
+hdi$predicted_life_expectancy <- fitted.values(schooling_life_model1)
+```
+
+And now you can use these predicted values of y just as you would any other variable. In this example, they are used to calculate the standard error of the coefficient:
+
+```{r}
+se_numerator <- sqrt(sum((hdi$life_expectancy - 
+          hdi$predicted_life_expectancy)^2) / 
+               (length(hdi$life_expectancy) - 2))
+
+se_denominator <- sqrt(sum((hdi$std_schooling_expectancy - 
+          mean(hdi$std_schooling_expectancy))^2))
+
+se <- se_numerator / se_denominator
+
+se
+```
+
+That value is the same as what the model provides as the standard error for the `std_schooling_expectancy` coefficient:
+
+```{r}
+summary(schooling_life_model1)
+```
+
+
+The `t value` column is the test statistic for a t-test that the coefficient is different from zero:
+
+```{r}
+6.5826 / 0.3856
+```
+
+The `Pr(>|t|)` column is the p value for a two-tailed test of the test statistic. It is calcualted using tools we know:
+
+```{r}
+# Area in right tail:
+pr_tail <- 1 - pt(17.07, df = 157)
+
+# Area in both tails (what output gives):
+2 * pr_tail
+```
+
+## Plotting Regressions, Part Two
+
+The `geom_abline()` is more helpful for teaching than analyzing. It will be more common to use `geom_smooth(method = lm)` to add a line to a scatterplot:
+
+```{r}
+schooling_life_plot1 + geom_point(color = "Dark Gray") +
+     labs(x = "Standardized Schooling Expectancy", 
+          y = "Life Expectancy",
+          title = "Schooling and Life Expectancies", 
+          subtitle = "UNHDP, 2016") +
+      geom_smooth(method = lm)
+```
+
+
+## Exercises
+
+Regress the gender inequality index (`gender_inequality_index`) on the percentage of members of parliament who are female (`female_parliament_pct`)
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+
+
+Regress the maternal mortality ratio (`maternal_mortality_ratio`) on the percentage of females with some secondary education (`female_secondary_educ`). The `maternal mortality ratio` is the number of female deaths for every 100,000 live births in a given year.
+
+### REPLACE THIS LINE WITH YOUR CODE
