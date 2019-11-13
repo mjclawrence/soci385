@@ -265,3 +265,19 @@ mortality_education_model <-
 
 summary(mortality_education_model)
 ```
+
+
+```{r}
+hdi$female_secondary_educ[hdi$country=="United States"]
+463.5736 - (5.2496*95.42986)
+```
+
+```{r}
+maternal_plot <- ggplot(hdi, aes(x = female_secondary_educ,
+                                 y = maternal_mortality_ratio)) + geom_point() +
+  geom_smooth(method = lm)
+
+maternal_plot
+```
+
+
