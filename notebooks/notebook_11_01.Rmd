@@ -1,0 +1,173 @@
+## Setting Up
+
+We'll use the `gss_week_11.csv` file on Canvas. Load it as a data frame called `gss_week11` and load the usual packages.
+
+```{r, include=FALSE, warning=FALSE}
+library(tidyverse)
+library(pander)
+gss_week11 <- read.csv("https://raw.githubusercontent.com/mjclawrence/soci385/master/data/gss_week11.csv")
+```
+
+
+## Warm Up / Review
+
+**Warm Up 1:** Regress age at first birth (`agekdbrn`) on years of education (`educ`)
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+Predict age at first birth for respondents with 16 years of education:
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+**Warm Up 2:** Regress age at first birth (`agekdbrn`) on highest degree (`degree`). Use "College Degree" as the reference group.
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+Predict age at first birth for respondents with a graduate or professional degree:
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+**Warm Up 3:** Regress having a first child at age 30 or later (`agekdbrn_30plus`) on religion (`religion`). Use "Protestant" as the reference group.
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+Predict probability of having a first child at age 30 or later for Jewish respondents:
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+
+## Introducing Multiple Regression
+
+Why do we control for other variables? The idea is to find another variable, *hold it constant*, and see if the association between X and Y changes.
+
+In R, include more variables by linking them to the independent variable with a plus sign. In this example, we want to regress age at first birth on education, holding religion constant:
+
+```{r}
+agekd_educ_religion <- lm(agekdbrn ~ educ + religion, 
+                          data = gss_week11)
+
+summary(agekd_educ_religion)
+```
+
+To find the predicted values, need to use the full equation. For example, to predict the age at first birth for a Protestant respondent with 16 years of education:
+
+```{r}
+13.32 + .76*16 + 1.55*0 + 3.45*0 + 2.85*0 - .14*0 + 1.25*0
+```
+
+Predict age at first birth for a Catholic respondent with 16 years of education:
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+Predict age at first birth for respondent from an Eastern religion with 13 years of education:
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+How do we make sense of this in a plot? The slopes (betas) are the same for every value of the control variable. But the intercepts are different.
+
+*Lots of code here; looking at the plot is more important than mastering the code!*
+
+```{r, warning = FALSE}
+agekd_educ_religion_plot <- ggplot(gss_week11, aes(x = educ, y = agekdbrn))
+agekd_educ_religion_plot + geom_point(color = "Light Gray") +
+     geom_abline(slope = .76529, intercept = 13.32194, color = "Blue") +
+     geom_abline(slope = .76529, intercept = 13.32194 + 1.54599, color = "Forest Green") +
+     geom_abline(slope = .76529, intercept = 13.32194 + 3.44548, color = "Red") + 
+     geom_abline(slope = .76529, intercept = 13.32194 + 2.85010, color = "Purple") +
+     geom_text(x = 8, y = 48, label = "Eastern", color = "Red") +
+     geom_text(x = 8, y = 45, label = "Jewish", color = "Purple") +
+     geom_text(x = 8, y = 42, label = "Catholic", color = "Forest Green") +
+     geom_text(x = 8, y = 39, label = "Protestant", color = "Blue") +
+     geom_point(x = 16, y = 25.48, color = "Blue", size = 2) +
+     geom_point(x = 16, y = 27.03, color = "Forest Green", size = 2) +
+     geom_point(x = 13, y = 26.65, color = "Red", size = 2) +
+     labs(x = "Years of Education", y = "Age at First Birth", 
+          title = "Education and Age at First Birth", 
+          subtitle = "GSS, 2010-2016") 
+```
+
+
+## Multiple Control Variables
+
+Models can have as many control variables as you want. Just continue adding them with plus signs. Let's try regressing age at first birth on education, religion, and race:
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+What is the predicted age at first birth for a Black Protestant with 17 years of education?
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+What is the predicted age at first birth for a Hispanic with no religious affiliation with 14 years of education?
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+
+## Comparing Models, Introducing R-Squared
+
+R-squared is the proportional reduction in the error from using the model. We'll calculate r-squared for the model regressing number of memberships on years of education.
+
+```{r}
+memnum_educ_model <- 
+lm(memnum ~ educ, data = gss_week11)
+
+summary(memnum_educ_model)
+```
+
+The r-squared value is 0.1144. Where does that number come from?
+
+```{r}
+# Save the predicted values of Y:
+gss_week11$pred_memnum <- 
+fitted(memnum_educ_model)
+
+# Find the residuals (the observed values of Y minus the predicted values of Y) and square them:
+gss_week11$res_memnum <- 
+(gss_week11$memnum - gss_week11$pred_memnum)^2
+
+#Find the deviations of each observed value of Y from the mean of Y:
+gss_week11$dev_memnum <- 
+(gss_week11$memnum - mean(gss_week11$memnum))^2
+
+#Sum the squared deviations and subtract the sum of the squared residuals.
+
+#Divide this difference by the sum of the squared deviations:
+rsquared <- ((sum(gss_week11$dev_memnum)) - 
+                  (sum(gss_week11$res_memnum))) /
+                  sum(gss_week11$dev_memnum)
+
+rsquared
+```
+
+
+To Find Adjusted R-squared:
+
+```{r}
+# adjusted_rsquared = 
+# 1 - (((1 - rsquared)*(n-1)) / (n-k-1))
+
+# n = sample size; k = number of variables
+
+adjusted_rsquared <- 
+1 - (((1 - rsquared)*(1924-1)) / (1924-1-1))
+
+adjusted_rsquared
+```
+
+
+## Comparing R-Squared Values
+
+When we regress number of memberships on education and age it looks like the model is better since r-squared increases:
+
+```{r}
+memnum_educ_age_model <- lm(memnum ~ educ + age, data = gss_week11)
+summary(memnum_educ_age_model)
+```
+
+But be careful: R-squared will almost always go up as you add variables, even if the variables are not significant. That does not necessarily mean the model is getting better.
+
+```{r}
+memnum_educ_age_place_model <- 
+     lm(memnum ~ educ + age + place, data = gss_week11)
+
+summary(memnum_educ_age_place_model)
+```
