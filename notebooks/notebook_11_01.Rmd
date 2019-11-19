@@ -5,7 +5,7 @@ We'll use the `gss_week_11.csv` file on Canvas. Load it as a data frame called `
 ```{r, include=FALSE, warning=FALSE}
 library(tidyverse)
 library(pander)
-gss_week11 <- read.csv("https://raw.githubusercontent.com/mjclawrence/soci385/master/data/gss_week11.csv")
+gss_week11 <- read.csv("https://raw.githubusercontent.com/mjclawrence/soci385/master/data/gss_week_11.csv")
 ```
 
 
