@@ -1,0 +1,298 @@
+---
+title: "Interactions"
+author: "Matt Lawrence"
+date: "November 20, 2019"
+output:
+  pdf_document: default
+  html_notebook: default
+  html_document: default
+---
+
+## Setting Up
+
+We'll use the `midd_survey.csv` file on Canvas. These are selected responses to a survey of Middlebury students conducted by Professor Peggy Nelson and her research methods class in Fall 2011. Load it as a data frame called `midd_survey` and load the usual packages.
+
+```{r, error = FALSE, warning = FALSE, message = FALSE}
+library(tidyverse)
+library(pander)
+midd_survey <- read.csv("https://raw.githubusercontent.com/mjclawrence/soci385/master/data/midd_survey.csv")
+```
+
+
+## Warm Up
+
+**Everyone:** Regress gpa on number of siblings:
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r}
+gpa_sibs_model <- lm(gpa ~ siblings, data = midd_survey)
+summary(gpa_sibs_model)
+```
+
+**Warm Up 1:** Add control for gender to original model
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r}
+gpa_sibs_gender_model <- lm(gpa ~ siblings + gender, 
+      data = midd_survey)
+
+summary(gpa_sibs_gender_model)
+```
+
+Predict gpa for men with 3 siblings and women with 4 siblings
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r}
+# For Men With 3 Siblings:
+3.531540 - .031269*3
+```
+
+```{r}
+# For Women With 4 Siblings:
+3.531540 - .031269*4 + .045629
+```
+
+
+**Warm Up 2:** Regress gpa on number of siblings, controlling for class.
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r}
+# Reorder class
+midd_survey <- midd_survey %>%
+     mutate(class = factor(class,
+                           levels = c("Lower Class",
+                                      "Middle Class",
+                                      "Upper Middle Class",
+                                      "Upper Class")))
+
+gpa_sibs_class_model <- lm(gpa ~ siblings + class, 
+  data = midd_survey)
+
+summary(gpa_sibs_class_model)
+```
+
+Predict gpa for middle class student with 2 siblings and upper middle class student with 1 sibling.
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r}
+# For middle class student with 2 siblings:
+3.405229 - .026787*2 + .130127
+```
+
+```{r}
+# For upper middle class student with 1 sibling:
+3.405229 - .026787*1 + .191764
+```
+
+
+**Warm Up 3:** Add controls for gender and class to original model
+
+```{r}
+gpa_sibs_class_gender_model <- 
+lm(gpa ~ siblings + class + gender, data = midd_survey)
+
+summary(gpa_sibs_class_gender_model)
+```
+
+Predict gpa for lower class men with 0 siblings.
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r}
+3.368622
+```
+
+
+
+## Introducing Interactions
+
+When we add a control to a model, we estimate different intercepts (or alphas) for each value of our control variable. When we add an interaction to a model, we estimate different slopes (or betas) for each value of our control variable. In words, the coefficient for an interaction term tells us if the average change in Y for a one unit change in X changes as the value of our control variable changes.
+
+Since an interaction is a product of two variables, we use the multiplication symbol (*) to set it up. In this example, we want to regress gpa on number of siblings and class, and we want an interaction term between siblings and class. 
+
+```{r}
+gpa_sibsXclass_model <- 
+lm(gpa ~ siblings * class, 
+      data = midd_survey)
+
+summary(gpa_sibsXclass_model)
+```
+
+This model still has a reference group; in this example, it is lower class respondents with zero siblings. But the model now estimates coefficients for two kinds of effects:
+
+- Main Effects: siblings, middle class, upper middle class, upper class
+
+- Interaction Effects: siblingsXmiddle class, siblingsXupper middle class, and siblingsXupper class
+     
+The slope for our reference group is just the coefficient for siblings. The slope for our other groups is the coefficient for siblings plus the respective interaction term.
+
+
+## Interactions and Predictions
+Writing out the full equation might make it easier to understand how interactions work. Here's the full equation for our model:
+
+```{r, eval = FALSE}
+3.52009 - 0.09065*(siblings) - 0.02612*(middle class) + 
+0.05007*(upper middle class) + 0.01418*(upper class) + 
+0.09276*(siblings*middle class) +
+0.08201*(siblings*upper class) + 
+0.08165*(siblings*upper middle class)
+```
+
+To estimate a predicted gpa for our reference group, every term inside the parentheses becomes a zero:
+
+```{r}
+3.52009 - 0.09065*(0) - 0.02612*(0) + 
+0.05007*(0) + 0.01418*(0) + 
+0.09276*(0) + 
+0.08201*(0) + 
+0.08165*(0)
+```
+
+For any other group, replace every "siblings" with the number of siblings and replace the class variables with a 1 (if you are predicting for that group) or 0 (if you are not predicting for that group). Don't forget the interaction terms!
+
+Try to estimate the predicted gpa for a middle class student with 2 siblings:
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r}
+3.52009 - 0.09065*(2) - 0.02612*(1) + 
+0.05007*(0) + 0.01418*(0) +
+0.09276*(2*1) + 
+0.08201*(0) + 
+0.08165*(0)
+```
+
+
+## Plotting Interactions
+
+When we were simply controlling for variables, we used `geom_abline()` to manually add lines with different alphas. Plotting interaction terms is easier. Just add your control variable to the aesthetics map (as a `color` term if you want to change colors; `linetype` is another option). The regular `geom_smooth(method = lm)` function includes interactions by default.
+
+
+```{r}
+gpa_sibs_class_plot <- ggplot(midd_survey, 
+      aes(x = siblings, y = gpa, color = class))
+
+gpa_sibs_class_plot + geom_point(color = "Light Gray") + 
+     geom_smooth(method = lm) +
+     labs(x = "Number of Siblings", y = "GPA", 
+      title = "GPA and Number of Siblings", 
+      subtitle = "Professor Peggy Nelson's Middlebury Survey, Fall 2011",
+      color = " ") + 
+     theme(legend.position = "bottom")
+```
+
+
+## Another Example
+
+Let's look at the `midd_lookingfor_relationship` variable. Survey respondents were asked to rate their responses from 1 (strongly disagree) to 5 (strongly agree) to the following statement: "I am actively looking for someone to have a relationship with at Middlebury." We want to know if the average responses vary across genders, if school year could explain that variation, and whether any differences across genders might vary by school year.
+
+Let's order the year levels before we continue:
+
+```{r}
+midd_survey$year <- factor(midd_survey$year,
+     levels = c("First Year", "Sophomore", 
+      "Junior", "Senior"))
+```
+
+Start by regressing `midd_lookingfor_relationship` on `gender`.
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r}
+
+lookrel_gender_model <- 
+     lm(midd_lookingfor_relationship ~ gender, 
+      data = midd_survey)
+
+summary(lookrel_gender_model)
+```
+
+Now add `year` as a control variable.
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r}
+lookrel_gender_year_model <- 
+lm(midd_lookingfor_relationship ~ gender + year, 
+      data = midd_survey)
+
+summary(lookrel_gender_year_model)
+```
+
+Finally add an interaction between `gender` and `year`.
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r}
+lookrel_genderXyear_model <- 
+lm(midd_lookingfor_relationship ~ gender * year, 
+data = midd_survey)
+
+summary(lookrel_genderXyear_model)
+```
+
+## Summarizing Interactions
+
+When interpreting or plotting interactions becomes messy, summarize predicted values. To calculate the predictions, use the `fitted()` function and save them as a new variable.
+
+```{r}
+midd_survey$pred_lookrel <- 
+fitted(lookrel_genderXyear_model)
+```
+
+Then use `group_by()` and `summarize()` to describe the predictions for each combination of the variables you are interacting.
+
+```{r}
+lookrel_predictions <- midd_survey %>%
+     group_by(gender, year) %>%
+     summarize(agree_look_rel = round(mean(pred_lookrel),3))
+```
+
+Want a nice table? Use `pander()` with the object you just created.
+
+### REPLACE THIS LINE WITH YOUR CODE
+
+```{r}
+pander(lookrel_predictions)
+```
+
+
+
+## Another Example
+
+Think about answers to the question: "Are you satisfied with opportunities at Middlebury to meet new people?" (It is also a disagree (1) to agree (5) scale.) Would answers differ by race or by class? Would those racial differences vary by class?
+
+```{r}
+newpeople_raceXclass_model <- lm(midd_opps_newpeople ~ race * class, 
+                                 data = midd_survey)
+
+summary(newpeople_raceXclass_model)
+```
+
+In this model, none of the interactions are significant. But some of the differences are big. So there could be good theoretical reasons why you would want to keep the interaction terms in. And there could be good methodological reasons why the terms are not significant. For example, small sample sizes could be a cause: in this case there is only one upper class African/African American student.
+
+Earlier we saw how to estimate the predicted values. Here's that code again:
+
+```{r}
+midd_survey$pred_newpeople <- fitted(newpeople_raceXclass_model)
+
+new_people_predictions <- midd_survey %>%
+     group_by(race, class) %>%
+     summarize(agree_opps_newpeople = round(mean(pred_newpeople),2))
+```
+
+This time we'll plot the predictions rather than display them in a table.
+
+```{r}
+plot3 <- ggplot(new_people_predictions, aes(x = class, y = agree_opps_newpeople, fill = race))
+plot3 + geom_col() + facet_wrap(~race) + guides(fill = "none") + 
+     labs(x = "", y = "Disagree - Agree",
+          title = "Satisfaction With Opportunities to Meet New People", 
+          subtitle = "Professor Peggy Nelson's Middlebury Survey, Fall 2011") +
+     theme(axis.text.x = element_text(angle = 60, hjust = 1))
+```
