@@ -1,0 +1,89 @@
+---
+title: "Introducing Stargazer"
+author: "Matt Lawrence"
+date: "Dcember 2, 2019"
+output:
+  pdf_document: default
+---
+
+## Setting Up
+
+We'll use the `midd_survey` data for this example. Load it and the usual packages.
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+library(tidyverse)
+library(pander)
+
+midd_survey <- read.csv("https://raw.githubusercontent.com/mjclawrence/soci385/master/data/midd_survey.csv")
+```
+
+## Formatting Regression Tables With Stargazer
+
+Summaries of linear regression models have a lot of information and can be messy in knitted files. One option to clean them up is to use the `stargazer` package. The package is highly customizable; we'll go over just a few options today. For more details about the package, click [here](https://www.jakeruss.com/cheatsheets/stargazer/). 
+
+To see how stargazer compares to the output we are used to, use the `midd_survey` data to regress `gpa` on `gender`, save the model as `model1`, and look at the summary (remember `echo = FALSE` suppresses the code in the knitted file):
+
+```{r, echo = FALSE}
+model1 <- lm(gpa ~ siblings, data = midd_survey)
+
+summary(model1)
+```
+
+Now that you are comfortable interpreting summary outputs, you should continue using the traditional summary outputs to get a sense of your models. But replace `summary()` with `stargazer()` when you want to knit your file. 
+
+```{r}
+# INSTALL STARGAZER THE FIRST TIME FROM THE BOTTOM RIGHT PANE
+library(stargazer)
+
+stargazer(model1)
+```
+
+There are a few other things to add to make sure the file knits properly:
+
+- `results = 'asis'` is the most important thing. It leaves the output in the format that knitr needs to render it. (Add this option to the open fence line; add everything else to the stargazer function line.)
+- `header = FALSE` deletes the contact information for the package author
+- `type = 'latex'` converts the output into the Latex language that pandoc needs to knit to a PDF. Latex is the default so you can leave it off if you want. To change to web output you would want to change `type = 'latex'` to `type = 'html'`.
+
+```{r, results = 'asis', warning = FALSE, echo = FALSE}
+stargazer(model1, header = FALSE, type = 'latex')
+```
+
+Knit the file to see the formatted regression table. 
+
+\pagebreak
+
+This is better than dumping raw R output into a report, but we can do even better. 
+
+Here are some more changes for the `stargazer()` function:
+
+- `style = 'ajs'` formats the table following publication guidelines for the *American Journal of Sociology*. Replace 'ajs' with 'asr' to use the formatting style for the *American Sociological Review*. These are the two most common formatting styles you will see for sociology papers. I prefer ajs style for written reports (because it includes standard errors), and asr style for presentation slides (because it is more condensed).
+- `title` creates a title for the table which will be numbered automatically
+- `covariate.labels = c()` is a list of names for the independent and control variables in your model. You need to label every variable or this won't work.
+- `dep.var.labels = ` creates a title above the dependent variable model numbers
+- `keep.stat = c("n", "rsq")` reports the number of observations and the r-squared value but excludes all the other model information
+
+We can include more than one model in a table too. Let's save a model with a control variable and a model with an interaction.
+
+```{r, include = FALSE}
+model2 <- lm(gpa ~ siblings + gender, data = midd_survey)
+model3 <- lm(gpa ~ siblings * gender, data = midd_survey)
+```
+
+And then include our three models in a stargazer function that also includes several of the changes described above.
+
+```{r, results = 'asis', warning = FALSE}
+stargazer(model1, model2, model3,
+          header=FALSE, type = 'latex', style = 'asr',
+  title = "A Better Title",
+  covariate.labels = c("Number of Siblings", "Gender = Other", "Gender = Woman",
+                       "Siblings X Gender = Other", "Siblings X Gender = Woman"),
+  dep.var.labels = "GPA",
+  keep.stat = c("n", "rsq"))
+```
+
+The final table is on the next page.
+
+\pagebreak
+
+
+
