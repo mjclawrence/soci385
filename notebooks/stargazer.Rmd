@@ -1,8 +1,3 @@
----
-output:
-  pdf_document: default
-  html_document: default
----
 ## Setting Up
 
 We'll use the `midd_survey` data for this example. Load it and the usual packages.
