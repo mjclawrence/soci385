@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 ## Setting Up
 
 We'll use the `midd_survey` data for this example. Load it and the usual packages.
@@ -65,7 +70,7 @@ And then include our three models in a stargazer function that also includes sev
 
 ```{r, results = 'asis', warning = FALSE}
 stargazer(model1, model2, model3,
-          header=FALSE, type = 'latex', style = 'asr',
+          header=FALSE, type = 'latex', style = 'ajs',
   title = "A Better Title",
   covariate.labels = c("Number of Siblings", "Gender = Other", "Gender = Woman",
                        "Siblings X Gender = Other", "Siblings X Gender = Woman"),
