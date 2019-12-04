@@ -1,11 +1,3 @@
----
-fontsize: 12pt
-geometry: margin=1.0in
-output: pdf_document
-header-includes:
-     - \usepackage{nopageno}
----
-
 ## Getting Started
 
 Load the csv file created from the GSS.R file. Save it as a data frame called `review` and load the usual packages.
@@ -30,9 +22,6 @@ The big thing to do before starting analyses is to code all missing values as NA
 You can find the codes for missing values of the `age` variable here: https://gssdataexplorer.norc.org/variables/53/vshow. Create a table of the `age` variable to see if there are missing values:
 
 ## REPLACE THIS LINE WITH YOUR CODE ##
-```{r}
-table(review$age)
-```
 
 There are 34 observations with a missing value code for age. Here's how we can make them NAs using `na_if` (which is efficient if there is only one missing value):
 
@@ -61,11 +50,6 @@ Try replacing the missing values for the `hispanic` variable.
 
 ### REPLACE THIS LINE WITH YOUR CODE ###
 
-```{r}
-review <- review %>%
-     mutate(hispanic = ifelse(hispanic==0 | hispanic>=98, 
-                              NA, hispanic))
-```
 
 Let's combine values from the `race` and `hispanic` variables to make a new variable called `racehisp`. The easiest way to do this is to first make a binary variable distinguishing those who are in any hispanic category from those who are not.
 
