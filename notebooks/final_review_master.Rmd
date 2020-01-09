@@ -187,6 +187,9 @@ pander(space_summary,
        caption = "Interest in Space Exploration by Religion and Confidence in Science")
 ```
 
+```{r}
+round(prop.table(table(review$religion, review$science),1),3)
+```
 
 
 
@@ -212,7 +215,11 @@ For ggplot, R knows to only use complete cases but will warn you that it is doin
 
 ```{r, warning = FALSE}
 plot <- ggplot(review, aes(x = educ))
-plot + geom_density()
+plot + geom_density() +
+  labs(x = "Education in Years",
+       y = "Density",
+       title = "Distribution of Education",
+       saubtitle = "General Social Survey, 2010-2018")
 ```
 
 Remember to change the axis labels and add a title to the figure above!
@@ -224,7 +231,7 @@ Basic linear models also know to drop NAs. The notes section of the summary info
 ***This is new: notice how we are redefining the science factor variable to have a numeric scale in the chunk below. Each of the three factor levels will be assigned a number from 1-3. Since we asserted that the order of levels is "Hardly any" / "Only some" / "A great deal", now higher scores tell us that respondents have more confidence in scientific institutions. (This is a neat trick, but in general be careful with this approach. It only works if you can assume that the distance between each level is even.)***
 
 ```{r}
-model <- lm(as.numeric(science) ~ educ, data = review)
+model <- lm(as.numeric(science) ~ religion * educ, data = review)
 summary(model)
 ```
 
@@ -292,7 +299,7 @@ The mean of age is `r round(mean(review$age, na.rm=TRUE),2)`.
 
 If you want to run the code chunk so you can see the output in your notebook but with neither the code nor the output showing up in your knitted file, use `include = FALSE`.
 
-```{r, include = FALSE}
+```{r, echo = FALSE}
 mean(review$age, na.rm=TRUE)
 ```
 
